@@ -1,0 +1,6 @@
+configs/git /home/jon/.config/git
+configs/nvim /home/jon/.config/nvim
+configs/zsh /home/jon/.config/zsh
+configs/tmux /home/jon/.config/tmux
+configs/.zshenv /home/jon/.zshenv
+configs/bin /home/jon/.config/bin
