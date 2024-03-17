@@ -65,6 +65,11 @@ sudo pacman --needed --noconfirm -S rlwrap        # Needed for chubin's cht.sh /
 yay -S --needed --noconfirm nishanths-license-git # Auto generate a license for your awesome software
 yay -S --needed --noconfirm git-ignore-bin        # CLI git ignore util.
 yay -S --needed --noconfirm glow                  # CLI Markdow Reader.
+
+sudo pacman --needed --noconfirm -S jdk-openjdk # install latest jdk
+sudo pacman --needed --noconfirm -S gradle      # install gradle
+
 chsh -l
 chsh -s /bin/zsh
+
 exec zsh # Restart zsh

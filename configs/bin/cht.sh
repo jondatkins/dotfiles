@@ -590,11 +590,11 @@ cmd_copy() {
 			if [ "$XDG_SESSION_TYPE" = wayland ]; then
 				wl-copy <"$TMP1"
 			else
-				echo xsel
+				# echo xsel
 				xsel -bi <"$TMP1"
 			fi
 		else
-			echo pbcopy
+			# echo pbcopy
 			pbcopy <"$TMP1"
 		fi
 		echo "copy: $(wc -l "$TMP1" | awk '{print $1}') lines copied to the selection"

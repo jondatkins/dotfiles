@@ -1,8 +1,8 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 LOG="${HOME}/dotfiles.log"
-GITHUB_USER="jonkinz"
-GITHUB_REPO="dotfiles-starter-kit"
-USER_GIT_AUTHOR_NAME="jonkinz"
+GITHUB_USER="jondatkins"
+GITHUB_REPO="dotfiles"
+USER_GIT_AUTHOR_NAME="jondatkins"
 USER_GIT_AUTHOR_EMAIL="122027005+jonkinz@users.noreply.github.com"
 
 DOTFILES_DIR="${HOME}/${GITHUB_REPO}"
@@ -13,7 +13,7 @@ link=false
 unlink=false
 install=false
 runall=true
-
+echo 'test'
 while getopts dlui flag; do
 	case "${flag}" in
 	d)
@@ -259,16 +259,16 @@ setup_git_authorship() {
 install() {
 	if [ "$runall" == true ]; then
 		_process "→ run all install functions"
-		download_dotfiles_with_git
-		link_dotfiles true
-		install_arch_dependencies
+		# download_dotfiles_with_git
+		# link_dotfiles true
+		# install_arch_dependencies
 		_process "→ dotfiles downloaded and linked"
 		return
 	fi
 
 	if [ "$download" == true ]; then
 		echo "download dotfiles here"
-		download_dotfiles_with_git
+		# download_dotfiles_with_git
 	fi
 	if [ "$unlink" == true ]; then
 		echo "unlink dotfiles"
@@ -280,7 +280,7 @@ install() {
 	fi
 	if [ "$install" == true ]; then
 		echo "install deps"
-		install_arch_dependencies
+		# install_arch_dependencies
 	fi
 }
 
