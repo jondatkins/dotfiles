@@ -3,4 +3,4 @@
 -- Add any additional options here
 local opt = vim.opt
 opt.swapfile = false
--- opt.clipboard = 'unnamedplus'
+opt.clipboard = "unnamedplus"

@@ -4,7 +4,10 @@ sudo pacman-key --populate
 sudo pacman --needed --noconfirm -Syu
 sudo pacman --needed --noconfirm -S archlinux-keyring # Note: ArchWSL says this is optional, but THIS PACKAGE IS MANDITORY! It should be the first one installed.
 # Install Yay all in one line
-sudo pacman -S --needed --noconfirm git base-devel && git clone https://aur.archlinux.org/yay.git ${HOME}/yay && cd ${HOME}/yay && makepkg -si
+pacman -S --needed --noconfirm git base-devel
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 cd ${HOME}
 sudo pacman --needed --noconfirm -S openssh                    # Install OpenSSH so we can use SSH.
 sudo pacman --needed --noconfirm -S github-cli                 # Install this so we can use `gh` to do github command. (TODO: Is there something similar for gitlab?)
@@ -12,23 +15,25 @@ sudo pacman --needed --noconfirm -S lolcat                     # Install `lolcat
 sudo pacman --needed --noconfirm -S bat                        # `bat` is like `cat`, but it looks better.
 sudo pacman --needed --noconfirm -S bat-extras clang llvm rust # Some important tools I'll talk about them later.
 # Install fzf using git clone, otherwise keybinds do not work.
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-sudo pacman --needed --noconfirm -S fd                                                     # Rust version of find
-sudo pacman --needed --noconfirm -S tree                                                   # Handy file tree view, used by fzf
+# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+# ~/.fzf/install
+sudo pacman --needed --noconfirm -S fd tree                                                # Rust version of find
+sudo pacman --needed --noconfirm -S zip unzip                                              # Handy file tree view, used by fzf
 sudo pacman --needed --noconfirm -S python-pip                                             # Python needs pip to install some packages
 sudo pacman --needed --noconfirm -S lm_sensors psutils python-psutil neofetch bashtop htop # Install these to show system information and to manage processes in a more user-friendly way
 sudo pacman --needed --noconfirm -S figlet cowsay fortune-mod cmatrix nyancat              # Command line toys, some of them are important that they install some depedencies you'll want to have around.
 sudo pacman --needed --noconfirm -S ponysay                                                # It's like cowsay, only 20% cooler.
 sudo pacman --needed --noconfirm -S stow                                                   # GNU stow, a symlink farm manager.
 sudo pacman --needed --noconfirm -S tldr                                                   # Too Long, Didn't Read, very handy.
+sudo pacman --needed --noconfirm -S node npm                                               # Too Long, Didn't Read, very handy.
+sudo pacman --needed --noconfirm -S wget                                                   # Too Long, Didn't Read, very handy.
 yay --needed --noconfirm -S bash-pipes                                                     # One more toy (`pipes.sh`), because the Internet is a Series of Tubes. (Note You can't use `sudo` with `yay` upfront. Yay will ask you for your sudo password later.)
 sudo pacman --needed --noconfirm -S imagemagick                                            # Manipulate images from the command line. You probably won't use it a whole lot, but there's some cool stuff that is important
 mkdir bin                                                                                  # Add this directory. It should be added to your `$PATH`. You can use this directory to launch scripts that you write to do tasks
 mkdir Projects Downloads Documents Sandbox Pictures                                        # Just some placeholder directories. I should really make them softlinks to their Windows counterpart later.
-curl wttr.in                                                                               # Check to see if we have curl installed by checking the weather!
-sudo pacman --needed --noconfirm -S zsh                                                    # Install Zsh
-zsh --version                                                                              # Show the version of Zsh. (We're still in Bash, but that will change shortly.)
+# curl wttr.in                                                                               # Check to see if we have curl installed by checking the weather!
+sudo pacman --needed --noconfirm -S zsh # Install Zsh
+zsh --version                           # Show the version of Zsh. (We're still in Bash, but that will change shortly.)
 # git clone https://github.com/zsh-users/zsh-autosuggestions ~/bin/zsh_plugins/zsh-autosuggestions/
 # git clone https://github.com/zsh-users/zsh-syntax-highlighting.git  ~/bin/zsh_plugins/zsh-syntax-highlighting
 # sh -c "$(curl -fsSL http://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"     # Install Oh-My-Zsh.  (I should have used `yay -S oh-my-zsh-git` but this works just as well.)  (If it asks if you want to change the default shell to Zsh, say yes!)
@@ -68,7 +73,12 @@ yay -S --needed --noconfirm glow                  # CLI Markdow Reader.
 
 sudo pacman --needed --noconfirm -S jdk-openjdk # install latest jdk
 sudo pacman --needed --noconfirm -S gradle      # install gradle
+sudo pacman --needed --noconfirm -S nodejs npm  # install nodejs npm
 
+# Grab a nerd font
+mkdir -p ~/.local/share/fonts
+cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf
+cd ~
 chsh -l
 chsh -s /bin/zsh
 

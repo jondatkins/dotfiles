@@ -41,3 +41,5 @@ alias myip="curl http://ipecho.net/plain; echo"
 alias browser='"${BROWSER}" --profile-directory="Profile 1"' 
 alias clip='clip.exe'
 alias win32yank='win32yank.exe'
+# What's my graphics driver?
+alias graphics="lspci -k | grep -EA3 'VGA|3D|Display'"
