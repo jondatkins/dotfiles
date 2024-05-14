@@ -4,3 +4,8 @@ configs/zsh /home/jon/.config/zsh
 configs/tmux /home/jon/.config/tmux
 configs/.zshenv /home/jon/.zshenv
 configs/bin /home/jon/.config/bin
+configs/i3 /home/jon/.config/i3
+configs/rofi /home/jon/.config/rofi
+configs/polybar /home/jon/.config/polybar
+configs/alacritty /home/jon/.config/alacritty
+configs/kitty /home/jon/.config/kitty

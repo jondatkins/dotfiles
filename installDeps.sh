@@ -64,6 +64,7 @@ sudo pacman --needed --noconfirm -S libcaca             # For ASCII-art image pr
 sudo pacman --needed --noconfirm -S python-chardet      # In case of encoding dection problems.
 sudo pacman --needed --noconfirm -S perl-image-exiftool # Show image EXIF information. This might be installed already if you installed imagemagick
 sudo pacman --needed --noconfirm -S w3m                 # Provide previews of HTML and Images
+sudo pacman --needed --noconfirm -S mpv                 # Provide previews of HTML and Images
 sudo pacman --needed --noconfirm -S ffmpegthumbnailer   # Designed for previewing videos, but should work for images too.
 curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh
 sudo pacman --needed --noconfirm -S rlwrap        # Needed for chubin's cht.sh / cheat sheet.
@@ -74,6 +75,7 @@ yay -S --needed --noconfirm glow                  # CLI Markdow Reader.
 sudo pacman --needed --noconfirm -S jdk-openjdk # install latest jdk
 sudo pacman --needed --noconfirm -S gradle      # install gradle
 sudo pacman --needed --noconfirm -S nodejs npm  # install nodejs npm
+sudo pacman --needed --noconfirm -S net-tools   # I need ifconfig
 
 # Grab a nerd font
 mkdir -p ~/.local/share/fonts
