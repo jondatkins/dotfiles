@@ -29,8 +29,8 @@ sudo pacman --needed --noconfirm -S node npm                                    
 sudo pacman --needed --noconfirm -S wget                                                   # Too Long, Didn't Read, very handy.
 yay --needed --noconfirm -S bash-pipes                                                     # One more toy (`pipes.sh`), because the Internet is a Series of Tubes. (Note You can't use `sudo` with `yay` upfront. Yay will ask you for your sudo password later.)
 sudo pacman --needed --noconfirm -S imagemagick                                            # Manipulate images from the command line. You probably won't use it a whole lot, but there's some cool stuff that is important
-mkdir bin                                                                                  # Add this directory. It should be added to your `$PATH`. You can use this directory to launch scripts that you write to do tasks
-mkdir Projects Downloads Documents Sandbox Pictures                                        # Just some placeholder directories. I should really make them softlinks to their Windows counterpart later.
+# mkdir bin                                                                                  # Add this directory. It should be added to your `$PATH`. You can use this directory to launch scripts that you write to do tasks
+mkdir Projects Downloads Documents Sandbox Pictures # Just some placeholder directories. I should really make them softlinks to their Windows counterpart later.
 # curl wttr.in                                                                               # Check to see if we have curl installed by checking the weather!
 sudo pacman --needed --noconfirm -S zsh # Install Zsh
 zsh --version                           # Show the version of Zsh. (We're still in Bash, but that will change shortly.)
@@ -72,11 +72,13 @@ yay -S --needed --noconfirm nishanths-license-git # Auto generate a license for 
 yay -S --needed --noconfirm git-ignore-bin        # CLI git ignore util.
 yay -S --needed --noconfirm glow                  # CLI Markdow Reader.
 
-sudo pacman --needed --noconfirm -S jdk-openjdk # install latest jdk
-sudo pacman --needed --noconfirm -S gradle      # install gradle
-sudo pacman --needed --noconfirm -S nodejs npm  # install nodejs npm
-sudo pacman --needed --noconfirm -S net-tools   # I need ifconfig
-
+sudo pacman --needed --noconfirm -S jdk-openjdk    # install latest jdk
+sudo pacman --needed --noconfirm -S gradle         # install gradle
+sudo pacman --needed --noconfirm -S nodejs npm     # install nodejs npm
+sudo pacman --needed --noconfirm -S net-tools      # I need ifconfig
+sudo pacman --needed --noconfirm -S networkmanager # network manager from command line
+sudo pacman --needed --noconfirm -S clipmenu       # clipboard manager
+yay -S --needed --noconfirm cava
 # Grab a nerd font
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf

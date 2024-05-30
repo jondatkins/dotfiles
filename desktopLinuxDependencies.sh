@@ -32,6 +32,9 @@ sudo pacman -S --needed --noconfirm feh
 sudo pacman -S --needed --noconfirm xclip
 sudo pacman -S --needed --noconfirm nvidia nvidia-utils
 sudo pacman -S --needed --noconfirm thunar
+sudo pacman -S --needed --noconfirm thunar-volman
+sudo pacman -S --needed --noconfirm udiskie
+sudo pacman -S --needed --noconfirm udisks2
 sudo pacman -S --needed --noconfirm materia-gtk-theme papirus-icon-theme
 sudo pacman -S --needed --noconfirm lxappearance
 # fonts
@@ -40,17 +43,35 @@ sudo pacman -S --needed --noconfirm ttf-droid
 sudo pacman -S --needed --noconfirm ttf-ubuntu-font-family
 sudo pacman -S --needed --noconfirm ttf-roboto-mono-nerd
 sudo pacman -S --needed --noconfirm ttf-ubuntu-mono-nerd
+yay -S --needed --noconfirm ttf-meslo-nerd
+git clone https://github.com/erikflowers/weather-icons
+cd weather-icons
+cp font/* ~/.fonts
+cd
 # fonts end
 sudo pacman -S --needed --noconfirm picom
 sudo pacman -S --needed --noconfirm rofi
 sudo pacman -S --needed --noconfirm rofi-emoji
 sudo pacman -S --needed --noconfirm rofi-calc
-yay i3lock-color
+sudo pacman -S --needed --noconfirm xautolock
+yay -S i3lock-color
+
+sudo pacman -S --needed --noconfirm xss-lock
 sudo pacman -S --needed --noconfirm krita
 sudo pacman -S --needed --noconfirm gimp
 sudo pacman -S --needed --noconfirm alacritty
 sudo pacman -S --needed --noconfirm usbutils
 sudo pacman -S --needed --noconfirm xf86-input-wacom
 sudo pacman -S --needed --noconfirm bluez bluez-utils blueman
-yay -S alacritty-themes
+yay -S --needed --noconfirm alacritty-themes
+yay -S --needed --noconfirm bashmount
 sudo pacman -S --needed --noconfirm ntfs-3g
+# play and rip CDs and DVDs
+sudo pacman -S --needed --noconfirm libcdio cdparanoia
+sudo pacman -S --needed --noconfirm abcde
+sudo pacman -S --needed --noconfirm vlc
+sudo pacman -S --needed --noconfirm strawberry sound-juicer
+sudo pacman -S --needed --noconfirm libcdio cdparanoia
+sudo pacman -S --needed --noconfirm libdvdread libdvdcss libdvdnav
+sudo pacman -S --needed --noconfirm steam xf86-video-nouveau pulseaudio-alsa # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.

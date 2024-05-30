@@ -13,7 +13,6 @@ link=false
 unlink=false
 install=false
 runall=true
-echo 'test'
 while getopts dlui flag; do
 	case "${flag}" in
 	d)
@@ -90,6 +89,7 @@ download_dotfiles_with_git() {
 
 # Takes a boolean arg. If true, link the files, if false, unlink them.
 link_dotfiles() {
+	echo $1
 	# Create config dir here if it doesn't already exist
 	if [ ! -d $CONFIG_DIR ]; then
 		_process "→ $CONFIG_DIR "
@@ -108,6 +108,7 @@ link_dotfiles() {
 		# read in passed-in file and store as an array
 		IFS=$'\r\n'
 		links=($(cat "${files}"))
+		echo $links
 		# Loop through array of files
 		for index in ${!links[*]}; do
 			for link in ${links[$index]}; do
@@ -115,8 +116,14 @@ link_dotfiles() {
 				IFS=$' '
 				# create an array of line items
 				file=(${links[$index]})
+				# This is where the config file is in my dotfiles
 				configFilePath=${file[0]}
+				# This is where I want to put the file, relative to my home directory
 				symLinkFilePath=${file[1]}
+				# This is the path to my home directory
+				userConfigPath="/home/$USER/"
+				symLinkFilePath=$userConfigPath$symLinkFilePath
+				echo $symLinkFilePath
 				if [ ! $configFilePath ] || [ ! $symLinkFilePath ]; then
 					process "→ link script expects 'files' data in the form:"
 					process "→ path/to/config path/to/symlink"
@@ -125,9 +132,14 @@ link_dotfiles() {
 					return
 				fi
 				if [ "$1" = false ]; then
-					if [ -f ${symLinkFilePath} ]; then
+					echo 'unlink files'
+					echo ${symLinkFilePath}
+					# -e flag checks for files and directories, -f is only for files, -d only for directories
+					if [ -e ${symLinkFilePath} ]; then
 						_process "→ removing symlink ${symLinkFilePath}"
 						rm ${symLinkFilePath}
+					else
+						echo "${symLinkFilePath} does not exist"
 					fi
 				else
 					# Remove any existing symlinks before making a new one. The default behaviour

@@ -1,0 +1,12 @@
+[Unit]
+Description=User suspend actions
+Before=suspend.target
+
+[Service]
+User=jon
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/jon/.local/bin/lock
+[Install]
+WantedBy=suspend.target
+WantedBy=sleep.target

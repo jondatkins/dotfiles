@@ -16,6 +16,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$HOME/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
 export PATH=$XDG_CONFIG_HOME/bin:$PATH
+export PATH=$XDG_CONFIG_HOME/rofi/scripts:$PATH
 export PATH=$CARGO_HOME/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH
@@ -40,15 +41,15 @@ export CM_LAUNCHER="fzf"
 # export FZF_DEFAULT_OPTS=$FZF_DEFAULT_OPTS' --color=fg:#c1c1c1,bg:#2b2b2b,hl:#78824B --color=fg+:#ffffff,bg+:#1c1c1c,hl+:#C9A554 --color=info:#5f875f,prompt:#5f875f,pointer:#78824B --color=marker:#78824B,spinner:#78824B,header:#78824B --color=gutter:#2b2b2b,border:#222222 --padding=1 --prompt=❯ --marker=❯ --pointer=❯ --reverse'
 
 #█▓▒░ language
-export LC_COLLATE=en_US.UTF-8
-export LC_CTYPE=en_US.UTF-8
-export LC_MESSAGES=en_US.UTF-8
-export LC_MONETARY=en_US.UTF-8
-export LC_NUMERIC=en_US.UTF-8
-export LC_TIME=en_US.UTF-8
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-export LANGUAGE=en_US.UTF-8
+export LC_COLLATE=en_GB.UTF-8
+export LC_CTYPE=en_GB.UTF-8
+export LC_MESSAGES=en_GB.UTF-8
+export LC_MONETARY=en_GB.UTF-8
+export LC_NUMERIC=en_GB.UTF-8
+export LC_TIME=en_GB.UTF-8
+export LC_ALL=en_GB.UTF-8
+export LANG=en_GB.UTF-8
+export LANGUAGE=en_GB.UTF-8
 export LESSCHARSET=utf-8
 
 #█▓▒░ no mosh titles
@@ -58,4 +59,4 @@ export MOSH_TITLE_NOPREFIX=1
 GPG_TTY=$(tty)
 export GPG_TTY
 # launch windows chrome from wsl
-export BROWSER='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' 
+# export BROWSER='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' 

@@ -7,8 +7,13 @@ https://gist.github.com/ld100/3376435a4bb62ca0906b0cff9de4f94b
 ### Setup
 
 - Open up the [install](https://github.com/gjunkie/dotfiles-starter-kit/blob/main/install) script and change the `GITHUB_USER` variable to your username.
-- Update the [files](https://github.com/gjunkie/dotfiles-starter-kit/blob/main/opt/files) that you want to keep synced between your systems.
-- And that you have installed git. Clone the repo, and run ./install -l to symlink the config files. You can run ./install -i to install the edependencies, or just run ./installDeps.sh.
+- Update the [files](https://github.com/gjunkie/dotfiles-starter-kit/blob/main/opt/files) that you want to keep synced between your systems. The opt/files file should have the relative path to the actual config file / dir in your dotfiles, followed by a space, followed by where you want the symlink to be made, relative to your home directory, e.g.
+
+configs/git .config/git
+
+This will create a symlink from ./configs/git to /home/$USER/.config/git
+
+- To install clone the repo, and run ./install -l to symlink the config files. You can run ./install -i to install the edependencies, or just run ./installDeps.sh. This will install terminal only programs, such as are used in a WSL2 arch linux system. Run the desktopLinuxDependencies.sh script for a full Arch / i3 OS install.
 
 ### One-line Install
 
