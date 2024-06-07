@@ -24,6 +24,7 @@ alias diary="vim ~/diary.txt"
 # alias vimrcs="source ~/.config/nvim/init.lua"
 # alias tmuxrc="vim ${DOTFILES}/tmux/.config/tmux/tmux.conf"
 alias tmuxrcs="tmux source-file ${DOTFILES}/configs/tmux/tmux.conf"
+alias mux=tmuxinator
 # TODO: Does this command need any other arguments (e.g. session number?)
 alias retmux='tmux attach'
 alias beep='echo -e "\a"'
@@ -45,3 +46,5 @@ alias browser='"${BROWSER}" --profile-directory="Profile 1"'
 # What's my graphics driver?
 alias graphics="lspci -k | grep -EA3 'VGA|3D|Display'"
 alias at='alacritty-themes'
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'

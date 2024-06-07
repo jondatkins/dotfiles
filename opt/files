@@ -10,8 +10,10 @@ configs/alacritty .config/alacritty
 configs/kitty .config/kitty
 configs/picom .config/picom
 configs/ranger .config/ranger
+configs/Thunar .config/Thunar
 configs/cava .config/cava
 configs/bashmount .config/bashmount
+configs/tmuxinator .config/tmuxinator
 configs/scripts/powermenu.sh .local/bin/powermenu
 configs/scripts/wifiMenu.sh .local/bin/wifi
 configs/scripts/i3_switch_workspaces.sh .local/bin/switchWorkspace
@@ -19,3 +21,6 @@ configs/scripts/polybar-weathermap.sh .local/bin/weatherMap
 configs/scripts/system-bluetooth-bluetoothctl.sh .local/bin/system-bluetooth
 configs/scripts/system-usb-udev .local/bin/system-usb-udev
 configs/scripts/i3lock.sh .local/bin/lock
+configs/scripts/tmux-cht.sh .local/bin/tmux-cht.sh
+configs/scripts/kp.sh .local/bin/kp
+

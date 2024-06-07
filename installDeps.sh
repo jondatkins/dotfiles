@@ -79,6 +79,7 @@ sudo pacman --needed --noconfirm -S net-tools      # I need ifconfig
 sudo pacman --needed --noconfirm -S networkmanager # network manager from command line
 sudo pacman --needed --noconfirm -S clipmenu       # clipboard manager
 yay -S --needed --noconfirm cava
+gem install tmuxinator
 # Grab a nerd font
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts && curl -fLO https://github.com/ryanoasis/nerd-fonts/raw/HEAD/patched-fonts/DroidSansMono/DroidSansMNerdFont-Regular.otf

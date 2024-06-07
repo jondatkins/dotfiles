@@ -11,7 +11,7 @@ sudo sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = glorious #\1/g' /etc/li
 sudo pacman -S --needed --noconfirm xorg-server-xephyr
 sudo sed -i 's/^debug_mode\s*=\s*\(.*\)/debug_mode = true #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
 sudo pacman -S --needed --noconfirm lightdm-webkit2-greeter
-yay -S zig
+yay -S --needed --noconfirm zig
 git clone https://github.com/fairyglade/ly
 cd ly
 zig build
@@ -35,6 +35,7 @@ sudo pacman -S --needed --noconfirm thunar
 sudo pacman -S --needed --noconfirm thunar-volman
 sudo pacman -S --needed --noconfirm udiskie
 sudo pacman -S --needed --noconfirm udisks2
+yay -S --needed --required polkit-gnome
 sudo pacman -S --needed --noconfirm materia-gtk-theme papirus-icon-theme
 sudo pacman -S --needed --noconfirm lxappearance
 # fonts
@@ -75,3 +76,4 @@ sudo pacman -S --needed --noconfirm libcdio cdparanoia
 sudo pacman -S --needed --noconfirm libdvdread libdvdcss libdvdnav
 sudo pacman -S --needed --noconfirm steam xf86-video-nouveau pulseaudio-alsa # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+yay -S xrdp
