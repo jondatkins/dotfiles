@@ -5,7 +5,7 @@ export XDG_CACHE_HOME="$HOME"/.local/cache
 export XDG_STATE_HOME="$HOME"/.local/state
 export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:=/tmp}"
 export ZDOTDIR="$HOME"/.config/zsh
-export DOTFILES="$HOME"/dotfiles-starter-kit
+export DOTFILES="$HOME"/dotfiles
 
 #█▓▒░ paths
 # export PATH=/usr/sbin:/usr/local/sbin:$HOME/.local/bin:$CARGO_HOME/bin:$GOPATH/bin:$NPM_CONFIG_PREFIX/bin:$TFENV/bin:$XDG_DATA_HOME/nvim/mason/bin:$PATH

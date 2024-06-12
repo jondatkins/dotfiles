@@ -257,13 +257,18 @@ exec_always xrandr --output DVI-D-0 --below HDMI-0 --mode 1920x1080 --rate 60
 # exec_always picom -f
 exec --no-startup-id picom
 exec_always xsetwacom set "Wacom One Pen Display 13 Pen stylus" MapToOutput 1920x1080+0+1080
+exec_always dunst
 # exec --no-startup-id xautolock -time 1 -locker "i3lock -c 000000 -n" -killtime 10 -killer "systemctl suspend" -corners +00- -detectsleep
-# exec_always --no-startup-id xautolock -time 15 -locker lock -killtime 30 -killer "systemctl suspend" -corners +00- -detectsleep
-exec_always --no-startup-id xautolock -time 5 -locker lock -killtime 10 -killer "systemctl suspend" -corners '++--' -cornerdelay 5
+# exec_always --no-startup-id xautolock -time 5 -locker lock -killtime 10 -killer "systemctl suspend" -corners '++--' -cornerdelay 5
+# exec --no-startup-id xautolock -time 5 -locker 'systemctl suspend' -notify 600 -notifier 'i3lock -corners '++--' | xset dpms force off' &
+# exec --no-startup-id xautolock -time 5 -locker 'systemctl suspend' -notify 600 -notifier lock -corners ++-- -cornerdelay 20 -restart
+# exec --no-startup-id xautolock -time 5 -locker lock -killer 'systemctl suspend' -killtime 5 -corners ++-- -cornerdelay 20 -restart
+# exec locker
 # exec_always xautolock -time 1 -locker "xset dpms force off" -notify 5 -notifier "i3lock -n -c 0E1621"
 # exec --no-startup-id xidlehook --not-when-fullscreen --not-when-audio --timer normal 600 'i3lock -i ~/Media/Pictures/yourbackground.png -t -ef -n' ''
 exec_always udiskie
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+exec_always dropbox
 
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd

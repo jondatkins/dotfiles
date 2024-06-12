@@ -48,3 +48,4 @@ alias graphics="lspci -k | grep -EA3 'VGA|3D|Display'"
 alias at='alacritty-themes'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
+alias dots="cd $DOTFILES; vim"

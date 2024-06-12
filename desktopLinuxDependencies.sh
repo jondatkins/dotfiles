@@ -76,4 +76,6 @@ sudo pacman -S --needed --noconfirm libcdio cdparanoia
 sudo pacman -S --needed --noconfirm libdvdread libdvdcss libdvdnav
 sudo pacman -S --needed --noconfirm steam xf86-video-nouveau pulseaudio-alsa # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
-yay -S xrdp
+sudo pacman -S --needed --noconfirm dusnt                                    # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm adwaita-icon-theme                       # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+yay -S --needed --noconfirm xrdp

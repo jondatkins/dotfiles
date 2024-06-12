@@ -21,6 +21,7 @@
 ; (gtk_accel_path "<Actions>/ThunarWindow/toggle-split-view" "F3")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/copy-2" "<Primary>Insert")
 ; (gtk_accel_path "<Actions>/ThunarActionManager/trash-delete" "Delete")
+; (gtk_accel_path "<Actions>/ThunarBookmarks/bac3de07d624bf72ebdb7a3a25ac05e8" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/open-recent" "")
 ; (gtk_accel_path "<Actions>/ThunarWindow/view-configure-toolbar" "")
 ; (gtk_accel_path "<Actions>/ThunarStandardView/forward" "<Alt>Right")

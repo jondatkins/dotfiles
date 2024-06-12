@@ -1,3 +1,4 @@
+#!/bin/sh
 ### PROCESS
 # mnemonic: [K]ill [P]rocess
 # show output of "ps -ef", use [tab] to select one or multiple entries
