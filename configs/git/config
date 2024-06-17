@@ -26,4 +26,4 @@
 	recent-branches = !git branch --sort=-committerdate | head
 	authors = !git log --format='%aN <%aE>' | grep -v 'users.noreply.github.com' | sort -u --ignore-case
 [credential]
-	helper = store
+	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
