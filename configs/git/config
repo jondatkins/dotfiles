@@ -1,7 +1,7 @@
 [user]
 	name = jonathan-atkins
-	email = 122027005+jonkinz@users.noreply.github.com
-  Username = jonkinz
+  email = 122027005+jondatkins@users.noreply.github.com
+  Username = jondatkins
 [credential "https://github.com"]
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
