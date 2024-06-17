@@ -15,8 +15,8 @@ sudo pacman --needed --noconfirm -S lolcat                     # Install `lolcat
 sudo pacman --needed --noconfirm -S bat                        # `bat` is like `cat`, but it looks better.
 sudo pacman --needed --noconfirm -S bat-extras clang llvm rust # Some important tools I'll talk about them later.
 # Install fzf using git clone, otherwise keybinds do not work.
-# git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-# ~/.fzf/install
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 sudo pacman --needed --noconfirm -S fd tree                                                # Rust version of find
 sudo pacman --needed --noconfirm -S zip unzip                                              # Handy file tree view, used by fzf
 sudo pacman --needed --noconfirm -S python-pip                                             # Python needs pip to install some packages
