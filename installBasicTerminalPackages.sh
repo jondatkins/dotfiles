@@ -41,6 +41,8 @@ chsh -s /bin/zsh
 
 # Restart zsh
 exec zsh
-#.
+cd ~
 # Just some placeholder directories. I should really make them softlinks to their Windows counterpart later
 mkdir Projects Downloads Documents Sandbox Pictures
+# all config files are here, or symlinked here
+mkdir ~/.config

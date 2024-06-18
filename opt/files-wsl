@@ -1,0 +1,8 @@
+configs/git .config/git
+configs/nvim .config/nvim
+configs/zsh .config/zsh
+configs/tmux .config/tmux
+configs/.zshenv .zshenv
+configs/ranger .config/ranger
+configs/scripts/kp.sh .local/bin/kp
+configs/scripts/tmux-cht.sh .local/bin/tmux-cht.sh
