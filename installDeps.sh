@@ -4,7 +4,7 @@ sudo pacman-key --populate
 sudo pacman --needed --noconfirm -Syu
 sudo pacman --needed --noconfirm -S archlinux-keyring # Note: ArchWSL says this is optional, but THIS PACKAGE IS MANDITORY! It should be the first one installed.
 # Install Yay all in one line
-pacman -S --needed --noconfirm git base-devel
+sudo pacman -S --needed --noconfirm git base-devel
 git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
