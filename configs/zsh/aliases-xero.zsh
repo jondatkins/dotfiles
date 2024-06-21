@@ -23,6 +23,7 @@ alias ec='nvim --cmd ":lua vim.g.noplugins=1" ' #nvim --clean
 
 #general
 alias weather="curl -4 wttr.in/derby"
+alias wthr="curl -4 wttr.in/derby"
 # alias vim="nvim"
 
 #source config

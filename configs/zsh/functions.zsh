@@ -24,6 +24,12 @@ function gitClone() {
   git clone https://github.com/$1
 }
 
+# Do gitPush 'some description of my commit'
+function gitPush(){
+  git add -A
+  git commit -m "$1"
+  git push
+}
 # shortcut for git add commit push. e.g. acp 'my cool commit'
 function acp() {
   git add .
