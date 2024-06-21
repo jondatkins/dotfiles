@@ -253,7 +253,7 @@ install() {
 
 	if [ "$download" == true ]; then
 		echo "download dotfiles here"
-		# download_dotfiles_with_git
+		download_dotfiles_with_git
 	fi
 	if [ "$unlink" == true ]; then
 		echo "unlink dotfiles"
