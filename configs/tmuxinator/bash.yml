@@ -1,7 +1,7 @@
 # /home/jon/.config/tmuxinator/work.yml
 
-name: java
-root: ~/Projects/Java/
+name: bash
+root: ~/Projects/Bash/
 
 # Optional tmux socket
 # socket_name: foo
@@ -55,7 +55,7 @@ windows:
       layout: acd0,136x33,0,0[136x22,0,0,9,136x10,0,23,14]
       # 2: code_stuff* (2 panes) [136x33] [layout acd0,136x33,0,0[136x22,0,0,9,136x10,0,23,14]] @5 (active)
       panes:
-        - vim ~/Projects/Java/demo/app/src/main/java/org/example/App.java
+        - vim ~/Projects/Bash/scratch.sh
         - echo "empty"
   - misc_stuff:
   - notes:
