@@ -13,14 +13,14 @@ configs/git .config/git
 
 This will create a symlink from ./configs/git to /home/$USER/.config/git
 
-- To install clone the repo, and run ./install -l to symlink the config files. You can run ./install -i to install the edependencies, or just run ./installDeps.sh. This will install terminal only programs, such as are used in a WSL2 arch linux system. Run the desktopLinuxDependencies.sh script for a full Arch / i3 OS install.
+- To install, clone the repo, and run ./install -l to symlink the config files. You can run ./install -i to install the dependencies, or just run, for example, ./installBasicTerminalPackages.sh. This will install terminal only programs, such as are used in a WSL2 arch linux system. Run the desktopLinuxDependencies.sh script for a full Arch / i3 OS install.
 
 ### One-line Install
 
 Make sure to update the username in the command below with your GitHub username.
 N.B. This approach is not well tested, just clone and install as described above.
 
-bash -c "$(curl -#fL raw.github.com/jonkinz/dotfiles-starter-kit/main/install)"
+bash -c "$(curl -#fL raw.github.com/[ yourGitUsername ]/dotfiles-starter-kit/main/install)"
 ```
 ### This is based on the tutorial at :
 
