@@ -27,3 +27,5 @@ configs/scripts/tmux-cht.sh .local/bin/tmux-cht.sh
 configs/scripts/locker.sh .local/bin/locker
 configs/scripts/changevolume.sh .local/bin/changevolume
 configs/scripts/pacman-package-list.sh .local/bin/pacman-package-list
+configs/scripts/pacmanSyu.sh .local/bin/pacmanSyu
+configs/scripts/volumeDunst.sh .local/bin/volumeDunst

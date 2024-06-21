@@ -81,3 +81,11 @@ sudo pacman --needed --noconfirm -S networkmanager
 sudo pacman --needed --noconfirm -S clipmenu
 yay -S --needed --noconfirm cava
 gem install tmuxinator
+# find faster download mirrors
+sudo pacman --needed --noconfirm -S reflector
+sudo pacman --needed --noconfirm -S aria2 edfat-utils p7zip unrar
+sudo pacman --needed --noconfirm -S amd-ucode
+# need to update grub after ucode install
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+yay -S preload
+sudo systemctl enable preload && sudo systemctl start preload
