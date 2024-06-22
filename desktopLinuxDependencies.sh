@@ -81,3 +81,4 @@ sudo pacman -S --needed --noconfirm adwaita-icon-theme                       # Y
 yay -S --needed --noconfirm xrdp
 sudo pacman -S --needed --noconfirm alsa-utils # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm pamixer
+yay -S --needed --noconfirm pulseaudio-control

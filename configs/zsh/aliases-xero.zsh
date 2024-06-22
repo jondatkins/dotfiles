@@ -80,6 +80,7 @@ alias tree='tree -CAFa -I "CVS|*.*.package|.svn|.git|.hg|node_modules|bower_comp
 
 alias exzsh='exec zsh'
 alias pacinstall='sudo pacman --noconfirm --needed -S'
+alias yayinstall='yay --noconfirm --needed -S'
 alias pacremove='sudo pacman -Rs'
 # alias clip.exe='clip'
 # alias explorer.exe='explorer'

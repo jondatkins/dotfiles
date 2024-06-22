@@ -29,3 +29,4 @@ configs/scripts/changevolume.sh .local/bin/changevolume
 configs/scripts/pacman-package-list.sh .local/bin/pacman-package-list
 configs/scripts/pacmanSyu.sh .local/bin/pacmanSyu
 configs/scripts/volumeDunst.sh .local/bin/volumeDunst
+configs/scripts/pulseaudio-control.sh .local/bin/pulseaudio-control
