@@ -4,47 +4,32 @@ GITHUB_USER="jondatkins"
 GITHUB_REPO="dotfiles"
 USER_GIT_AUTHOR_NAME="jondatkins"
 USER_GIT_AUTHOR_EMAIL="122027005+jonkinz@users.noreply.github.com"
+
 DOTFILES_DIR="${HOME}/${GITHUB_REPO}"
 CONFIG_DIR="${HOME}/.config"
-# Set the files to link. These can be for a full arch desktop, or for arch on Windows Subsystem for Linux.
-# The default is 'files', i.e. the full arch config.
-DESKTOP_CONFIG_FILES="files"
-WSL_CONFIG_FILES="files-wsl"
 
 download=false
 link=false
 unlink=false
 install=false
-runall=false
-wsl=false
-config_files=$DESKTOP_CONFIG_FILES
-
-while getopts dluiw flag; do
+runall=true
+while getopts dlui flag; do
 	case "${flag}" in
 	d)
 		download=true
 		runall=false
-		echo 'd'
 		;;
 	l)
 		link=true
 		runall=false
-		echo 'l'
 		;;
 	u)
 		unlink=true
 		runall=false
-		echo 'u'
 		;;
 	i)
 		install=true
 		runall=false
-		echo 'i'
-		;;
-	w)
-		wsl=true
-		config_files=$WSL_CONFIG_FILES
-		echo 'w'
 		;;
 	esac
 done
@@ -102,18 +87,6 @@ download_dotfiles_with_git() {
 	cd "${DOTFILES_DIR}"
 }
 
-installTerminalPackages() {
-	sudo pacman -S --needed --confirm - <terminalpackages.txt
-}
-
-installDesktopPackages() {
-	echo 'foo'
-}
-
-installAllPackages() {
-	sudo pacman -S - <pkglist.txt
-}
-
 # Takes a boolean arg. If true, link the files, if false, unlink them.
 link_dotfiles() {
 	echo $1
@@ -124,11 +97,11 @@ link_dotfiles() {
 		return
 	fi
 	# symlink files to the HOME directory.
-	if ! [[ -f "${DOTFILES_DIR}/opt/$config_files" ]]; then
-		echo "no config file ${DOTFILES_DIR}/opt/$config_files"
+	if ! [[ -f "${DOTFILES_DIR}/opt/files" ]]; then
+		echo "no config file ${DOTFILES_DIR}/opt/files"
 	else
 		# Set variable for list of files
-		files="${DOTFILES_DIR}/opt/$config_files"
+		files="${DOTFILES_DIR}/opt/files"
 		# Store IFS separator within a temp variable
 		OIFS=$IFS
 		# Set the separator to a carriage return & a new line break
@@ -193,6 +166,16 @@ link_dotfiles() {
 	fi
 }
 
+install_homebrew() {
+	_process "→ Installing Homebrew"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+
+	_process "→ Running brew doctor"
+	brew doctor
+	[[ $? ]] &&
+		_success "Installed Homebrew"
+}
+
 install_node() {
 	if ! type -P 'npm' &>/dev/null; then
 		_process "→ Installing node"
@@ -206,6 +189,50 @@ install_node() {
 
 install_arch_dependencies() {
 	source installDeps.sh
+}
+
+install_formulae() {
+	if ! type -P 'brew' &>/dev/null; then
+		_error "Homebrew not found"
+	else
+		_process "→ Installing Homebrew packages"
+
+		# Set variable for list of homebrew formulaes
+		brews="${DOTFILES_DIR}/opt/homebrew"
+
+		# Update and upgrade all packages
+		_process "→ Updating and upgrading Homebrew packages"
+		brew update
+		brew upgrade
+
+		# Tap some necessary formulae
+		brew tap homebrew/cask-versions
+		brew tap homebrew/cask-drivers
+		brew tap vitorgalvao/tiny-scripts
+
+		# Store IFS within a temp variable
+		OIFS=$IFS
+
+		# Set the separator to a carriage return & a new line break
+		# read in passed-in file and store as an array
+		IFS=$'\r\n' formulae=($(cat "${brews}"))
+
+		# Loop through split list of formulae
+		_process "→ Checking status of desired Homebrew formulae"
+		for index in ${!formulae[*]}; do
+			# Test whether a Homebrew formula is already installed
+			if ! brew list ${formulae[$index]} &>/dev/null; then
+				brew install ${formulae[$index]}
+			fi
+		done
+
+		# Reset IFS back
+		IFS=$OIFS
+
+		brew cleanup
+
+		[[ $? ]] && _success "All Homebrew packages installed and updated"
+	fi
 }
 
 setup_git_authorship() {
@@ -253,7 +280,7 @@ install() {
 
 	if [ "$download" == true ]; then
 		echo "download dotfiles here"
-		download_dotfiles_with_git
+		# download_dotfiles_with_git
 	fi
 	if [ "$unlink" == true ]; then
 		echo "unlink dotfiles"
@@ -261,7 +288,6 @@ install() {
 	fi
 	if [ "$link" == true ]; then
 		echo "link dotfiles"
-		echo $config_files
 		link_dotfiles true
 	fi
 	if [ "$install" == true ]; then
