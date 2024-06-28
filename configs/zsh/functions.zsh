@@ -52,6 +52,7 @@ function randomString() {
   # echo randomString
 }
 
+# paste for WSL
 function nvimPaste() {
   if command -v win32yank.exe >/dev/null 2>/dev/null; then
     win32yank.exe -o --lf
