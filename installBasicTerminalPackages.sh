@@ -33,6 +33,8 @@ sudo pacman --needed --noconfirm -S tmux
 sudo pacman --needed --noconfirm -S neovim
 # Python 3 plugin support for Neovim
 sudo pacman --needed --noconfirm -S python-neovim
+# Handy for python tkinter UI programming
+sudo pacman --needed --noconfirm -S tk
 # install nodejs np
 sudo pacman --needed --noconfirm -S nodejs npm
 sudo pacman --needed --noconfirm -S lazygit

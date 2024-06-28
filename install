@@ -184,10 +184,10 @@ link_dotfiles() {
 					# first makes more sense, I think.
 					if [ -f ${symLinkFilePath} ]; then
 						_process "→ removing symlink ${symLinkFilePath}"
-						# rm ${symLinkFilePath}
+						rm ${symLinkFilePath}
 					fi
 					_process "→ creating link "${DOTFILES_DIR}/${configFilePath}" "${symLinkFilePath}""
-					# ln -fsnT "${DOTFILES_DIR}/${configFilePath}" "${symLinkFilePath}"
+					ln -fsnT "${DOTFILES_DIR}/${configFilePath}" "${symLinkFilePath}"
 				fi
 			done
 			# set separater back to carriage return & new line break
