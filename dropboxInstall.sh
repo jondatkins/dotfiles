@@ -1,5 +1,6 @@
-# cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
-# wget -O ~/.local/bin/dropbox https://www.dropbox.com/download?dl=packages/dropbox.py
+cd ~ && wget -O - "https://www.dropbox.com/download?plat=lnx.x86_64" | tar xzf -
+~/.dropbox-dist/dropboxd
+wget -O ~/.local/bin/dropbox https://www.dropbox.com/download?dl=packages/dropbox.py
 chmod +x ~/.local/bin/dropbox
 mkdir -p ~/.local/share/systemd/user
 cat >~/.local/share/systemd/user/dropbox.service <<EOF

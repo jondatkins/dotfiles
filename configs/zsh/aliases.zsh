@@ -8,7 +8,6 @@ if [ -x "$(command -v lsd)" ]; then
     alias ll='lsd -l'
     alias la='lsd -la'
 else
-  k
     alias l='ls -la'
     alias ls='ls'
     alias ll='ls -l'
@@ -49,3 +48,4 @@ alias at='alacritty-themes'
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 alias dots="cd $DOTFILES; vim"
+alias lg="lazygit"

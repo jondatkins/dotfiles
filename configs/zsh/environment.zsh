@@ -1,3 +1,4 @@
+#!/bin/sh
 #█▓▒░ clean home
 export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_DATA_HOME="$HOME"/.local/share
@@ -28,6 +29,7 @@ export PATH=$HOME/.local/bin/java/jdk-20.0.1/bin:$PATH
 export PATH=$HOME/.local/bin/gradle/gradle-8.1.1/bin:$PATH
 [ -z ${WSLENV+x} ] || export PATH="${PATH:+"$PATH:"}$HOME/bin/win-bash-xclip-xsel"
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
+export PATH=$HOME/.cargo/bin:$PATH
 #█▓▒░ man
 export MANPAGER='nvim --cmd ":lua vim.g.noplugins=1" +Man!'
 export MANWIDTH=999
@@ -54,8 +56,15 @@ export MOSH_TITLE_NOPREFIX=1
 #█▓▒░ gpg cli in the tty
 GPG_TTY=$(tty)
 export GPG_TTY
-# launch windows chrome from wsl
-# export BROWSER='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' 
 # /usr/lib/jvm/java-22-openjdk/bin/java
 export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+# use IS_WSL variable for Windows Subsystem for Linux
+IS_WSL=false
+if [[ $(grep -i Microsoft /proc/version) ]]; then
+   IS_WSL=true
+fi
+export IS_WSL
 
+# launch windows chrome from wsl
+# export BROWSER='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' 
+$IS_WSL && export BROWSER=wslview || export BROWSER=chrome
