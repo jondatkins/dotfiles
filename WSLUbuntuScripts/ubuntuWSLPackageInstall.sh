@@ -22,3 +22,4 @@ brew install fd
 brew install lsd
 brew install ripgrep
 brew install lazygit
+pip install ruff-lsp
