@@ -1,4 +1,4 @@
-# /home/jon/.config/tmuxinator/work.yml
+# /home/atreyu/.config/tmuxinator/notes.yml
 
 name: notes
 root: ~/Notes/
@@ -53,3 +53,13 @@ windows:
   - misc_stuff:
   - terminal:
       -
+  - editor:
+      layout: tiled
+      # Synchronize all panes of this window, can be enabled before or after the pane commands run.
+      # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
+      # synchronize: after
+      panes:
+        - vim diary.txt todo.txt
+        -
+  - window2:
+  - msc:

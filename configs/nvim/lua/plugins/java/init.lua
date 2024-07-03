@@ -1,3 +1,7 @@
+-- I'm not sure I need this manual config, so disabling for now.
+if true then
+  return {}
+end
 return {
   "nvim-java/nvim-java",
   dependencies = {

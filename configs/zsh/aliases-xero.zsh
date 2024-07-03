@@ -11,7 +11,6 @@ if [ -x "$(command -v lsd)" ]; then
     alias ll='lsd -l'
     alias la='lsd -la'
 else
-  k
     alias l='ls -la'
     alias ls='ls'
     alias ll='ls -l'
