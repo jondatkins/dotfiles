@@ -5,6 +5,7 @@ configs/scripts/kp.sh .local/bin/kp
 configs/scripts/linkDropboxNotes.sh .local/bin/linkDropboxNotes
 configs/scripts/tmux-cht.sh .local/bin/tmux-cht
 configs/scripts/isInstalled.sh .local/bin/isInstalled
+configs/scripts/gitRepoCreate.sh .local/bin/gitRepoCreate
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/zsh .config/zsh

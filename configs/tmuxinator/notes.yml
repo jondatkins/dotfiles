@@ -1,7 +1,7 @@
 # /home/atreyu/.config/tmuxinator/notes.yml
 
 name: notes
-root: ~/
+root: ~/Notes/
 
 # Optional tmux socket
 # socket_name: foo
@@ -51,7 +51,7 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        - vim
+        - vim diary.txt todo.txt
         -
   - window2:
   - msc:
