@@ -37,6 +37,7 @@ sudo pacman --needed --noconfirm -S python-neovim
 sudo pacman --needed --noconfirm -S tk
 # install nodejs np
 sudo pacman --needed --noconfirm -S nodejs npm
+
 sudo pacman --needed --noconfirm -S lazygit
 cd ~
 chsh -l

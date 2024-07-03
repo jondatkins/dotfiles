@@ -31,7 +31,7 @@ fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+$IS_PACMAN || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 $IS_PACMAN || source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 $IS_PACMAN || source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
@@ -39,4 +39,4 @@ $IS_PACMAN || source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggesti
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-source $HOME/.cargo/env
+$IS_PACMAN || source $HOME/.cargo/env
