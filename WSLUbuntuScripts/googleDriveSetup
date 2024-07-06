@@ -1,0 +1,6 @@
+
+install: creating directory '/opt/google/drive'
+'opt/google/drive/drive' -> '/opt/google/drive/drive'
+'opt/google/drive/libfuse.so' -> '/opt/google/drive/libfuse.so'
+'mount-drive' -> '/usr/bin/mount-drive'
+'umount-drive' -> '/usr/bin/umount-drive'

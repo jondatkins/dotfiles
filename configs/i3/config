@@ -39,7 +39,7 @@ bindsym $mod+Ctrl+l exec "/home/$USER/.config/scripts/lock"
 # I now have as systemd service which should lock the screen with my lock script prior to sleep. suspend or hibernate
 bindsym $mod+Ctrl+s exec --no-startup-id "systemctl suspend"
 
-bindsym $mod+Ctrl+h exec --no-startup-id "systemctl hibernate"
+# bindsym $mod+Ctrl+h exec --no-startup-id "systemctl hibernate"
 
 bindsym $mod+Ctrl+u exec --no-startup-id "systemctl reboot"
 
@@ -82,12 +82,7 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id dmenu_run
 # bindsym $mod+d exec --no-startup-id -show drun
 # A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+space exec --no-startup-id rofi -show drun
-# bindsym $mod+d exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
-# bindsym $mod+p exec --no-startup-id rofi -show power-menu -modi power-menu:rofi-power-menu
-# bindsym $mod+p exec --no-startup-id ~/.config/rofi/powermenu/type-2/powermenu.sh
 bindsym $mod+p exec --no-startup-id powermenu
 bindsym $mod+Ctrl+w exec --no-startup-id wifi
 bindsym $mod+x exec --no-startup-id switchWorkspace
@@ -95,7 +90,7 @@ bindsym $mod+Ctrl+e exec --no-startup-id rofi -show emoji
 bindsym $mod+c exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort 
 # There also is i3-dmenu-desktop which only displays applications shipping a
 # .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-deskto
+# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+h focus left
@@ -122,10 +117,10 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation, using 'b' because it's next to 'v'
-bindsym $mod+Ctrl+b split h
+bindsym $mod+b split h
 
 # split in vertical orientation
-bindsym $mod+Ctrl+v split v
+bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -149,21 +144,22 @@ bindsym $mod+a focus parent
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws1 "1:   Krita"
+set $ws1 "1:   Terminal"
 set $ws2 "2:   WorkWeb"
-set $ws3 "3:   Terminal"
-set $ws4 "4:   GenWeb"
-set $ws5 "5:   Music"
-set $ws6 "6"
-set $ws7 "7"
+set $ws3 "3:   GenWeb"
+set $ws4 "4:   Krita"
+set $ws5 "5:   Gimp"
+set $ws6 "6:   Music"
+set $ws7 "7:   Files"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
 # Allocate applications to workspaces. Use 'xprop' to find class names
-for_window [class="krita"] move to workspace $ws1
-for_window [class="google-chrome"] move to workspace $ws2
 for_window [class="Alacritty"] move to workspace $ws1
+for_window [class="google-chrome"] move to workspace $ws2
+for_window [class="krita"] move to workspace $ws4
+for_window [class="gimp"] move to workspace $ws5
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -224,29 +220,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-
-# class                 border  backgr. text    indicator child_border
-# client.focused          #d65d0e #d65d0e #fbf1c7 #d65d0e   #d65d0e
-# client.focused_inactive #282828 #282828 #fbf1c7 #282828   #282828
-# client.unfocused        #282828 #282828 #fbf1c7 #282828   #282828
-# client.urgent           #2f343a #900000 #ffffff #900000   #900000
-# client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
-#
-# client.background       #ffffff
-
-# Color shemes for windows 
-# set $bgcolor    #523d64
-# set $in-bgcolor #363636
-# set $text       #ffffff
-# set $u-bgcolor  #ff0000
-# set $indicator  #a8a3c1
-# set $in-text    #969696
-#                       border          background      text            indicator (a line which shows where the next window will be placed)     
-# client.focused          $bgcolor        $bgcolor        $text           $indicator
-# client.unfocused        $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
-# client.focused_inactive $in-bgcolor     $in-bgcolor     $in-text        $in-bgcolor
-# client.urgent           $u-bgcolor      $u-bgcolor      $text           $u-bgcolor 
-
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -267,7 +240,8 @@ exec_always xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --ti
 exec_always udiskie
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always dropbox
-
+# mount google drive
+exec_always mount-drive /usr/bin/mount-drive
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd
 set $pink      #f5c2e7
