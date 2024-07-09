@@ -30,3 +30,4 @@ bash -c "$(curl -#fL raw.github.com/[ yourGitUsername ]/dotfiles-starter-kit/mai
 
 https://freddiecarthy.com/blog/make-your-dotfiles-portable-with-git-and-a-simple-bash-script
 # Python Projects
+# Python Projects
