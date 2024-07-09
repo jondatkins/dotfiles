@@ -48,8 +48,8 @@ windows:
   - notes:
       layout: tiled
       panes:
-        - vim ~/Notes/diary.txt
-        - vim ~/Notes/archDesktopSetupNotes.txt
+        -
+        -
   - misc_stuff:
   - terminal:
       -

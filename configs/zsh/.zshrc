@@ -21,13 +21,20 @@ fi
 # Only run powerline if there is a config for it.
 if [[ -f $HOME/.config/zsh/p10k.zsh ]]
 then
-  # source $HOME/.config/zsh/p10k2.zsh
-  $IS_PACMAN && source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
-  $IS_PACMAN || source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+  source $HOME/.config/zsh/p10k.zsh
 else
   echo "No file at $HOME/.config/zsh/p10k2.zsh"
 fi
 
+if [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]
+then
+  source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+fi
+
+if [ -f $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme ]
+then
+  source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations

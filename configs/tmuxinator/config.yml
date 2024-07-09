@@ -1,7 +1,7 @@
 # /home/atreyu/.config/tmuxinator/config.yml
 
 name: config
-root: ~/
+root: ~/dotfiles
 
 # Optional tmux socket
 # socket_name: foo
