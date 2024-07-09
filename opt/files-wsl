@@ -1,12 +1,6 @@
 configs/git .config/git
 configs/nvim .config/nvim
 configs/ranger .config/ranger
-configs/scripts/kp.sh .local/bin/kp
-configs/scripts/linkDropboxNotes.sh .local/bin/linkDropboxNotes
-configs/scripts/tmux-cht.sh .local/bin/tmux-cht
-configs/scripts/isInstalled.sh .local/bin/isInstalled
-configs/scripts/gitRepoCreate.sh .local/bin/gitRepoCreate
-configs/scripts/newNote.sh .local/bin/newNote
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/zsh .config/zsh

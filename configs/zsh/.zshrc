@@ -5,7 +5,7 @@ zle_highlight=('paste:none')
 
 # source all .zsh config
 for config (~/.config/zsh/*.zsh) source $config
-# for scripts (~/dotfiles/configs/scripts/*.sh) source $scripts
+#for scripts (~/dotfiles/configs/scripts/*.sh) source $scripts
 # if [[ -d ]]
 eval "$(zoxide init zsh)"
 
