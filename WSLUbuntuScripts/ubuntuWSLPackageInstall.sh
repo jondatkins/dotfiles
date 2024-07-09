@@ -26,3 +26,4 @@ pip install ruff-lsp
 git clone https://github.com/PKD667/google-drive-linux.git
 cd google-drive-linux
 sudo sh install.sh
+sudo apt install snapd -y
