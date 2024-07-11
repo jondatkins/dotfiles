@@ -152,8 +152,8 @@ set $ws10 "10"
 # Allocate applications to workspaces. Use 'xprop' to find class names
 for_window [class="Alacritty"] move to workspace $ws1
 for_window [class="google-chrome"] move to workspace $ws2
-for_window [class="krita"] move to workspace $ws4
-for_window [class="gimp"] move to workspace $ws5
+# for_window [class="krita"] move to workspace $ws4
+# for_window [class="gimp"] move to workspace $ws5
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
