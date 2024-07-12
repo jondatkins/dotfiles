@@ -4,8 +4,8 @@
 # if "test ! -d ~/.tmux/plugins/tpm" \
 #    "run 'git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins'"
 if [ ! -d "~/.tmux/plugins/tpm" ]; then
-	echo "tpm is installed"
+  echo "tpm is installed"
 else
-	echo "installing tpm"
-	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
+  echo "installing tpm"
+  # git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm && ~/.tmux/plugins/tpm/bin/install_plugins
 fi
