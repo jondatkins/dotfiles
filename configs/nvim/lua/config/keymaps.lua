@@ -5,6 +5,7 @@ local opts = { noremap = true, silent = true }
 -- Add any additional keymaps here
 vim.keymap.set("n", "<F5>", ":pu=strftime('%c')<CR>", { noremap = true, silent = true, desc = "Add Date" })
 vim.keymap.set("i", "<F5>", "<C-R>=strftime('%c')<CR>", { noremap = true, silent = true, desc = "Add Date" })
+vim.keymap.set("n", "<Leader>dd", ":pu=strftime('%c')<CR>", { noremap = true, silent = true, desc = "Add Date" })
 -- map("n", "src", ":so %<CR>", { noremap = true, silent = false, desc = "Source File" })
 vim.keymap.set("n", "<Leader>sv", ":source $MYVIMRC<CR>", { noremap = true, silent = false, desc = "Source File" })
 vim.keymap.set("n", "<Leader>fx", ":!chmod +x %<CR>", { noremap = true, silent = false, desc = "Make file executable" })
