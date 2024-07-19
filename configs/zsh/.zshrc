@@ -30,17 +30,17 @@ if [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]
 then
   source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 fi
-
-if [ -f $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme ]
+# /home/linuxbrew/.linuxbrew
+if [ -f /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme ]
 then
-  source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme
+  source /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations
 $IS_PACMAN || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-$IS_PACMAN || source $(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-$IS_PACMAN || source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+$IS_PACMAN || source /home/linuxbrew.linuxbre/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+$IS_PACMAN || source /home/linuxbrew.linuxbre/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # pacman installs zsh plugins in /usr/share, so on arch source these files
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
