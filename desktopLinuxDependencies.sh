@@ -59,7 +59,8 @@ sudo pacman -S --needed --noconfirm xautolock
 yay -S i3lock-color
 
 sudo pacman -S --needed --noconfirm xss-lock
-sudo pacman -S --needed --noconfirm krita
+# sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
+yay -S --needed --noconfirm appimagelauncher
 sudo pacman -S --needed --noconfirm gimp
 sudo pacman -S --needed --noconfirm alacritty
 sudo pacman -S --needed --noconfirm usbutils
