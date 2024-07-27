@@ -39,8 +39,8 @@ fi
 
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations
 $IS_PACMAN || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-$IS_PACMAN || source /home/linuxbrew.linuxbre/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-$IS_PACMAN || source /home/linuxbrew.linuxbre/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+$IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+$IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # pacman installs zsh plugins in /usr/share, so on arch source these files
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
