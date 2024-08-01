@@ -13,3 +13,5 @@ vim.keymap.set("n", "<Leader>fx", ":!chmod +x %<CR>", { noremap = true, silent =
 -- Press jk fast to exit insert mode
 vim.keymap.set("i", "jk", "<ESC>", opts)
 vim.keymap.set("i", "kj", "<ESC>", opts)
+-- vim.keymap.set("<Leader>p", '"_dP', opts)
+vim.keymap.set("v", "Leader<p>", '"_dP')
