@@ -30,6 +30,7 @@ alias beep='echo -e "\a"'
 alias dev='printf "%s\n" "${dev_commands[@]}" | fzf --height 20% --header Commands | xargs bash'
 alias example='f() { echo Your arg was $1. };f'
 alias python=/usr/bin/python3
+alias py=/usr/bin/python3
 alias lastFile='ls -t | head -n1'
 alias nrun='npm run dev'
 alias gs='git status'
