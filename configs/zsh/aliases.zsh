@@ -19,7 +19,7 @@ alias clr='clear'
 # aliases from Elijah Manor's dotfiles
 alias weather="curl -4 wttr.in/derby"
 alias vim="nvim"
-alias diary="vim ~/diary.txt"
+alias vi="nvim"
 # alias vimrcs="source ~/.config/nvim/init.lua"
 # alias tmuxrc="vim ${DOTFILES}/tmux/.config/tmux/tmux.conf"
 alias tmuxrcs="tmux source-file ${DOTFILES}/configs/tmux/tmux.conf"

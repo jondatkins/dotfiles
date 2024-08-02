@@ -54,7 +54,8 @@ sudo pacman --needed --noconfirm -S zsh-autosuggestions             # Enable aut
 sudo pacman --needed --noconfirm -S zsh-syntax-highlighting
 # Some extras from :
 sudo pacman --needed --noconfirm -S zoxide
-sudo pacman --needed --noconfirm -S mc ranger           # A couple of command-line file explorers. Try them out.
+sudo pacman --needed --noconfirm -S mc ranger # A couple of command-line file explorers. Try them out.
+yay -S --needed --noconfirm yazi
 sudo pacman --needed --noconfirm -S ueberzug            # View images in Ranger. More than likely, animated GIFs won't work. Also, it won't work if tmux is using a split window. Still worth installing.
 sudo pacman --needed --noconfirm -S atool               # Add this for previews in archive files.
 sudo pacman --needed --noconfirm -S highlight           # Enable code syntax highlighting when viewing source code files.
