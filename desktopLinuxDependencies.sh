@@ -80,6 +80,7 @@ sudo pacman -S --needed --noconfirm steam xf86-video-nouveau pulseaudio-alsa # Y
 sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm dunst                                    # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm adwaita-icon-theme                       # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm arc-gtk-theme                            # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm xrdp
 sudo pacman -S --needed --noconfirm alsa-utils # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm pamixer

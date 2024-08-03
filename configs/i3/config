@@ -43,6 +43,11 @@ bindsym $mod+Ctrl+s exec --no-startup-id "systemctl suspend"
 
 bindsym $mod+Ctrl+u exec --no-startup-id "systemctl reboot"
 
+bindsym $mod+Ctrl+space exec --no-startup-id "dunstctl close"
+bindsym $mod+Ctrl+shift+space exec --no-startup-id "dunstctl close-all"
+bindsym $mod+Ctrl+shift+period exec --no-startup-id "dunstctl context"
+bindsym $mod+Ctrl+p exec --no-startup-id "dunstctl history-pop"
+
 # shutdown / restart / suspend...
 # set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
 
