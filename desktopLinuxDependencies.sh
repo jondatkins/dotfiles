@@ -61,7 +61,7 @@ yay -S i3lock-color
 sudo pacman -S --needed --noconfirm xss-lock
 # sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
 yay -S --needed --noconfirm appimagelauncher
-sudo pacman -S --needed --noconfirm gimp
+sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
 sudo pacman -S --needed --noconfirm alacritty
 sudo pacman -S --needed --noconfirm usbutils
 sudo pacman -S --needed --noconfirm xf86-input-wacom
@@ -85,3 +85,4 @@ yay -S --needed --noconfirm xrdp
 sudo pacman -S --needed --noconfirm alsa-utils # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm pamixer
 yay -S --needed --noconfirm pulseaudio-control
+yay -S --needed --noconfirm appimagelauncher

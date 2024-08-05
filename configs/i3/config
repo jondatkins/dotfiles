@@ -30,11 +30,11 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id xss-lock -l -- "/home/$USER/.config/scripts/lock" -n
+# exec --no-startup-id xss-lock -l -- "/home/$USER/.config/scripts/lock" -n
 # bindsym $mod+Control+l exec i3lock
 
 # Shortcut for Lockscreen
-bindsym $mod+Ctrl+l exec "/home/$USER/.config/scripts/lock"
+bindsym $mod+Ctrl+l exec "lock"
 
 # I now have as systemd service which should lock the screen with my lock script prior to sleep. suspend or hibernate
 bindsym $mod+Ctrl+s exec --no-startup-id "systemctl suspend"
