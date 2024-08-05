@@ -31,7 +31,7 @@ sudo pacman -S --needed --noconfirm pavucontrol
 sudo pacman -S --needed --noconfirm feh
 yay -S --needed --noconfirm qimgv
 sudo pacman -S --needed --noconfirm xclip
-sudo pacman -S --needed --noconfirm nvidia nvidia-utils
+sudo pacman -S --needed --noconfirm nvidia nvidia-utils nvidia-settings
 sudo pacman -S --needed --noconfirm thunar
 sudo pacman -S --needed --noconfirm thunar-volman
 sudo pacman -S --needed --noconfirm udiskie

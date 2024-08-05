@@ -89,3 +89,4 @@ sudo pacman --needed --noconfirm -S amd-ucode
 sudo grub-mkconfig -o /boot/grub/grub.cfg
 yay -S preload
 sudo systemctl enable preload && sudo systemctl start preload
+sudo pacman --needed --noconfirm -S pacman-contrib

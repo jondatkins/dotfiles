@@ -244,7 +244,9 @@ exec_always udiskie
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always dropbox
 # mount google drive
-exec_always mount-drive /usr/bin/mount-drive
+# exec_always mount-drive /usr/bin/mount-drive
+# exec_always nvidia-settings --load-config-only
+
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd
 set $pink      #f5c2e7
