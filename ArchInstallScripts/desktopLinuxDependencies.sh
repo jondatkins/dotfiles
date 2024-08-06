@@ -3,7 +3,7 @@
 sudo pacman -S --needed --noconfirm xorg
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm
-yay -S lightdm-webkit2-theme-glorious
+yay -S --needed --noconfirm lightdm-webkit2-theme-glorious
 # Set default lightdm greeter to lightdm-webkit2-greeter
 sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
 # Set default lightdm-webkit2-greeter theme to Glorious
@@ -26,7 +26,7 @@ cd ~
 sudo pacman -S amd-ucode
 sudo pacman -S --needed --noconfirm i3
 sudo pacman -S --needed --noconfirm xorg-xrandr
-sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
+# sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
 sudo pacman -S --needed --noconfirm pavucontrol
 sudo pacman -S --needed --noconfirm feh
 yay -S --needed --noconfirm qimgv
@@ -46,17 +46,18 @@ sudo pacman -S --needed --noconfirm ttf-ubuntu-font-family
 sudo pacman -S --needed --noconfirm ttf-roboto-mono-nerd
 sudo pacman -S --needed --noconfirm ttf-ubuntu-mono-nerd
 yay -S --needed --noconfirm ttf-meslo-nerd
-git clone https://github.com/erikflowers/weather-icons
-cd weather-icons
-cp font/* ~/.fonts
-cd
+yay -S --needed --noconfirm ttf-weather-icons
+# git clone https://github.com/erikflowers/weather-icons
+# cd weather-icons
+# cp font/* ~/.fonts
+# cd
 # fonts end
 sudo pacman -S --needed --noconfirm picom
 sudo pacman -S --needed --noconfirm rofi
 sudo pacman -S --needed --noconfirm rofi-emoji
 sudo pacman -S --needed --noconfirm rofi-calc
 sudo pacman -S --needed --noconfirm xautolock
-yay -S i3lock-color
+yay -S --needed --noconfirm i3lock-color
 
 sudo pacman -S --needed --noconfirm xss-lock
 # sudo pacman -S --needed --noconfirm krita krita-plugin-gmic

@@ -88,9 +88,9 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id -show drun
 # A more modern dmenu replacement is rofi:
 bindsym $mod+space exec --no-startup-id rofi -show drun
-bindsym $mod+p exec --no-startup-id powermenu
+bindsym $mod+p exec --no-startup-id powermenu.sh
 bindsym $mod+Ctrl+w exec --no-startup-id wifi
-bindsym $mod+x exec --no-startup-id switchWorkspace
+bindsym $mod+x exec --no-startup-id switchWorkspace.sh
 bindsym $mod+Ctrl+e exec --no-startup-id rofi -show emoji
 bindsym $mod+c exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort 
 # There also is i3-dmenu-desktop which only displays applications shipping a
