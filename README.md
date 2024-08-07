@@ -29,14 +29,3 @@ bash -c "$(curl -#fL raw.github.com/[ yourGitUsername ]/dotfiles-starter-kit/mai
 ### This is based on the tutorial at :
 
 https://freddiecarthy.com/blog/make-your-dotfiles-portable-with-git-and-a-simple-bash-script
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
-# Python Projects
