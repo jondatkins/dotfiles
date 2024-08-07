@@ -79,6 +79,7 @@ for_window [window_role="task_dialog"] floating enable
 
 # start a terminal
 bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec kitty -e tmux
 
 # kill focused window
 bindsym $mod+q kill
@@ -242,7 +243,7 @@ exec_always xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --ti
 # exec locker
 exec_always udiskie
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always dropbox
+exec dropbox
 # mount google drive
 # exec_always mount-drive /usr/bin/mount-drive
 # exec_always nvidia-settings --load-config-only

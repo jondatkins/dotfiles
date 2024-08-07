@@ -87,3 +87,4 @@ sudo pacman -S --needed --noconfirm alsa-utils # You have to edit /etc/pacman.co
 yay -S --needed --noconfirm pamixer
 yay -S --needed --noconfirm pulseaudio-control
 yay -S --needed --noconfirm appimagelauncher
+yay -S --needed --noconfirm downgrade
