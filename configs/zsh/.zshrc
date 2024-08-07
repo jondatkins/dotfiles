@@ -12,10 +12,10 @@ eval "$(zoxide init zsh)"
 if [[ -d /usr/share/zsh/plugins ]]
 then
   IS_PACMAN=true
-  echo 'is pacmam is '$IS_PACMAN
+  # echo 'is pacmam is '$IS_PACMAN
 else
   IS_PACMAN=false
-  echo 'is pacmam is '$IS_PACMAN
+  # echo 'is pacmam is '$IS_PACMAN
 fi
 
 # Only run powerline if there is a config for it.
