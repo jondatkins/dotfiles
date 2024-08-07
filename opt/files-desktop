@@ -1,4 +1,5 @@
 configs/alacritty .config/alacritty
+configs/kitty .config/kitty
 configs/bashmount .config/bashmount
 configs/cava .config/cava
 configs/dunst .config/dunst

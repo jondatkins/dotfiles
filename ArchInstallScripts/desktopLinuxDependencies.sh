@@ -3,7 +3,7 @@
 sudo pacman -S --needed --noconfirm xorg
 sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 sudo systemctl enable lightdm
-yay -S lightdm-webkit2-theme-glorious
+yay -S --needed --noconfirm lightdm-webkit2-theme-glorious
 # Set default lightdm greeter to lightdm-webkit2-greeter
 sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
 # Set default lightdm-webkit2-greeter theme to Glorious
@@ -26,12 +26,12 @@ cd ~
 sudo pacman -S amd-ucode
 sudo pacman -S --needed --noconfirm i3
 sudo pacman -S --needed --noconfirm xorg-xrandr
-sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
+# sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
 sudo pacman -S --needed --noconfirm pavucontrol
 sudo pacman -S --needed --noconfirm feh
 yay -S --needed --noconfirm qimgv
 sudo pacman -S --needed --noconfirm xclip
-sudo pacman -S --needed --noconfirm nvidia nvidia-utils
+sudo pacman -S --needed --noconfirm nvidia nvidia-utils nvidia-settings
 sudo pacman -S --needed --noconfirm thunar
 sudo pacman -S --needed --noconfirm thunar-volman
 sudo pacman -S --needed --noconfirm udiskie
@@ -46,22 +46,23 @@ sudo pacman -S --needed --noconfirm ttf-ubuntu-font-family
 sudo pacman -S --needed --noconfirm ttf-roboto-mono-nerd
 sudo pacman -S --needed --noconfirm ttf-ubuntu-mono-nerd
 yay -S --needed --noconfirm ttf-meslo-nerd
-git clone https://github.com/erikflowers/weather-icons
-cd weather-icons
-cp font/* ~/.fonts
-cd
+yay -S --needed --noconfirm ttf-weather-icons
+# git clone https://github.com/erikflowers/weather-icons
+# cd weather-icons
+# cp font/* ~/.fonts
+# cd
 # fonts end
 sudo pacman -S --needed --noconfirm picom
 sudo pacman -S --needed --noconfirm rofi
 sudo pacman -S --needed --noconfirm rofi-emoji
 sudo pacman -S --needed --noconfirm rofi-calc
 sudo pacman -S --needed --noconfirm xautolock
-yay -S i3lock-color
+yay -S --needed --noconfirm i3lock-color
 
 sudo pacman -S --needed --noconfirm xss-lock
 # sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
 yay -S --needed --noconfirm appimagelauncher
-sudo pacman -S --needed --noconfirm gimp
+sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
 sudo pacman -S --needed --noconfirm alacritty
 sudo pacman -S --needed --noconfirm usbutils
 sudo pacman -S --needed --noconfirm xf86-input-wacom
@@ -80,7 +81,10 @@ sudo pacman -S --needed --noconfirm steam xf86-video-nouveau pulseaudio-alsa # Y
 sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm dunst                                    # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm adwaita-icon-theme                       # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm arc-gtk-theme                            # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm xrdp
 sudo pacman -S --needed --noconfirm alsa-utils # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm pamixer
 yay -S --needed --noconfirm pulseaudio-control
+yay -S --needed --noconfirm appimagelauncher
+yay -S --needed --noconfirm downgrade

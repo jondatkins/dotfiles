@@ -19,7 +19,7 @@ alias clr='clear'
 # aliases from Elijah Manor's dotfiles
 alias weather="curl -4 wttr.in/derby"
 alias vim="nvim"
-alias diary="vim ~/diary.txt"
+alias vi="nvim"
 # alias vimrcs="source ~/.config/nvim/init.lua"
 # alias tmuxrc="vim ${DOTFILES}/tmux/.config/tmux/tmux.conf"
 alias tmuxrcs="tmux source-file ${DOTFILES}/configs/tmux/tmux.conf"
@@ -30,6 +30,7 @@ alias beep='echo -e "\a"'
 alias dev='printf "%s\n" "${dev_commands[@]}" | fzf --height 20% --header Commands | xargs bash'
 alias example='f() { echo Your arg was $1. };f'
 alias python=/usr/bin/python3
+alias py=/usr/bin/python3
 alias lastFile='ls -t | head -n1'
 alias nrun='npm run dev'
 alias gs='git status'

@@ -18,13 +18,14 @@ return {
   },
   opts = {
     workspaces = {
-      {
-        name = "personal",
-        path = "~/vaults/personal",
-      },
+      -- {
+      --   name = "personal",
+      --   path = "~/vaults/personal",
+      -- },
       {
         name = "work",
-        path = "~/vaults/work",
+        -- N.B. On windows / WSL this won't work. So move the obsidian vault on windows, or use a sym lin
+        path = "~/Dropbox/obsidian/obsidian/",
       },
     },
 

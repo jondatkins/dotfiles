@@ -52,19 +52,20 @@ get_duration() {
 
 }
 
-KEY=${WEATHER_MAP_KEY}
-# echo $WEATHER_MAP_KEY
-CITY="Derby,UK"
+KEY="2f9ecb26fe42e96f8fd6b9011f64ade3"
+CITY="DERBY"
 UNITS="metric"
 SYMBOL="°"
 
 API="https://api.openweathermap.org/data/2.5"
+
 if [ -n "$CITY" ]; then
 	if [ "$CITY" -eq "$CITY" ] 2>/dev/null; then
 		CITY_PARAM="id=$CITY"
 	else
 		CITY_PARAM="q=$CITY"
 	fi
+
 	current=$(curl -sf "$API/weather?appid=$KEY&$CITY_PARAM&units=$UNITS")
 	forecast=$(curl -sf "$API/forecast?appid=$KEY&$CITY_PARAM&units=$UNITS&cnt=1")
 else

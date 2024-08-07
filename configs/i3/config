@@ -30,11 +30,11 @@ exec --no-startup-id dex --autostart --environment i3
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 # exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec --no-startup-id xss-lock -l -- "/home/$USER/.config/scripts/lock" -n
+# exec --no-startup-id xss-lock -l -- "/home/$USER/.config/scripts/lock" -n
 # bindsym $mod+Control+l exec i3lock
 
 # Shortcut for Lockscreen
-bindsym $mod+Ctrl+l exec "/home/$USER/.config/scripts/lock"
+bindsym $mod+Ctrl+l exec "lock"
 
 # I now have as systemd service which should lock the screen with my lock script prior to sleep. suspend or hibernate
 bindsym $mod+Ctrl+s exec --no-startup-id "systemctl suspend"
@@ -42,6 +42,11 @@ bindsym $mod+Ctrl+s exec --no-startup-id "systemctl suspend"
 # bindsym $mod+Ctrl+h exec --no-startup-id "systemctl hibernate"
 
 bindsym $mod+Ctrl+u exec --no-startup-id "systemctl reboot"
+
+bindsym $mod+Ctrl+space exec --no-startup-id "dunstctl close"
+bindsym $mod+Ctrl+shift+space exec --no-startup-id "dunstctl close-all"
+bindsym $mod+Ctrl+shift+period exec --no-startup-id "dunstctl context"
+bindsym $mod+Ctrl+p exec --no-startup-id "dunstctl history-pop"
 
 # shutdown / restart / suspend...
 # set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
@@ -73,7 +78,8 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty
+# bindsym $mod+Return exec kitty -e tmux
 
 # kill focused window
 bindsym $mod+q kill
@@ -83,9 +89,9 @@ bindsym $mod+q kill
 # bindsym $mod+d exec --no-startup-id -show drun
 # A more modern dmenu replacement is rofi:
 bindsym $mod+space exec --no-startup-id rofi -show drun
-bindsym $mod+p exec --no-startup-id powermenu
+bindsym $mod+p exec --no-startup-id powermenu.sh
 bindsym $mod+Ctrl+w exec --no-startup-id wifi
-bindsym $mod+x exec --no-startup-id switchWorkspace
+bindsym $mod+x exec --no-startup-id switchWorkspace.sh
 bindsym $mod+Ctrl+e exec --no-startup-id rofi -show emoji
 bindsym $mod+c exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort 
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -179,7 +185,9 @@ bindsym $mod+Shift+5 move container to workspace number $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
+# move focused window between monitors
+bindsym $mod+Shift+greater move container to output right
+bindsym $mod+Shift+less move container to output leftindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
@@ -235,9 +243,11 @@ exec_always xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --ti
 # exec locker
 exec_always udiskie
 exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec_always dropbox
+exec dropbox
 # mount google drive
-exec_always mount-drive /usr/bin/mount-drive
+# exec_always mount-drive /usr/bin/mount-drive
+# exec_always nvidia-settings --load-config-only
+
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd
 set $pink      #f5c2e7
