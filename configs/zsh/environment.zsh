@@ -69,3 +69,5 @@ export IS_WSL
 # launch windows chrome from wsl
 # export BROWSER='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' 
 $IS_WSL && export BROWSER=wslview || export BROWSER=chrome
+
+export NVM_DIR=~/.nvm
