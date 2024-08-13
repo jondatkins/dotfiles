@@ -51,5 +51,5 @@ $IS_PACMAN || source $HOME/.cargo/env
 # Start tmux when I open my terminal, as described here https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   # exec tmux
-  exec t
+  # exec t
 fi

@@ -1,7 +1,7 @@
 # /home/jon/.config/tmuxinator/work.yml
 
 name: python
-root: ~/Projects/Python/
+root: ~/Projects/python_projects/
 
 # Optional tmux socket
 # socket_name: foo
