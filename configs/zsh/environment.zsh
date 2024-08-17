@@ -70,4 +70,4 @@ export IS_WSL
 # export BROWSER='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' 
 $IS_WSL && export BROWSER=wslview || export BROWSER=chrome
 
-export NVM_DIR=~/.nvm
+export NVM_DIR=~/.config/nvm
