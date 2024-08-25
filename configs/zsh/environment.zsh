@@ -70,10 +70,6 @@ export IS_WSL
 # export BROWSER='/mnt/c/Program Files (x86)/Google/Chrome/Application/chrome.exe' 
 $IS_WSL && export BROWSER=wslview || export BROWSER=chrome
 
-<<<<<<< HEAD
 export NVM_DIR=~/.config/nvm
-=======
-export NVM_DIR=~/.nvm
 export W3M_DIR=~/dotfiles/configs/w3m
 export LYNX_CFG=~/dotfiles/configs/lynx/lynx.cfg
->>>>>>> 37aec61 (Adding config for terminal browsers, some related configchanges, moving the nvidia script to the arch install dir.)
