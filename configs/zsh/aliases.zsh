@@ -53,3 +53,4 @@ alias paste='xsel --clipboard --output'
 alias copypath='pwd|xsel --clipboard --input'
 alias dots="cd $DOTFILES; vim"
 alias lg="lazygit"
+alias lynx="lynx -vikeys -accept-all-cookies"

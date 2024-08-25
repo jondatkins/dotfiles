@@ -61,7 +61,8 @@ sudo pacman --needed --noconfirm -S python-chardet
 sudo pacman --needed --noconfirm -S perl-image-exiftool
 # Provide previews of HTML and Image
 sudo pacman --needed --noconfirm -S w3m
-# Provide previews of HTML and Images
+# funky terminal browser, like w3m.
+sudo pacman --needed --noconfirm -S lynx
 sudo pacman --needed --noconfirm -S mpv
 # Designed for previewing videos, but should work for images too
 sudo pacman --needed --noconfirm -S ffmpegthumbnailer

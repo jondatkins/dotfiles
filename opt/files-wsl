@@ -5,3 +5,4 @@ configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/zsh .config/zsh
 configs/.zshenv .zshenv
+configs/w3m .config/w3m
