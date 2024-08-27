@@ -48,8 +48,8 @@ windows:
   - coding:
       layout: acd0,136x33,0,0[136x22,0,0,9,136x10,0,23,14]
       panes:
-        - vim .
-        - cd ~/Projects/Python/
+        - vim ~/Projects/Python/automate/README.md
+        - cd ~/Projects/Python/automate
   - python_notes:
       layout: tiled
       panes:
