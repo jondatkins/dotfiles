@@ -50,6 +50,7 @@ windows:
       panes:
         - vim ~/Projects/Python/automate/README.md
         - cd ~/Projects/Python/automate
+        -
   - python_notes:
       layout: tiled
       panes:

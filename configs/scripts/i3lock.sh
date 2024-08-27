@@ -11,6 +11,12 @@ i3lock \
   --ignore-empty-password \
   --radius 200 \
   --ring-width 19.0 \
+  --time-size 70 \
+  --date-size 20 \
+  --show-failed-attempts \
+  --custom-key-commands \
+  --pass-power-keys \
+  --cmd-power-sleep - XF86Sleep \
   --insidever-color=$CLEAR \
   --ringver-color=$VERIFYING \
   \
