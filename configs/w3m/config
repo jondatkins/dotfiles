@@ -1,5 +1,6 @@
 #Auto preview link url
 display_link 1
+display_link_numbers
 # Ascii entity renderings
 graphic_char 2
 # no images
