@@ -71,3 +71,5 @@ export IS_WSL
 $IS_WSL && export BROWSER=wslview || export BROWSER=chrome
 
 export NVM_DIR=~/.config/nvm
+export W3M_DIR=~/dotfiles/configs/w3m
+export LYNX_CFG=~/dotfiles/configs/lynx/lynx.cfg

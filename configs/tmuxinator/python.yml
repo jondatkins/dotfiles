@@ -1,7 +1,7 @@
 # /home/jon/.config/tmuxinator/work.yml
 
 name: python
-root: ~/Projects/python_projects/
+root: ~/Projects/Python/
 
 # Optional tmux socket
 # socket_name: foo
@@ -48,8 +48,9 @@ windows:
   - coding:
       layout: acd0,136x33,0,0[136x22,0,0,9,136x10,0,23,14]
       panes:
-        - vim ~/Projects/python_projects/
-        - cd ~/Projects/python_projects/
+        - vim ~/Projects/Python/automate/README.md
+        - cd ~/Projects/Python/automate
+        -
   - python_notes:
       layout: tiled
       panes:

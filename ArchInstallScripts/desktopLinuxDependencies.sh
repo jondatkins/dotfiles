@@ -47,6 +47,7 @@ sudo pacman -S --needed --noconfirm ttf-roboto-mono-nerd
 sudo pacman -S --needed --noconfirm ttf-ubuntu-mono-nerd
 yay -S --needed --noconfirm ttf-meslo-nerd
 yay -S --needed --noconfirm ttf-weather-icons
+yay -S --needed --noconfirm font-manager
 # git clone https://github.com/erikflowers/weather-icons
 # cd weather-icons
 # cp font/* ~/.fonts

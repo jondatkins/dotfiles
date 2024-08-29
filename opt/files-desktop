@@ -1,3 +1,4 @@
+configs/.xinitrc .config/.xinitrc
 configs/alacritty .config/alacritty
 configs/kitty .config/kitty
 configs/bashmount .config/bashmount
