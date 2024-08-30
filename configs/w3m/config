@@ -20,3 +20,5 @@ accept_cookie 1
 accept_bad_cookie 0
 cookie_reject_domains 
 cookie_accept_domains
+setenv SEARCH_ENGINE 'https://duckduckgo.com/?q=%s'
+num 1
