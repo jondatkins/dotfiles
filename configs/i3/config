@@ -138,8 +138,21 @@ bindsym $mod+Shift+space floating toggle
 bindsym $mod+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+bindsym $mod+d focus child
 
+# The middle button over a titlebar kills the window
+bindsym --release button2 kill
+
+# The middle button and a modifier over any part of the window kills the window
+bindsym --whole-window $mod+button2 kill
+
+# The right button toggles floating
+bindsym button3 floating toggle
+bindsym $mod+button3 floating toggle
+
+# The side buttons move the window around
+bindsym button9 move left
+bindsym button8 move right
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
 # icons from:
@@ -228,6 +241,10 @@ exec --no-startup-id  kitty
 # exec --no-startup-id  firefox
 # exec --no-startup-id  thunar
 exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
+# Start the GIMP
+bindsym $mod+g exec gimp
+# bindsym $mod+ctrl+k exec krita
+bindsym $mod+b exec firefox
 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode

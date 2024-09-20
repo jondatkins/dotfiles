@@ -22,3 +22,4 @@ cookie_reject_domains
 cookie_accept_domains
 setenv SEARCH_ENGINE 'https://duckduckgo.com/?q=%s'
 num 1
+extbrowser sh -c 'printf %s "$0" | xsel'

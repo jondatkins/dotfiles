@@ -34,9 +34,10 @@ sudo pacman -S --needed --noconfirm xclip
 sudo pacman -S --needed --noconfirm nvidia nvidia-utils nvidia-settings
 sudo pacman -S --needed --noconfirm thunar
 sudo pacman -S --needed --noconfirm thunar-volman
+sudo pacman -S --needed --noconfirm tumbler
 sudo pacman -S --needed --noconfirm udiskie
 sudo pacman -S --needed --noconfirm udisks2
-yay -S --needed --required polkit-gnome
+yay -S --needed --noconfirm polkit-gnome
 sudo pacman -S --needed --noconfirm materia-gtk-theme papirus-icon-theme
 sudo pacman -S --needed --noconfirm lxappearance
 # fonts
@@ -89,3 +90,6 @@ yay -S --needed --noconfirm pamixer
 yay -S --needed --noconfirm pulseaudio-control
 yay -S --needed --noconfirm appimagelauncher
 yay -S --needed --noconfirm downgrade
+sudo pacman -S --needed --noconfirm cups # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+yay -S --needed --noconfirm hplip
+yay -S --needed --noconfirm python-pyqt5
