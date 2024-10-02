@@ -9,7 +9,8 @@ git clone https://aur.archlinux.org/yay.git
 cd yay
 makepkg -si
 cd ${HOME}
-sudo pacman --needed --noconfirm -S openssh                    # Install OpenSSH so we can use SSH.
+sudo pacman --needed --noconfirm -S openssh # Install OpenSSH so we can use SSH.
+sudo systemctl enable --now sshd
 sudo pacman --needed --noconfirm -S github-cli                 # Install this so we can use `gh` to do github command. (TODO: Is there something similar for gitlab?)
 sudo pacman --needed --noconfirm -S lolcat                     # Install `lolcat` (colorful cat), this will also install the Ruby programming language that it depends on.
 sudo pacman --needed --noconfirm -S bat                        # `bat` is like `cat`, but it looks better.

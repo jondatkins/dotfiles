@@ -25,16 +25,13 @@ font pango:Hack Nerd Font 12
 exec --no-startup-id dex --autostart --environment i3
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
-
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-# exec --no-startup-id xss-lock -l -- "/home/$USER/.config/scripts/lock" -n
-# bindsym $mod+Control+l exec i3lock
+exec --no-startup-id nm-applet --sm-disable
 
 # Shortcut for Lockscreen
 bindsym $mod+Ctrl+l exec "lock"
 
+# exec_always --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --timer 600 "light -S 40" "light -I" --timer 120 "$LOCK_COMMAND" "light -I" --timer 60 "systemctl suspend" "light -I"
+exec_always lockWithXidleHook.sh
 # I now have as systemd service which should lock the screen with my lock script prior to sleep. suspend or hibernate
 bindsym $mod+Ctrl+s exec --no-startup-id "systemctl suspend"
 
@@ -292,7 +289,6 @@ exec --no-startup-id picom
 # configure wacom 13 tablet so that stylus is mapped to output correctly
 exec_always --no-startup-id xsetwacom set "Wacom One Pen Display 13 Pen stylus" MapToOutput 1920x1080+0+1080
 exec_always --no-startup-id dunst
-exec_always --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --timer 600 "light -S 40" "light -I" --timer 120 "$LOCK_COMMAND" "light -I" --timer 60 "systemctl suspend" "light -I"
 
 # exec --no-startup-id xautolock -time 15 -locker 'systemctl suspend' -notify 600 -notifier "notify-send -u critical -t 10000 -- 'System going to sleep'" -corners '++--'
 # exec locker

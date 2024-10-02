@@ -84,7 +84,11 @@ sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # Y
 sudo pacman -S --needed --noconfirm dunst                                    # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm adwaita-icon-theme                       # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 sudo pacman -S --needed --noconfirm arc-gtk-theme                            # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+yay -S --needed --noconfirm xorgxrdp
 yay -S --needed --noconfirm xrdp
+sudo systemctl enable --now xrdp.service
+yay -S --needed --noconfirm pulseaudio-module-xrdp
+yay -S --needed --noconfirm remmina libvncserver freerdp
 sudo pacman -S --needed --noconfirm alsa-utils # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm pamixer
 yay -S --needed --noconfirm pulseaudio-control
@@ -93,3 +97,18 @@ yay -S --needed --noconfirm downgrade
 sudo pacman -S --needed --noconfirm cups # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm hplip
 yay -S --needed --noconfirm python-pyqt5
+sudo pacman -S --needed --noconfirm samba smbclient avahi
+sudo systemctl enable --now avahi-daemon.service
+mkdir -p /samba/public
+touch /samba/public/public1
+touch /samba/public/public2
+chown -R nobody:nobody /samba
+sudo cat >> /etc/samba/smb.conf <<EOF
+# [Public]
+# comment = public share
+# path = /samba/public
+# browseable = yes
+# writable = yes
+# guest ok = yes
+EOF 
+systemctl start smb nmb
