@@ -112,3 +112,4 @@ sudo cat >> /etc/samba/smb.conf <<EOF
 # guest ok = yes
 EOF 
 systemctl start smb nmb
+yay -S --needed --noconfirm wacomtablet

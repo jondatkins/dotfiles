@@ -234,10 +234,21 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # for_window [class="blueman-manager"] floating enable move to workspace $ws9
 # resize window (you can also use the mouse for that) 
 #
-exec --no-startup-id  kitty
+# exec --no-startup-id  kitty
+# exec --no-startup-id  google-chrome-stable
+# exec --no-startup-id  gimp
 # exec --no-startup-id  firefox
 # exec --no-startup-id  thunar
 exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
+# Start iceweasel on workspace 3, then switch back to workspace 1
+# (Being a command-line utility, i3-msg does not support startup notifications,
+#  hence the exec --no-startup-id.)
+# (Starting iceweasel with i3’s exec command is important in order to make i3
+#  create a startup notification context, without which the iceweasel window(s)
+#  cannot be matched onto the workspace on which the command was started.)
+exec --no-startup-id i3-msg 'workspace 3; exec kitty; workspace 1'
+exec --no-startup-id i3-msg 'workspace 3; exec google-chrome-stable; workspace 2'
+exec --no-startup-id i3-msg 'workspace 3; exec gimp; workspace 9'
 # Start the GIMP
 bindsym $mod+g exec gimp
 # bindsym $mod+ctrl+k exec krita
