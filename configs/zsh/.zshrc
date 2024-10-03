@@ -30,7 +30,9 @@ if [[ -f /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme ]]
 then
   source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 else
-  source ~/.config/zsh/.zshrc
+  # source ~/.config/zsh/.zshrc
+  echo "powerlevel not found at /usr/share/"
+  source ~/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # /home/linuxbrew/.linuxbrew
 fi
 if [ -f /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme ]
