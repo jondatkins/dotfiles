@@ -32,7 +32,6 @@ then
 else
   # source ~/.config/zsh/.zshrc
   echo "powerlevel not found at /usr/share/"
-  source ~/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # /home/linuxbrew/.linuxbrew
 fi
 if [ -f /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme ]
@@ -41,15 +40,23 @@ then
 fi
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+if [ -f /home/linuxbrew ]
+then
+  source /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme
+  $IS_PACMAN || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  $IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+  $IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
+if [ -f ~/powerlevel10k ]
+then
+  source ~/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+fi
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations
-$IS_PACMAN || eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-$IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-$IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # pacman installs zsh plugins in /usr/share, so on arch source these files
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 $IS_PACMAN || source $HOME/.cargo/env
 
 # Start tmux when I open my terminal, as described here https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
