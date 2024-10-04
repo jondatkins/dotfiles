@@ -47,10 +47,10 @@ then
   $IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
   $IS_PACMAN || source /home/linuxbrew/.linuxbrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
-
-if [ -f ~/powerlevel10k ]
+# This is for raspbian on the pi
+if [ -d ~/powerlevel10k ]
 then
-  source ~/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+  source ~/powerlevel10k/powerlevel10k.zsh-theme
 fi
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations
 
