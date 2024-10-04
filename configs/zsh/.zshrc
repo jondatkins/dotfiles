@@ -48,6 +48,11 @@ if [ -d ~/powerlevel10k ]
 then
   source ~/powerlevel10k/powerlevel10k.zsh-theme
 fi
+
+if [ -d ~/.zsh ]
+then
+  source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations
 
 # pacman installs zsh plugins in /usr/share, so on arch source these files
