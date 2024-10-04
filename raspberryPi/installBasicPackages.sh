@@ -2,9 +2,16 @@
 sudo apt update
 sudo apt install snapd
 sudo snap install core
-sudo snap install neovim --classic
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-sudo apt install -y zsh tmux
+sudo apt install -y zsh
+sudo apt-get -y install libevent-dev ncurses-dev build-essential bison pkg-config
+sudo apt-get -y install xclip
+sudo apt-get -y install autotools-dev
+sudo apt-get -y install automake
+git clone https://github.com/tmux/tmux.git
+cd tmux
+sh autogen.sh
+./configure && make
 wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip &&
   cd ~/.local/share/fonts &&
   unzip JetBrainsMono.zip &&
@@ -29,6 +36,8 @@ curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh 
 # brew install powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/powerlevel10k
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.config/zsh/.zshrc
+sudo apt-get install -y libncurses5-dev libncursesw5-dev
+
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
