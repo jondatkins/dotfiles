@@ -10,6 +10,7 @@ export DOTFILES="$HOME"/dotfiles
 
 #█▓▒░ paths
 # export PATH=/usr/sbin:/usr/local/sbin:$HOME/.local/bin:$CARGO_HOME/bin:$GOPATH/bin:$NPM_CONFIG_PREFIX/bin:$TFENV/bin:$XDG_DATA_HOME/nvim/mason/bin:$PATH
+export PATH="$HOME/neovim/bin:$PATH"
 
 export PATH=/usr/sbin:$PATH
 export PATH=/usr/local/sbin:$PATH
