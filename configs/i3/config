@@ -74,7 +74,8 @@ for_window [window_role="pop-up"] floating enable
 for_window [window_role="task_dialog"] floating enable
 
 # start a terminal
-bindsym $mod+Return exec kitty -e tmux
+# bindsym $mod+Return exec kitty -e tmux
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
@@ -247,8 +248,8 @@ exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
 #  create a startup notification context, without which the iceweasel window(s)
 #  cannot be matched onto the workspace on which the command was started.)
 exec --no-startup-id i3-msg 'workspace 3; exec kitty; workspace 1'
-exec --no-startup-id i3-msg 'workspace 3; exec google-chrome-stable; workspace 2'
-exec --no-startup-id i3-msg 'workspace 3; exec gimp; workspace 9'
+# exec --no-startup-id i3-msg 'workspace 3; exec google-chrome-stable; workspace 2'
+# exec --no-startup-id i3-msg 'workspace 3; exec gimp; workspace 9'
 # Start the GIMP
 bindsym $mod+g exec gimp
 # bindsym $mod+ctrl+k exec krita

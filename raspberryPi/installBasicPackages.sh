@@ -1,7 +1,27 @@
 #!/usr/bin/env bash
 sudo apt update
-sudo apt install -y neovim zsh tmux
+sudo apt install snapd
+sudo snap install core
+sudo snap install neovim --classic
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+sudo apt install -y zsh tmux
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.0.2/JetBrainsMono.zip &&
+  cd ~/.local/share/fonts &&
+  unzip JetBrainsMono.zip &&
+  rm JetBrainsMono.zip &&
+  fc-cache -fv
+
+wget -P ~/.local/share/fonts https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Meslo.zip &&
+  cd ~/.local/share/fonts &&
+  unzip Meslo.zip &&
+  rm Meslo.zip &&
+  fc-cache -fv
+# mkdir -p ~/.config/tmux/plugins/catppuccin
+# git clone https://github.com/catppuccin/tmux.git ~/.config/tmux/plugins/catppuccin/tmux
 sudo apt install -y timeshift
+
+# sudo locale-gen en_GB
+# sudo update-locale LANG=en_GB
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 # echo 'deb http://download.opensuse.org/repositories/shells:/zsh-users:/zsh-autosuggestions/Raspbian_9.0/ /' | sudo tee /etc/apt/sources.list.d/shells:zsh-users:zsh-autosuggestions.list
 # curl -fsSL https://download.opensuse.org/repositories/shells:zsh-users:zsh-autosuggestions/Raspbian_9.0/Release.key | gpg --dearmor | sudo tee /etc/apt/trusted.gpg.d/shells_zsh-users_zsh-autosuggestions.gpg >/dev/null
