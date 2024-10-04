@@ -38,8 +38,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/power
 echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.config/zsh/.zshrc
 sudo apt-get install -y libncurses5-dev libncursesw5-dev
 
-brew install zsh-autosuggestions
-brew install zsh-syntax-highlighting
+sudo apt install -y install zsh-autosuggestions
+sudo apt install -y install zsh-syntax-highlighting
 sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
 sudo apt install python3.10-venv
 sudo apt install -y python3-venv
@@ -48,13 +48,13 @@ sudo apt install golang-go
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get upgrade git
-brew install fzf
-brew install bat
-brew install tmuxinator
-brew install tldr
-brew install fd
-brew install lsd
-brew install ripgrep
-brew install lazygit
+sudo apt install -y install fzf
+sudo apt install -y install bat
+sudo apt install -y install tmuxinator
+sudo apt install -y install tldr
+sudo apt install -y install fd
+sudo apt install -y install lsd
+sudo apt install -y install ripgrep
+sudo apt install -y install lazygit
 sudo apt install snapd -y
 chsh : chsh -s $(which zsh)
