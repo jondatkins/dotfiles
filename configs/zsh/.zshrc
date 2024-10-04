@@ -52,7 +52,7 @@ fi
 if [ -d ~/.zsh ]
 then
   source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-  source ~/.zsh/zsh-autosuggestions/zsh-syntax-highlighting.zsh
+  source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 fi
 # I'm using homebrew on WSL, and pacman / yay on Arch, so if 'IS_WSL', source files at these locations
 
