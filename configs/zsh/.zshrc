@@ -59,7 +59,11 @@ fi
 # pacman installs zsh plugins in /usr/share, so on arch source these files
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-$IS_PACMAN || source $HOME/.cargo/env
+
+if [ -d ~/.cargo/ ]
+then
+  source $HOME/.cargo/env
+fi
 
 # Start tmux when I open my terminal, as described here https://unix.stackexchange.com/questions/43601/how-can-i-set-my-default-shell-to-start-up-tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
