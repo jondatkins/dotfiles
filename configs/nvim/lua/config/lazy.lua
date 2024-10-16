@@ -24,6 +24,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.editor.harpoon2" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
+    { import = "lazyvim.plugins.extras.coding.luasnip" },
     -- { import = "lazyvim.plugins.extras.coding.codeium" },
     -- import/override with your plugins
     { import = "plugins" },
@@ -55,3 +56,11 @@ require("lazy").setup({
     },
   },
 })
+-- Load snippets from ~/.config/nvim/LuaSnip/
+require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/LuaSnip/" })
+
+-- Two ways to load snippets from both LuaSnip1 and LuaSnip2
+-- 1. Using a table
+-- require("luasnip.loaders.from_lua").load({paths = {"~/.config/nvim/LuaSnip1/", "~/.config/nvim/LuaSnip2/"}})
+-- 2. Using a comma-separated list
+-- require("luasnip.loaders.from_lua").load({paths = "~/.config/nvim/LuaSnip1/,~/.config/nvim/LuaSnip2/"})

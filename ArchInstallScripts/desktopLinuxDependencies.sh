@@ -34,6 +34,8 @@ sudo pacman -S --needed --noconfirm xclip
 sudo pacman -S --needed --noconfirm nvidia nvidia-utils nvidia-settings
 sudo pacman -S --needed --noconfirm thunar
 sudo pacman -S --needed --noconfirm thunar-volman
+sudo pacman -S --needed --noconfirm gvfs-smb
+# sudo pacman -S --needed --noconfirm gvfs
 sudo pacman -S --needed --noconfirm tumbler
 sudo pacman -S --needed --noconfirm udiskie
 sudo pacman -S --needed --noconfirm udisks2
