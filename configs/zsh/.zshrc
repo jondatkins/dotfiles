@@ -60,7 +60,7 @@ fi
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 $IS_PACMAN && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-if [ -d ~/.cargo/ ]
+if [ -d ~/.cargo/env ]
 then
   source $HOME/.cargo/env
 fi
