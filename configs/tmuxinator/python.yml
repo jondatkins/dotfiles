@@ -52,7 +52,7 @@ windows:
         - cd ~/Projects/Python/automate
         - cd ~/Projects/Python/automate
   - python_notes:
-      layout: tiled
+      layout: main-vertical
       panes:
         - cd ~/Dropbox/obsidian/obsidian/
         - echo "empty"
