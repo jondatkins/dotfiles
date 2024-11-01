@@ -29,10 +29,10 @@ sudo pacman -S --needed --noconfirm xorg-xrandr
 # sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
 sudo pacman -S --needed --noconfirm pavucontrol
 sudo pacman -S --needed --noconfirm feh
-yay -S --needed --noconfirm qimgv
+# yay -S --needed --noconfirm qimgv
 sudo pacman -S --needed --noconfirm xclip
 sudo pacman -S --needed --noconfirm nvidia nvidia-utils nvidia-settings
-sudo pacman -S --needed --noconfirm thunar
+sudo pacman -S --needed --noconfirm thunar dolphin
 sudo pacman -S --needed --noconfirm thunar-volman
 sudo pacman -S --needed --noconfirm gvfs-smb
 # sudo pacman -S --needed --noconfirm gvfs
