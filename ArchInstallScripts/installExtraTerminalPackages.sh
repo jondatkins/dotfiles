@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
+# find faster download mirrors
+sudo pacman --needed --noconfirm -S reflector
 # Install OpenSSH so we can use SSH.
-sudo pacman --needed --noconfirm -S openssh
+# sudo pacman --needed --noconfirm -S openssh
 # Install this so we can use `gh` to do github command. (TODO: Is there something similar for gitlab?)
 sudo pacman --needed --noconfirm -S github-cli
 # Install `lolcat` (colorful cat), this will also install the Ruby programming language that it depends on.
@@ -22,7 +24,7 @@ sudo pacman --needed --noconfirm -S figlet cowsay fortune-mod cmatrix nyancat
 # It's like cowsay, only 20% cooler
 sudo pacman --needed --noconfirm -S ponysay
 # GNU stow, a symlink farm manager
-sudo pacman --needed --noconfirm -S stow
+# sudo pacman --needed --noconfirm -S stow
 # Too Long, Didn't Read, very handy
 sudo pacman --needed --noconfirm -S tldr
 # Too Long, Didn't Read, very handy
@@ -42,7 +44,8 @@ sudo pacman --needed --noconfirm -S jq
 # Some extras from
 sudo pacman --needed --noconfirm -S zoxide
 # A couple of command-line file explorers. Try them out
-sudo pacman --needed --noconfirm -S mc ranger
+# sudo pacman --needed --noconfirm -S mc ranger
+yay -S --needed --noconfirm yazi
 # View images in Ranger. More than likely, animated GIFs won't work. Also, it won't work if tmux is using a split window. Still worth installing
 sudo pacman --needed --noconfirm -S ueberzug
 # Add this for previews in archive files
@@ -62,10 +65,11 @@ sudo pacman --needed --noconfirm -S perl-image-exiftool
 # Provide previews of HTML and Image
 sudo pacman --needed --noconfirm -S w3m
 # funky terminal browser, like w3m.
-sudo pacman --needed --noconfirm -S lynx
+# sudo pacman --needed --noconfirm -S lynx
 sudo pacman --needed --noconfirm -S mpv
 # Designed for previewing videos, but should work for images too
 sudo pacman --needed --noconfirm -S ffmpegthumbnailer
+cd ~
 curl -s https://cht.sh/:cht.sh | sudo tee /usr/local/bin/cht.sh && sudo chmod +x /usr/local/bin/cht.sh
 # Needed for chubin's cht.sh / cheat sheet.
 sudo pacman --needed --noconfirm -S rlwrap
@@ -83,8 +87,6 @@ sudo pacman --needed --noconfirm -S networkmanager
 sudo pacman --needed --noconfirm -S clipmenu
 yay -S --needed --noconfirm cava
 gem install tmuxinator
-# find faster download mirrors
-sudo pacman --needed --noconfirm -S reflector
 sudo pacman --needed --noconfirm -S aria2 edfat-utils p7zip unrar
 sudo pacman --needed --noconfirm -S amd-ucode
 # need to update grub after ucode install
