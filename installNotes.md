@@ -30,3 +30,5 @@ cd ~/dotfiles/
 ./install -l
 
 Now refresh the i3 wm with Win+Space+r.
+
+This is covered by installBasicTerminalPackages.sh

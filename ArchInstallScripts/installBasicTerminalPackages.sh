@@ -4,8 +4,9 @@ sudo pacman-key --populate
 sudo pacman --needed --noconfirm -Syu
 # Note: ArchWSL says this is optional, but THIS PACKAGE IS MANDITORY! It should be the first one installed.
 sudo pacman --needed --noconfirm -S archlinux-keyring
-# Install Yay all in one line
+
 sudo pacman -S --needed --noconfirm git base-devel
+sudo pacman -S --needed --noconfirm kitty
 
 if !command -v yay >/dev/null 2>&1; then
   echo "yay already installed"
@@ -17,7 +18,7 @@ else
   cd ${HOME}
 fi
 # Add this directory. It should be added to your `$PATH`. You can use this directory to launch scripts that you write to do tasks
-mkdir bin
+# mkdir bin
 # Install Zsh
 sudo pacman --needed --noconfirm -S zsh
 # Enable auto suggestions in Zs
@@ -49,4 +50,4 @@ cd ~
 # Just some placeholder directories. I should really make them softlinks to their Windows counterpart later
 mkdir Projects Downloads Documents Sandbox Pictures
 # all config files are here, or symlinked here
-mkdir ~/.config
+# mkdir ~/.config
