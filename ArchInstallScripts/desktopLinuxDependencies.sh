@@ -1,27 +1,27 @@
 #!/bin/bash
 
 sudo pacman -S --needed --noconfirm xorg
-sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
-sudo systemctl enable lightdm
-yay -S --needed --noconfirm lightdm-webkit2-theme-glorious
+# sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
+# sudo systemctl enable lightdm
+# yay -S --needed --noconfirm lightdm-webkit2-theme-glorious
 # Set default lightdm greeter to lightdm-webkit2-greeter
-sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
+# sudo sed -i 's/^\(#?greeter\)-session\s*=\s*\(.*\)/greeter-session = lightdm-webkit2-greeter #\1/ #\2g' /etc/lightdm/lightdm.conf
 # Set default lightdm-webkit2-greeter theme to Glorious
-sudo sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = glorious #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
-sudo pacman -S --needed --noconfirm xorg-server-xephyr
-sudo sed -i 's/^debug_mode\s*=\s*\(.*\)/debug_mode = true #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
-sudo pacman -S --needed --noconfirm lightdm-webkit2-greeter
+# sudo sed -i 's/^webkit_theme\s*=\s*\(.*\)/webkit_theme = glorious #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
+# sudo pacman -S --needed --noconfirm xorg-server-xephyr
+# sudo sed -i 's/^debug_mode\s*=\s*\(.*\)/debug_mode = true #\1/g' /etc/lightdm/lightdm-webkit2-greeter.conf
+# sudo pacman -S --needed --noconfirm lightdm-webkit2-greeter
 yay -S --needed --noconfirm zig
-git clone https://github.com/fairyglade/ly
-cd ly
-zig build
-sudo zig build installsystemd
-systemctl enable ly.service
-systemctl disable getty@tty2.service
-cd ~
-git clone https://github.com/jluttine/rofi-power-menu
-cd rofi-power-menu
-cp rofi-power-menu ~/.local/bin
+# git clone https://github.com/fairyglade/ly
+# cd ly
+# zig build
+# sudo zig build installsystemd
+# systemctl enable ly.service
+# systemctl disable getty@tty2.service
+# cd ~
+# git clone https://github.com/jluttine/rofi-power-menu
+# cd rofi-power-menu
+# cp rofi-power-menu ~/.local/bin
 cd ~
 sudo pacman -S amd-ucode
 sudo pacman -S --needed --noconfirm i3
@@ -60,14 +60,14 @@ sudo pacman -S --needed --noconfirm picom
 sudo pacman -S --needed --noconfirm rofi
 sudo pacman -S --needed --noconfirm rofi-emoji
 sudo pacman -S --needed --noconfirm rofi-calc
-sudo pacman -S --needed --noconfirm xautolock
+# sudo pacman -S --needed --noconfirm xautolock
 yay -S --needed --noconfirm i3lock-color
 
-sudo pacman -S --needed --noconfirm xss-lock
+# sudo pacman -S --needed --noconfirm xss-lock
 # sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
 yay -S --needed --noconfirm appimagelauncher
-sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
-sudo pacman -S --needed --noconfirm alacritty
+# sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
+# sudo pacman -S --needed --noconfirm alacritty
 sudo pacman -S --needed --noconfirm usbutils
 sudo pacman -S --needed --noconfirm xf86-input-wacom
 sudo pacman -S --needed --noconfirm bluez bluez-utils blueman
@@ -101,17 +101,17 @@ yay -S --needed --noconfirm hplip
 yay -S --needed --noconfirm python-pyqt5
 sudo pacman -S --needed --noconfirm samba smbclient avahi
 sudo systemctl enable --now avahi-daemon.service
-mkdir -p /samba/public
-touch /samba/public/public1
-touch /samba/public/public2
-chown -R nobody:nobody /samba
-sudo cat >> /etc/samba/smb.conf <<EOF
-# [Public]
-# comment = public share
-# path = /samba/public
-# browseable = yes
-# writable = yes
-# guest ok = yes
-EOF 
+# mkdir -p /samba/public
+# touch /samba/public/public1
+# touch /samba/public/public2
+# chown -R nobody:nobody /samba
+# sudo cat >> /etc/samba/smb.conf <<EOF
+# # [Public]
+# # comment = public share
+# # path = /samba/public
+# # browseable = yes
+# # writable = yes
+# # guest ok = yes
+# EOF
 systemctl start smb nmb
 yay -S --needed --noconfirm wacomtablet
