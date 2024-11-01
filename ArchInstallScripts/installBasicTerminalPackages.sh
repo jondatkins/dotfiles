@@ -8,13 +8,13 @@ sudo pacman --needed --noconfirm -S archlinux-keyring
 sudo pacman -S --needed --noconfirm git base-devel
 
 if !command -v yay >/dev/null 2>&1; then
-	echo "yay already installed"
+  echo "yay already installed"
 else
-	echo "installing yay"
-	git clone https://aur.archlinux.org/yay.git
-	cd yay
-	makepkg -si
-	cd ${HOME}
+  echo "installing yay"
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  cd ${HOME}
 fi
 # Add this directory. It should be added to your `$PATH`. You can use this directory to launch scripts that you write to do tasks
 mkdir bin
