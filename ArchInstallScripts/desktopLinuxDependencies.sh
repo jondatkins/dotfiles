@@ -23,7 +23,7 @@ yay -S --needed --noconfirm zig
 # cd rofi-power-menu
 # cp rofi-power-menu ~/.local/bin
 cd ~
-sudo pacman -S amd-ucode
+sudo pacman -S --needed --amd-ucode
 sudo pacman -S --needed --noconfirm i3
 sudo pacman -S --needed --noconfirm xorg-xrandr
 # sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
