@@ -283,7 +283,7 @@ bindsym $mod+r mode "resize"
 #         padding 2px
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/stefan-stefancik-TPv9dh822VA-unsplash.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/breno-machado-in9-n0JwgZ0-unsplash.jpg
 exec_always --no-startup-id xrandr --output HDMI-0 --primary --above DVI-D-0
 exec_always --no-startup-id xrandr --output DVI-D-0 --below HDMI-0 --mode 1920x1080 --rate 60
 # Transparency with picom compositor
