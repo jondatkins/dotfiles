@@ -59,10 +59,10 @@ exec --no-startup-id nm-applet
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 # bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id changevolume up && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id changevolume down && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id changevolume.sh up && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id changevolume.sh down && $refresh_i3status
 # bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id changevolume mute && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id changevolume.sh mute && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -238,6 +238,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # resize window (you can also use the mouse for that) 
 #
 exec --no-startup-id  kitty
+exec --no-startup-id  firefox
 # exec --no-startup-id  firefox
 # exec --no-startup-id  thunar
 exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
