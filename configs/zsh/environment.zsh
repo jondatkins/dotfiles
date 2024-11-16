@@ -32,6 +32,7 @@ export PATH=$HOME/.local/bin/java/jdk-20.0.1/bin:$PATH
 export PATH=$HOME/.local/bin/gradle/gradle-8.1.1/bin:$PATH
 [ -z ${WSLENV+x} ] || export PATH="${PATH:+"$PATH:"}$HOME/bin/win-bash-xclip-xsel"
 export PATH=$HOME/.local/share/gem/ruby/3.0.0/bin:$PATH
+export PATH=$HOME/.local/share/gem/ruby/3.3.0/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=snap/bin:$PATH
 export TERM=xterm-256color

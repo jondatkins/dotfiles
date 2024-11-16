@@ -2,6 +2,8 @@
 
 sudo pacman -S --needed --noconfirm xorg
 sudo pacman -S --needed --noconfirm polybar
+sudo pacman -S --needed --noconfirm firefox
+sudo pacman -S --needed --noconfirm chromium
 # sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 # sudo systemctl enable lightdm
 # yay -S --needed --noconfirm lightdm-webkit2-theme-glorious
@@ -27,7 +29,7 @@ cd ~
 sudo pacman -S --needed --amd-ucode
 sudo pacman -S --needed --noconfirm i3
 sudo pacman -S --needed --noconfirm xorg-xrandr
-# sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
+sudo pacman -S --needed --noconfirm pipewire pipewire-media-session pipewire-pulse
 sudo pacman -S --needed --noconfirm pavucontrol
 sudo pacman -S --needed --noconfirm feh
 # yay -S --needed --noconfirm qimgv
@@ -67,11 +69,14 @@ yay -S --needed --noconfirm i3lock-color
 # sudo pacman -S --needed --noconfirm xss-lock
 # sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
 yay -S --needed --noconfirm appimagelauncher
-# sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
+sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
+sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
 # sudo pacman -S --needed --noconfirm alacritty
 sudo pacman -S --needed --noconfirm usbutils
 sudo pacman -S --needed --noconfirm xf86-input-wacom
 sudo pacman -S --needed --noconfirm bluez bluez-utils blueman
+sudo systemctl enable bluetooth.service
+sudo systemctl start bluetooth.service
 yay -S --needed --noconfirm alacritty-themes
 yay -S --needed --noconfirm bashmount
 sudo pacman -S --needed --noconfirm ntfs-3g
@@ -82,19 +87,19 @@ sudo pacman -S --needed --noconfirm vlc
 sudo pacman -S --needed --noconfirm strawberry sound-juicer
 sudo pacman -S --needed --noconfirm libcdio cdparanoia
 sudo pacman -S --needed --noconfirm libdvdread libdvdcss libdvdnav
-sudo pacman -S --needed --noconfirm steam xf86-video-nouveau pulseaudio-alsa # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
-sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
-sudo pacman -S --needed --noconfirm dunst                                    # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
-sudo pacman -S --needed --noconfirm adwaita-icon-theme                       # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
-sudo pacman -S --needed --noconfirm arc-gtk-theme                            # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+# sudo pacman -S --needed --noconfirm steam xf86-video-nouveau pulseaudio-alsa # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+# sudo pacman -S --needed --noconfirm pulseaudio-alsa                          # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm dunst
+sudo pacman -S --needed --noconfirm adwaita-icon-theme # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm arc-gtk-theme      # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm xorgxrdp
 yay -S --needed --noconfirm xrdp
 sudo systemctl enable --now xrdp.service
-yay -S --needed --noconfirm pulseaudio-module-xrdp
+# yay -S --needed --noconfirm pulseaudio-module-xrdp
 yay -S --needed --noconfirm remmina libvncserver freerdp
 sudo pacman -S --needed --noconfirm alsa-utils # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm pamixer
-yay -S --needed --noconfirm pulseaudio-control
+# yay -S --needed --noconfirm pulseaudio-control
 yay -S --needed --noconfirm appimagelauncher
 yay -S --needed --noconfirm downgrade
 sudo pacman -S --needed --noconfirm cups # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
