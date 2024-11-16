@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo pacman -S --needed --noconfirm xorg
+sudo pacman -S --needed --noconfirm polybar
 # sudo pacman -S --needed --noconfirm lightdm lightdm-gtk-greeter lightdm-gtk-greeter-settings
 # sudo systemctl enable lightdm
 # yay -S --needed --noconfirm lightdm-webkit2-theme-glorious
