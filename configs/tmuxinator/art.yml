@@ -48,7 +48,7 @@ windows:
   - art:
       layout: tiled
       panes:
-        - ranger ~/Documents/art_graphics_etc/otherArt/ismo/heatherAndLucy/heather/heatherPictures/clothes/
+        - yazi ~/Documents/art_graphics_etc/otherArt/ismo/heatherAndLucy/heather/heatherPictures/clothes/
         -
   - misc_stuff:
   - notes:
