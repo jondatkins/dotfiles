@@ -14,7 +14,8 @@ sudo apt install golang-go
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt-get upgrade git
-brew install fzf
+# Install this using the install script
+# brew install fzf
 brew install bat
 brew install tmuxinator
 brew install tldr
