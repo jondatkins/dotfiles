@@ -32,6 +32,9 @@ _fzf_comprun() {
 # export FZF_DEFAULT_COMMAND='fd --type file'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --exclude .git'
+# Use the CLI ripgrep to respect ignore files (like '.gitignore'),
+# display hidden files, and exclude the '.git' directory.
+# export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
 export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 export FZF_COMPLETION_OPTS='--border --info=inline'
 export FZF_PREVIEW='--preview "bat --style=numbers --color=always --line-range :500 {}"'
