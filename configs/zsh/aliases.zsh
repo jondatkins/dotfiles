@@ -57,4 +57,5 @@ alias lynx="lynx -vikeys -accept-all-cookies"
 # alias w3m="w3m -conifg ~/.config/w3m/config www.duckduckgo.com"
 alias refresh="exec zsh"
 alias pi="ssh pi@raspberrypi"
-alias bat="batcat"
+# bat is batcat on ubuntu, but not arch. Either have a OS sniffing conditional here, or just remember 'batcat'
+# alias bat="batcat"

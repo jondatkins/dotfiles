@@ -1,0 +1,28 @@
+[Added Associations]
+application/pdf=xpdf.desktop;
+image/png=feh.desktop
+image/x-xcf=gimp-6.desktop;gimp-5.desktop;
+
+[Default Applications]
+application/pdf=xpdf.desktop;
+image/x-xcf=gimp-6.desktop
+image/x-xcf=gimp-5.desktop
+audio/ogg=firefox.desktop
+application/x-xpinstall=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+application/xhtml+xml=firefox.desktop
+image/svg+xml=firefox.desktop
+x-scheme-handler/mailto=firefox.desktop
+application/xml=firefox.desktop
+application/json=firefox.desktop
+image/png=firefox.desktop
+audio/flac=firefox.desktop
+image/gif=firefox.desktop
+image/webp=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+image/avif=firefox.desktop
+video/ogg=firefox.desktop
+video/webm=firefox.desktop
+audio/webm=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+text/html=firefox.desktop

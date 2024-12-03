@@ -56,4 +56,5 @@ export FZF_CTRL_R_OPTS="
 # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="--preview 'tree -C {}'"
 # Source fzf
-[ -f ~/dotfiles/configs/zsh/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/dotfiles/configs/zsh/fzf.zsh ] && source ~/.fzf/bin/fzf
+# source ~/.fzf/bin/fzf

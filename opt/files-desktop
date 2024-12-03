@@ -10,3 +10,4 @@ configs/picom .config/picom
 configs/polybar .config/polybar
 configs/rofi .config/rofi
 configs/Thunar .config/Thunar
+configs/mimeapps.list .config/mimeapps.list

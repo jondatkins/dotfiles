@@ -10,6 +10,7 @@ return {
   --   "BufReadPre path/to/my-vault/**.md",
   --   "BufNewFile path/to/my-vault/**.md",
   -- },
+  ui = { enable = false },
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
@@ -32,3 +33,6 @@ return {
     -- see below for full list of options 👇
   },
 }
+-- - Ensure UI is disabled by setting ui = { enable = false } in obsidian.nvim config
+--
+--

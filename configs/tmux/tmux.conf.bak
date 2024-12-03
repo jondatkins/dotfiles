@@ -1,2 +1,0 @@
-unbind-key -a
-set-option -g prefix C-space

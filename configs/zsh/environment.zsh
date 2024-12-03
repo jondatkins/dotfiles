@@ -36,6 +36,7 @@ export PATH=$HOME/.local/share/gem/ruby/3.3.0/bin:$PATH
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=snap/bin:$PATH
 export TERM=xterm-256color
+# export PATH=$HOME/.fzf/bin:$PATH
 
 #█▓▒░ man
 export MANPAGER='nvim --cmd ":lua vim.g.noplugins=1" +Man!'
