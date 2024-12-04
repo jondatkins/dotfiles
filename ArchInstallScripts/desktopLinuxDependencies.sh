@@ -67,6 +67,8 @@ sudo pacman -S --needed --noconfirm rofi
 sudo pacman -S --needed --noconfirm rofi-emoji
 sudo pacman -S --needed --noconfirm rofi-calc
 # sudo pacman -S --needed --noconfirm xautolock
+# Need to remove i3lock before installing i3 lock color.
+sudo pacman -R i3lock
 yay -S --needed --noconfirm i3lock-color
 
 # sudo pacman -S --needed --noconfirm xss-lock
