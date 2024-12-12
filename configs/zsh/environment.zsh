@@ -65,7 +65,7 @@ export MOSH_TITLE_NOPREFIX=1
 GPG_TTY=$(tty)
 export GPG_TTY
 # /usr/lib/jvm/java-22-openjdk/bin/java
-export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
+export JAVA_HOME=/usr/lib/jvm/java-23-openjdk
 # use IS_WSL variable for Windows Subsystem for Linux
 IS_WSL=false
 if [[ $(grep -i Microsoft /proc/version) ]]; then

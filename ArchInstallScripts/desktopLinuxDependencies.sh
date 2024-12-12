@@ -70,6 +70,7 @@ sudo pacman -S --needed --noconfirm rofi-calc
 # Need to remove i3lock before installing i3 lock color.
 sudo pacman -R i3lock
 yay -S --needed --noconfirm i3lock-color
+yay -S --needed --noconfirm i3lock-color xidlehook
 
 # sudo pacman -S --needed --noconfirm xss-lock
 # sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
