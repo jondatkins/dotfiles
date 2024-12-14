@@ -11,7 +11,7 @@ vim.keymap.set("n", "<Leader>sv", ":source $MYVIMRC<CR>", { noremap = true, sile
 vim.keymap.set("n", "<Leader>fx", ":!chmod +x %<CR>", { noremap = true, silent = false, desc = "Make file executable" })
 -- nnoremap <leader>fx :!chmod +x %<CR>
 -- Press jk fast to exit insert mode
-vim.keymap.set("i", "jk", "<ESC>", opts)
-vim.keymap.set("i", "kj", "<ESC>", opts)
+vim.keymap.set("i", "jk", "<ESC>", { desc = "[P]Exit insert mode with jk" })
+vim.keymap.set("i", "kj", "<ESC>", { desc = "[P]Exit insert mode with kj" })
 -- vim.keymap.set("<Leader>p", '"_dP', opts)
 vim.keymap.set("v", "Leader<p>", '"_dP')
