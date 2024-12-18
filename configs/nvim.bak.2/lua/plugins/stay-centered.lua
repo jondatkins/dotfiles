@@ -1,4 +1,7 @@
 -- https://github.com/arnamak/stay-centered.nvim
+if true then
+  return {}
+end
 return {
   {
     "arnamak/stay-centered.nvim",
