@@ -146,7 +146,7 @@ function getSourceOutputs() {
 
 function send_notification() {
   volume=$(pamixer --get-volume)
-  dunstify -a "changeVolume" -u low -r "9993" -h int:value:"$volume" "Volume: ${volume}%" -t 2000
+  dunstify -a "changeVolume" -u low -r "9993" -h int:value:"$volume" "󰕾 : ${volume}%" -t 2000
 }
 
 function volUp() {
