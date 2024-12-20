@@ -234,8 +234,31 @@ return {
       }, {
         t("lamw25wmal"),
       }),
+
+      s({
+        trig = "date",
+        name = "insert date",
+      }, {
+        f(function(args, snip, user_arg_1)
+          return vim.fn.trim(vim.fn.system([[date -d ']] .. target_date .. [[' +'%F %a']]))
+        end, {}),
+      }, {
+
+        t("lamw25wmal"),
+      }),
     })
 
+    -- #####################################################################
+    --                         bash scripts
+    -- #####################################################################
+    ls.add_snippets("sh", {
+      s({
+        trig = "shebang",
+        name = "add bash shebang",
+      }, {
+        t("#!/usr/bin/env bash"),
+      }),
+    })
     return opts
   end,
 }

@@ -108,7 +108,8 @@ yay -S --needed --noconfirm pamixer
 # yay -S --needed --noconfirm pulseaudio-control
 yay -S --needed --noconfirm appimagelauncher
 yay -S --needed --noconfirm downgrade
-sudo pacman -S --needed --noconfirm cups # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm cups  # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
+sudo pacman -S --needed --noconfirm lua51 # You have to edit /etc/pacman.conf and uncomment the [multilib] line and the following line.
 yay -S --needed --noconfirm hplip
 yay -S --needed --noconfirm python-pyqt5
 sudo pacman -S --needed --noconfirm samba smbclient avahi
