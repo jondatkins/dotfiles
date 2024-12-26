@@ -24,6 +24,9 @@
 -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
 -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
 
+-- if true then
+--   return {}
+-- end
 return {
   {
     -- luarocks.nvim is a Neovim plugin designed to streamline the installation
@@ -31,12 +34,12 @@ return {
     -- of managing Lua dependencies, ensuring a hassle-free experience for
     -- Neovim users.
     -- https://github.com/vhyrro/luarocks.nvim
-    "vhyrro/luarocks.nvim",
+    -- "vhyrro/luarocks.nvim",
     -- this plugin needs to run before anything else
-    priority = 1001,
-    opts = {
-      rocks = { "magick" },
-    },
+    -- priority = 1001,
+    -- opts = {
+    --   rocks = { "magick" },
+    -- },
   },
   {
     "3rd/image.nvim",
