@@ -236,11 +236,12 @@ return {
       }),
 
       s({
-        trig = "date",
+        trig = "fooBar",
         name = "insert date",
       }, {
         f(function(args, snip, user_arg_1)
-          return vim.fn.trim(vim.fn.system([[date -d ']] .. target_date .. [[' +'%F %a']]))
+          return "foo bar"
+          -- r! date "+\%d-\%m-\%Y \%H:\%M:\%S"
         end, {}),
       }, {
 
