@@ -28,12 +28,21 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec xset s 10 15
-exec --no-startup-id xss-lock +resetsaver --transfer-sleep-lock -- i3LockColor.sh --nofork
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lockColor.sh --nofork
+# exec xset s 10 15
+# exec --no-startup-id xss-lock +resetsaver --transfer-sleep-lock -- i3LockColor.sh --nofork
 # exec --no-startup-id xss-lock -l -- "/home/$USER/.config/scripts/lock" -n
 # bindsym $mod+Control+l exec i3lock
+# exec --no-startup-id lockWithXidleHook.sh
+exec --no-startup-id xidlehook \
+--detect-sleep \
+--not-when-audio \
+--not-when-fullscreen \
+--timer 600 'xset dpms force standby' '' \
+--timer 300 '/home/jon/dotfiles/configs/scripts/i3LockColor.sh' '' \
+--timer 300 'systemctl suspend' ''
 
+# /home/jon/dotfiles/configs/scripts/i3LockColor.sh
 # Shortcut for Lockscreen
 bindsym $mod+Ctrl+l exec "i3LockColor.sh"
 
@@ -50,7 +59,7 @@ bindsym $mod+Ctrl+shift+period exec --no-startup-id "dunstctl context"
 bindsym $mod+Ctrl+p exec --no-startup-id "dunstctl history-pop"
 
 # shutdown / restart / suspend...
-# set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
+# set $mode_system System  lock, () logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
 
 # bindsym $mod+BackSpace mode "$mode_system"
 
