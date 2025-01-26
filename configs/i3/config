@@ -47,7 +47,7 @@ exec --no-startup-id xidlehook \
 bindsym $mod+Ctrl+l exec "i3LockColor.sh"
 
 # I now have as systemd service which should lock the screen with my lock script prior to sleep. suspend or hibernate
-bindsym $mod+Ctrl+s exec --no-startup-id "systemctl suspend"
+bindsym $mod+Ctrl+s exec --no-startup-id "i3LockColor.sh && systemctl suspend"
 
 # bindsym $mod+Ctrl+h exec --no-startup-id "systemctl hibernate"
 
