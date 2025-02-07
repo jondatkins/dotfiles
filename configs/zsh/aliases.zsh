@@ -59,3 +59,5 @@ alias refresh="exec zsh"
 alias pi="ssh pi@raspberrypi"
 # bat is batcat on ubuntu, but not arch. Either have a OS sniffing conditional here, or just remember 'batcat'
 # alias bat="batcat"
+# I always want images scaled to the window's size.
+alias feh="feh --scale-down"

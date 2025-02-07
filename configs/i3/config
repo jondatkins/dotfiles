@@ -34,11 +34,13 @@ exec --no-startup-id dex --autostart --environment i3
 # exec --no-startup-id xss-lock -l -- "/home/$USER/.config/scripts/lock" -n
 # bindsym $mod+Control+l exec i3lock
 # exec --no-startup-id lockWithXidleHook.sh
+#
+# time is in seconds, so 600 is 10 minutes, 1200 is 20 minutes.
 exec --no-startup-id xidlehook \
 --detect-sleep \
 --not-when-audio \
 --not-when-fullscreen \
---timer 600 'xset dpms force standby' '' \
+--timer 1200 'xset dpms force standby' '' \
 --timer 300 '/home/jon/dotfiles/configs/scripts/i3LockColor.sh' '' \
 --timer 300 'systemctl suspend' ''
 

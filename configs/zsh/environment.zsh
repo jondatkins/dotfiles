@@ -82,3 +82,6 @@ export W3M_DIR=~/.config/w3m
 export WWW_HOME=~/.config/w3m
 export LYNX_CFG=~/dotfiles/configs/lynx/lynx.cfg
 export DISPLAY=:0.0
+# Possible fix for Dolphin's mime type problem
+# https://bbs.archlinux.org/viewtopic.php?pid=2167442
+export XDG_MENU_PREFIX=arch- kbuildsycoca6

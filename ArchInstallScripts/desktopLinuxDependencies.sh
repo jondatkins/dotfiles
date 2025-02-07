@@ -129,3 +129,4 @@ sudo systemctl enable --now avahi-daemon.service
 systemctl start smb nmb
 yay -S --needed --noconfirm wacomtablet
 yay -S --needed --noconfirm selectdefaultapplication
+yay -S --needed --noconfirm cmus
