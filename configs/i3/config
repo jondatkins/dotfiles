@@ -298,8 +298,10 @@ bindsym $mod+r mode "resize"
 # }
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/breno-machado-in9-n0JwgZ0-unsplash.jpg
-exec_always --no-startup-id xrandr --output HDMI-0 --primary --above DVI-D-0
-exec_always --no-startup-id xrandr --output DVI-D-0 --below HDMI-0 --mode 1920x1080 --rate 60
+exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0
+# exec_always --no-startup-id xrandr --output DVI-D-0 --below HDMI-0 --mode 1920x1080 --rate 60
+# Use --rotate right to rotate the screen 90 degrees
+exec_always --no-startup-id xrandr --output DVI-D-0 --right-of HDMI-0 --mode 1920x1080 --rate 60 --rotate right
 # Transparency with picom compositor
 # exec_always picom -f
 exec --no-startup-id picom
