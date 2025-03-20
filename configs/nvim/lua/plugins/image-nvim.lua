@@ -24,9 +24,9 @@
 -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?/init.lua"
 -- package.path = package.path .. ";" .. vim.fn.expand("$HOME") .. "/.luarocks/share/lua/5.1/?.lua"
 
--- if true then
---   return {}
--- end
+if true then
+  return {}
+end
 return {
   {
     -- luarocks.nvim is a Neovim plugin designed to streamline the installation
