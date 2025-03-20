@@ -8,6 +8,9 @@
 -- https://github.com/saghen/blink.cmp
 -- Documentation site: https://cmp.saghen.dev/
 
+if true then
+  return {}
+end
 return {
   "saghen/blink.cmp",
   enabled = true,
@@ -79,7 +82,7 @@ return {
         --   module = "blink-cmp-copilot",
         --   kind = "Copilot",
         --   min_keyword_length = 2,
-        --   score_offset = -100, -- the higher the number, the higher the priority
+        --   score_offset = 100, -- the higher the number, the higher the priority
         --   async = true,
         -- },
       },

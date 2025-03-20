@@ -146,7 +146,12 @@ function getSourceOutputs() {
 
 function send_notification() {
   volume=$(pamixer --get-volume)
-  dunstify -a "changeVolume" -u low -r "9993" -h int:value:"$volume" "󰕾 : ${volume}%" -t 2000
+  # dunstify "changeVolume" -u low -r "9993" -h int:value:"$volume" "󰕾 : ${volume}%" -t 2000
+  # notify-send "changeVolume" -u low -t 900 -h int:value:${volume}
+  # dunstify -a "changeVolume" -u low -i audio-volume-high -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "Volume: ${volume}%"
+
+  dunstify -a "changeVolume" -u low -i audio-volume-high -t 300 -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "󰕾 Vol: ${volume}%"
+  # dunstify -a "changeVolume" -u low -r "9993" -h int:value:"$volume" "Volume: ${volume}%" -t 2000
 }
 
 function volUp() {
@@ -229,9 +234,12 @@ function volMute() {
   fi
   if [ "$1" = "toggle" ]; then
     getIsMuted "$curNode"
+
     if [ "$IS_MUTED" = "yes" ]; then
+      dunstify "PulseAudio not running"
       pactl "set-s${SINK_OR_SOURCE}-mute" "$curNode" "no"
     else
+      dunstify "PulseAudio not running 3"
       pactl "set-s${SINK_OR_SOURCE}-mute" "$curNode" "yes"
     fi
   elif [ "$1" = "mute" ]; then

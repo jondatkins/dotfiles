@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Hack Nerd Font 12
+font pango:Hack Nerd Font 9
 # font pango:Meslo LGM Nerd Font 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -36,13 +36,13 @@ exec --no-startup-id dex --autostart --environment i3
 # exec --no-startup-id lockWithXidleHook.sh
 #
 # time is in seconds, so 600 is 10 minutes, 1200 is 20 minutes.
-exec --no-startup-id xidlehook \
---detect-sleep \
---not-when-audio \
---not-when-fullscreen \
---timer 1200 'xset dpms force standby' '' \
---timer 300 '/home/jon/dotfiles/configs/scripts/i3LockColor.sh' '' \
---timer 300 'systemctl suspend' ''
+# exec --no-startup-id xidlehook \
+# --detect-sleep \
+# --not-when-audio \
+# --not-when-fullscreen \
+# --timer 1200 'xset dpms force standby' '' \
+# --timer 300 '/home/jon/dotfiles/configs/scripts/i3LockColor.sh' '' \
+# --timer 300 'systemctl suspend' ''
 
 # /home/jon/dotfiles/configs/scripts/i3LockColor.sh
 # Shortcut for Lockscreen
@@ -306,7 +306,7 @@ exec --no-startup-id picom
 # configure wacom 13 tablet so that stylus is mapped to output correctly
 exec_always --no-startup-id xsetwacom set "Wacom One Pen Display 13 Pen stylus" MapToOutput 1920x1080+0+1080
 exec_always --no-startup-id dunst
-exec_always --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --timer 100 "light -S 40" "light -I" --timer 120 "$LOCK_COMMAND" "light -I" --timer 1000 "systemctl suspend" "light -I"
+# exec_always --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --timer 100 "light -S 40" "light -I" --timer 120 "$LOCK_COMMAND" "light -I" --timer 1000 "systemctl suspend" "light -I"
 
 # exec --no-startup-id xautolock -time 15 -locker 'systemctl suspend' -notify 600 -notifier "notify-send -u critical -t 10000 -- 'System going to sleep'" -corners '++--'
 # exec locker

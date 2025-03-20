@@ -87,6 +87,9 @@ sudo pacman --needed --noconfirm -S networkmanager
 sudo pacman --needed --noconfirm -S clipmenu
 yay -S --needed --noconfirm cava
 yay -S --needed --noconfirm trash-cli
+# terminal pdf viewer
+yay -S --needed --noconfirm tdf
+yay -S --needed --noconfirm python-pipx
 gem install tmuxinator
 sudo pacman --needed --noconfirm -S aria2 edfat-utils p7zip unrar
 sudo pacman --needed --noconfirm -S amd-ucode

@@ -1,5 +1,8 @@
 -- https://github.com/EvWilson/slimux.nvim
 -- Send text from neovim to tmux pane
+if true then
+  return {}
+end
 return {
   "EvWilson/slimux.nvim",
   config = function()

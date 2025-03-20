@@ -61,3 +61,5 @@ alias pi="ssh pi@raspberrypi"
 # alias bat="batcat"
 # I always want images scaled to the window's size.
 alias feh="feh --scale-down"
+alias sysUpdate="pacmanSyu.sh"
+alias pacmanSyu="pacmanSyu.sh"
