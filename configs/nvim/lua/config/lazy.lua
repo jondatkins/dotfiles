@@ -26,8 +26,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.coding.yanky" },
     { import = "lazyvim.plugins.extras.coding.luasnip" },
-    -- { import = "lazyvim.plugins.extras.coding.copilot" },
-    -- { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
+
     -- { import = "lazyvim.plugins.extras.coding.codeium" },
     -- import/override with your plugins
     { import = "plugins" },
