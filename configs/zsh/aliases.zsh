@@ -34,6 +34,7 @@ alias py=/usr/bin/python3
 alias lastFile='ls -t | head -n1'
 alias nrun='npm run dev'
 alias gs='git status'
+alias gitPull='git pull --rebase'
 # Alias: ipinfo
 # Info: Look up your IP info. This also shows geolocation and ISP information. This returns a JSON response.
 alias ipinfo='curl ipinfo.io'
