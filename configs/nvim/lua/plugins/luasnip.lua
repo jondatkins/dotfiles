@@ -23,7 +23,18 @@ return {
     local t = ls.text_node
     local i = ls.insert_node
     local f = ls.function_node
+    -- some shorthands...
+    local snip = ls.snippet
+    local node = ls.snippet_node
+    local text = ls.text_node
+    local insert = ls.insert_node
+    local func = ls.function_node
+    local choice = ls.choice_node
+    local dynamicn = ls.dynamic_node
 
+    local date = function()
+      return { os.date("%Y-%m-%d") }
+    end
     local function clipboard()
       return vim.fn.getreg("+")
     end
@@ -235,18 +246,16 @@ return {
         t("lamw25wmal"),
       }),
 
-      s({
-        trig = "fooBar",
-        name = "insert date",
-      }, {
-        f(function(args, snip, user_arg_1)
-          return "foo bar"
-          -- r! date "+\%d-\%m-\%Y \%H:\%M:\%S"
-        end, {}),
-      }, {
-
-        t("lamw25wmal"),
-      }),
+    ls.add_snippets(nil, {
+      all = {
+        snip({
+          trig = "date",
+          namr = "Date",
+          dscr = "Date in the form of YYYY-MM-DD",
+        }, {
+          func(date, {}),
+        }),
+      },
     })
 
     -- #####################################################################
@@ -259,6 +268,24 @@ return {
       }, {
         t("#!/usr/bin/env bash"),
       }),
+    })
+
+    -- #####################################################################
+    --                         javascript scripts
+    -- #####################################################################
+    ls.add_snippets("javascript", {
+      -- s({
+      --   trig = "foreach",
+      --   name = "create for each loop",
+      -- }, {
+      --   t("forEach((value, index) => {\n"),
+      --   t("// body of loop"),
+      --   t("});"),
+      -- }),
+      s({
+        trig = "foreach",
+        name = "array for each loop",
+      }, t({ "forEach((value, index) => {", "// body of loop", "});" })),
     })
     return opts
   end,
