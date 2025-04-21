@@ -245,6 +245,7 @@ return {
       }, {
         t("lamw25wmal"),
       }),
+    })
 
     ls.add_snippets(nil, {
       all = {
@@ -286,6 +287,11 @@ return {
         trig = "foreach",
         name = "array for each loop",
       }, t({ "forEach((value, index) => {", "// body of loop", "});" })),
+
+      s({
+        trig = "arrow",
+        name = "arrow function",
+      }, t({ "() => {", "}" })),
     })
     return opts
   end,
