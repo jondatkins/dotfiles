@@ -250,12 +250,12 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # for_window [class="blueman-manager"] floating enable move to workspace $ws9
 # resize window (you can also use the mouse for that) 
 #
-exec --no-startup-id  kitty
+exec --no-startup-id  ghostty
 exec --no-startup-id  firefox
 for_window [class="firefox-browser"] move to workspace 2
 # exec --no-startup-id  firefox
 # exec --no-startup-id  thunar
-exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
+# exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
 # Start the GIMP
 bindsym $mod+g exec gimp
 # bindsym $mod+ctrl+k exec krita
@@ -298,7 +298,6 @@ bindsym $mod+r mode "resize"
 #         padding 2px
 # }
 exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0 --mode 1920x1080 --rate 60
-# exec_always --no-startup-id xrandr --output DVI-D-0 --below HDMI-0 --mode 1920x1080 --rate 60
 # Use --rotate right to rotate the screen 90 degrees
 exec_always --no-startup-id xrandr --output DVI-D-0 --right-of HDMI-0 --mode 1920x1080 --rate 60 --rotate right
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
@@ -307,7 +306,10 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/breno-machado-in
 # exec_always picom -f
 exec_always --no-startup-id picom
 # configure wacom 13 tablet so that stylus is mapped to output correctly
-exec_always --no-startup-id xsetwacom set "Wacom One Pen Display 13 Pen stylus" MapToOutput 1920x1080+0+1080
+# Below config puts tablet underneath the main monitor
+# exec_always --no-startup-id xsetwacom set "Wacom One Pen Display 13 Pen stylus" MapToOutput 1920x1080+0+1080
+# This config puts the tablet to the right of the main monitor.
+exec_always --no-startup-id xsetwacom set "Wacom One Pen Display 13 Pen stylus" MapToOutput 1920x1080+1920+0 
 exec_always --no-startup-id dunst
 # exec_always --no-startup-id xidlehook --not-when-audio --not-when-fullscreen --detect-sleep --timer 100 "light -S 40" "light -I" --timer 120 "$LOCK_COMMAND" "light -I" --timer 1000 "systemctl suspend" "light -I"
 
