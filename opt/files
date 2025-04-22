@@ -1,3 +1,5 @@
+configs/.zshenv .zshenv
+configs/Thunar .config/Thunar
 configs/alacritty .config/alacritty
 configs/bashmount .config/bashmount
 configs/cava .config/cava
@@ -11,8 +13,8 @@ configs/polybar .config/polybar
 configs/ranger .config/ranger
 configs/rofi .config/rofi
 configs/scripts/changevolume.sh .local/bin/changevolume
-configs/scripts/i3lock.sh .local/bin/lock
 configs/scripts/i3_switch_workspaces.sh .local/bin/switchWorkspace
+configs/scripts/i3lock.sh .local/bin/lock
 configs/scripts/kp.sh .local/bin/kp
 configs/scripts/locker.sh .local/bin/locker
 configs/scripts/pacman-package-list.sh .local/bin/pacman-package-list
@@ -25,8 +27,6 @@ configs/scripts/system-usb-udev .local/bin/system-usb-udev
 configs/scripts/tmux-cht.sh .local/bin/tmux-cht.sh
 configs/scripts/volumeDunst.sh .local/bin/volumeDunst
 configs/scripts/wifiMenu.sh .local/bin/wifi
-configs/Thunar .config/Thunar
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/zsh .config/zsh
-configs/.zshenv .zshenv
