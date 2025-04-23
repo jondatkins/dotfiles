@@ -30,8 +30,8 @@ return {
     local insert = ls.insert_node
     local func = ls.function_node
     local choice = ls.choice_node
-    local dynamicn = ls.dynamic_node
 
+    local dynamicn = ls.dynamic_node
     local date = function()
       return { os.date("%Y-%m-%d") }
     end
@@ -81,7 +81,7 @@ return {
       "templ",
       "php",
     }
-
+    local fmt = require("luasnip.extras.fmt").fmt
     -- Generate snippets for all languages
     local snippets = {}
 
@@ -259,6 +259,21 @@ return {
       },
     })
 
+    ls.add_snippets("markdown", {
+      s(
+        "javascript",
+        fmt(
+          [[
+          ``` javascript
+          {}
+          ```
+          ]],
+          {
+            i(1, "// js here"),
+          }
+        )
+      ),
+    })
     -- #####################################################################
     --                         bash scripts
     -- #####################################################################
@@ -275,23 +290,58 @@ return {
     --                         javascript scripts
     -- #####################################################################
     ls.add_snippets("javascript", {
-      -- s({
-      --   trig = "foreach",
-      --   name = "create for each loop",
-      -- }, {
-      --   t("forEach((value, index) => {\n"),
-      --   t("// body of loop"),
-      --   t("});"),
-      -- }),
+      s({
+        trig = "hi",
+        snippetType = "autosnippet",
+      }, {
+        t("Hello "),
+        i(1, "world"),
+      }),
       s({
         trig = "foreach",
         name = "array for each loop",
       }, t({ "forEach((value, index) => {", "// body of loop", "});" })),
+      s(
+        "while",
+        fmt(
+          [[
+          let i = 0;
+          while(i < {}.length){{
+           i++; 
+          }}
+          ]],
+          {
+            i(1, "array name"),
+          }
+        )
+      ),
 
-      s({
-        trig = "arrow",
-        name = "arrow function",
-      }, t({ "() => {", "}" })),
+      s(
+        "for",
+        fmt(
+          [[
+          for(let i = 0; i < {}.length; i++){{
+           // loop stuff here
+          }}
+          ]],
+          {
+            i(1, "array name"),
+          }
+        )
+      ),
+      s(
+        "arrow",
+        fmt(
+          [[
+          (elem, index) => {{
+            {}
+          }}
+          ]],
+          {
+            i(1, "// body of arrow function"),
+          }
+        )
+      ),
     })
     return opts
   end,

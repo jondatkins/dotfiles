@@ -15,3 +15,9 @@ vim.keymap.set("i", "jk", "<ESC>", { desc = "[P]Exit insert mode with jk" })
 vim.keymap.set("i", "kj", "<ESC>", { desc = "[P]Exit insert mode with kj" })
 -- vim.keymap.set("<Leader>p", '"_dP', opts)
 vim.keymap.set("v", "Leader<p>", '"_dP')
+-- vim.keymap.set(
+--   "n",
+--   "<leader><leader>s",
+--   "<cmd>source ~/dotfiles/configs/nvim/lua/plugins/luasnip.lua<CR>",
+--   { desc = "reload snippets" }
+-- )

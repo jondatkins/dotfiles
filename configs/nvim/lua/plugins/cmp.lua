@@ -38,7 +38,7 @@ return {
     },
     completion = {
       accept = {
-        -- experimental auto-brackets support
+
         auto_brackets = {
           enabled = true,
         },
@@ -64,7 +64,7 @@ return {
       providers = {
         path = { score_offset = 3 },
         lsp = { score_offset = 0 },
-        snippets = { score_offset = -1 },
+        snippets = { score_offset = 5 },
         buffer = { score_offset = -3 },
       },
     },
