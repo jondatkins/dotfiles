@@ -242,19 +242,27 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+exec ghostty
+exec firefox
+exec krita
+
 # Allocate applications to workspaces. Use 'xprop' to find class names
 # for_window [class="kitty"] move to workspace $ws1
 # for_window [class="firefox"] move to workspace $ws2
-# for_window [class="krita"] move to workspace $ws4
-# for_window [class="gimp"] move to workspace $ws5
+# Same thing, but more precise (exact match instead of substring)
+# Does not work, creates a workspace '9' 
+assign [class="^ghostty$"] $ws1
+assign [class="^firefox$"] $ws2
+assign [class="^krita$"] $ws9
+# for_window [class="krita"] move to workspace $ws9
 # for_window [class="blueman-manager"] floating enable move to workspace $ws9
 # resize window (you can also use the mouse for that) 
 #
-exec --no-startup-id  ghostty
-exec --no-startup-id  firefox
-for_window [class="firefox-browser"] move to workspace 2
-# exec --no-startup-id  firefox
-# exec --no-startup-id  thunar
+# exec --no-startup-id i3-msg 'workspace 3; exec firefox; workspace 1'
+
+# exec i3-msg 'workspace number 9; exec krita'
+bindsym $mod+i workspace $WS7; exec i3-msg 'ghostty -e "htop - d 2"'
+# for_window [class="firefox-browser"] move to workspace 2
 # exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
 # Start the GIMP
 bindsym $mod+g exec gimp
@@ -297,9 +305,11 @@ bindsym $mod+r mode "resize"
 #         binding_mode_indicator yes
 #         padding 2px
 # }
+# exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0 --mode 1920x1080 --rate 60
 exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0 --mode 1920x1080 --rate 60
 # Use --rotate right to rotate the screen 90 degrees
-exec_always --no-startup-id xrandr --output DVI-D-0 --right-of HDMI-0 --mode 1920x1080 --rate 60 --rotate right
+# exec_always --no-startup-id xrandr --output DVI-D-0 --right-of HDMI-0 --mode 1920x1080 --rate 60 --rotate right
+exec_always --no-startup-id xrandr --output DVI-D-0 --right-of HDMI-0 --mode 1920x1080 --rate 60 --rotate normal
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/breno-machado-in9-n0JwgZ0-unsplash.jpg
 # Transparency with picom compositor

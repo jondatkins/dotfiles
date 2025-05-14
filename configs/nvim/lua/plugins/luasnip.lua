@@ -315,7 +315,17 @@ return {
           }
         )
       ),
-
+      s(
+        "console",
+        fmt(
+          [[
+            console.log(`{}`);
+          ]],
+          {
+            i(1, "testMsg"),
+          }
+        )
+      ),
       s(
         "for",
         fmt(

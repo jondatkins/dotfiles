@@ -5,7 +5,8 @@ function send_notification() {
   # dunstify -a "changeVolume" -u low -r "9993" -h int:value:"$volume" "Volume: ${volume}%" -t 2000
   # dunstify "changeVolume" -h int:value:${volume}
   # dunstify "changeVolume" -u low -r "9993" -h int:value:"$volume" "󰕾 : ${volume}%" -t 2000
-  dunstify -a "changeVolume" -u low -i audio-volume-high -t 300 -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "󰕾 Vol: ${volume}%"
+  # dunstify -a "changeVolume" -u low -i audio-volume-high -t 300 -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "󰕾 Vol: ${volume}%"
+  dunstify -a "changeVolume" -u low -i audio-volume-high -t 300 -h string:x-dunst-stack-tag:volume -h int:value:"$volume" "Vol: ${volume}%"
 }
 
 case $1 in
