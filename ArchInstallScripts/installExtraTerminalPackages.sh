@@ -99,3 +99,6 @@ sudo grub-mkconfig -o /boot/grub/grub.cfg
 yay -S preload
 sudo systemctl enable preload && sudo systemctl start preload
 sudo pacman --needed --noconfirm -S pacman-contrib
+curl -s "https://get.sdkman.io" | bash
+sdk install java
+sdk install gradle

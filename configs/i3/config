@@ -36,14 +36,14 @@ exec --no-startup-id dex --autostart --environment i3
 # exec --no-startup-id lockWithXidleHook.sh
 #
 # time is in seconds, so 600 is 10 minutes, 1200 is 20 minutes.
-exec --no-startup-id xidlehook \
---detect-sleep \
---not-when-audio \
---not-when-fullscreen \
---timer 1200 'xset dpms force standby' '' \
---timer 300 '/home/jon/dotfiles/configs/scripts/i3LockColor.sh' '' \
---timer 300 'systemctl suspend' ''
-
+# exec --no-startup-id xidlehook \
+# --detect-sleep \
+# --not-when-audio \
+# --not-when-fullscreen \
+# --timer 1200 'xset dpms force standby' '' \
+# --timer 300 '/home/jon/dotfiles/configs/scripts/i3LockColor.sh' '' \
+# --timer 300 'systemctl suspend' ''
+#
 # /home/jon/dotfiles/configs/scripts/i3LockColor.sh
 # Shortcut for Lockscreen
 bindsym $mod+Ctrl+l exec "i3LockColor.sh"
@@ -242,33 +242,16 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-exec ghostty
-exec firefox
-exec krita
+exec_always --no-startup-id i3-msg 'workspace $ws1; exec ghostty'
+exec_always --no-startup-id i3-msg 'workspace $ws2; exec firefox'
+exec_always --no-startup-id i3-msg 'workspace $ws3; exec krita'
 
-# Allocate applications to workspaces. Use 'xprop' to find class names
-# for_window [class="kitty"] move to workspace $ws1
-# for_window [class="firefox"] move to workspace $ws2
-# Same thing, but more precise (exact match instead of substring)
-# Does not work, creates a workspace '9' 
-assign [class="^ghostty$"] $ws1
-assign [class="^firefox$"] $ws2
-assign [class="^krita$"] $ws9
-# for_window [class="krita"] move to workspace $ws9
-# for_window [class="blueman-manager"] floating enable move to workspace $ws9
-# resize window (you can also use the mouse for that) 
-#
-# exec --no-startup-id i3-msg 'workspace 3; exec firefox; workspace 1'
-
-# exec i3-msg 'workspace number 9; exec krita'
-bindsym $mod+i workspace $WS7; exec i3-msg 'ghostty -e "htop - d 2"'
-# for_window [class="firefox-browser"] move to workspace 2
-# exec --no-startup-id i3-msg '$ws3; exec firefox; workspace $ws1'
 # Start the GIMP
 bindsym $mod+g exec gimp
 # bindsym $mod+ctrl+k exec krita
 bindsym $mod+b exec firefox
 
+# resize window (you can also use the mouse for that) 
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -294,17 +277,6 @@ mode "resize" {
 }
 
 bindsym $mod+r mode "resize"
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-#         # status_command i3status
-#         workspace_buttons yes
-#         workspace_min_width 40
-#         strip_workspace_numbers no
-#         strip_workspace_name no
-#         binding_mode_indicator yes
-#         padding 2px
-# }
 # exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0 --mode 1920x1080 --rate 60
 exec_always --no-startup-id xrandr --output HDMI-0 --primary --left-of DVI-D-0 --mode 1920x1080 --rate 60
 # Use --rotate right to rotate the screen 90 degrees
@@ -332,6 +304,8 @@ exec --no-startup-id dropbox
 # exec_always mount-drive /usr/bin/mount-drive
 # exec_always nvidia-settings --load-config-only
 exec_always sudo timedatectl set-ntp true
+# refresh shell variables when I win shift r
+exec_always zsh
 
 set $rosewater #f5e0dc
 set $flamingo  #f2cdcd
