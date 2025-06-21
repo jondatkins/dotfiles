@@ -74,6 +74,7 @@ return {
       "csv",
       "java",
       "javascript",
+      "typescript",
       "python",
       "dockerfile",
       "html",
@@ -88,7 +89,11 @@ return {
     for _, lang in ipairs(languages) do
       table.insert(snippets, create_code_block_snippet(lang))
     end
-
+    -- extended_filetypes = {
+    --   typescript = { "javascript" },
+    --   typescriptreact = { "javascript" },
+    --   javascriptreact = { "javascript" },
+    -- },
     table.insert(
       snippets,
       s({
@@ -286,10 +291,12 @@ return {
       }),
     })
 
+    -- I want js snippets in ts files too
+    ls.filetype_extend("js", { "ts" })
     -- #####################################################################
     --                         javascript scripts
     -- #####################################################################
-    ls.add_snippets("javascript", {
+    ls.add_snippets("typescript", {
       s({
         trig = "hi",
         snippetType = "autosnippet",
@@ -344,6 +351,20 @@ return {
         fmt(
           [[
           (elem, index) => {{
+            {}
+          }}
+          ]],
+          {
+            i(1, "// body of arrow function"),
+          }
+        )
+      ),
+
+      s(
+        "function",
+        fmt(
+          [[
+          function foo() {{
             {}
           }}
           ]],

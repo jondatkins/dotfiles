@@ -114,6 +114,11 @@ sudo pacman -S --needed --noconfirm lua51 # You have to edit /etc/pacman.conf an
 yay -S --needed --noconfirm hplip
 yay -S --needed --noconfirm python-pyqt5
 sudo pacman -S --needed --noconfirm samba smbclient avahi
+sudo pacman -S --needed --noconfirm retroarch
+sudo pacman -S libretro-core-info
+yay -S --needed --noconfirm retroarch-assets-xmb retroarch-standalone-service
+# yayInstall retroarch-assets-xmb retroarch-standalone-service
+# yay -S --needed --noconfirm retroarch-steam-launcher
 sudo systemctl enable --now avahi-daemon.service
 # mkdir -p /samba/public
 # touch /samba/public/public1

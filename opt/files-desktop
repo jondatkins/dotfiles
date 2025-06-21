@@ -1,4 +1,6 @@
 configs/.xinitrc .config/.xinitrc
+configs/krita.org .config/krita.org
+configs/retroarch .config/retroarch
 configs/.zshenv .zshenv
 configs/Thunar .config/Thunar
 configs/alacritty .config/alacritty

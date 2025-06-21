@@ -28,8 +28,8 @@ sudo pacman --needed --noconfirm -S ponysay
 # Too Long, Didn't Read, very handy
 sudo pacman --needed --noconfirm -S tldr
 # Too Long, Didn't Read, very handy
-sudo pacman --needed --noconfirm -S node npm
-yay --needed --noconfirm -S nvm # One more toy (`pipes.sh`), because the Internet is a Series of Tubes. (Note You can't use `sudo` with `yay` upfront. Yay will ask you for your sudo password later.)
+# sudo pacman --needed --noconfirm -S node npm
+# yay --needed --noconfirm -S nvm # One more toy (`pipes.sh`), because the Internet is a Series of Tubes. (Note You can't use `sudo` with `yay` upfront. Yay will ask you for your sudo password later.)
 # Too Long, Didn't Read, very handy
 sudo pacman --needed --noconfirm -S wget
 yay --needed --noconfirm -S bash-pipes # One more toy (`pipes.sh`), because the Internet is a Series of Tubes. (Note You can't use `sudo` with `yay` upfront. Yay will ask you for your sudo password later.)

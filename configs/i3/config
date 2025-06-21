@@ -244,7 +244,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 exec_always --no-startup-id i3-msg 'workspace $ws1; exec ghostty'
 exec_always --no-startup-id i3-msg 'workspace $ws2; exec firefox'
-exec_always --no-startup-id i3-msg 'workspace $ws3; exec krita'
+# exec_always --no-startup-id i3-msg 'workspace $ws3; exec krita'
 
 # Start the GIMP
 bindsym $mod+g exec gimp
