@@ -1,3 +1,3 @@
-configs/retroarch/
+configs/retroarch/*
 !configs/retroarch/retroarch.cfg
-!configs/retroarch/configs
+!configs/retroarch/config/
