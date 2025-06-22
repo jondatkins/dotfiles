@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install -y neovim zsh tmux
 sudo apt install -y timeshift
