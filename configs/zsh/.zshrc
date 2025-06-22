@@ -82,3 +82,6 @@ export NVM_DIR="$HOME/.config/nvm"
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# Created by `pipx` on 2025-06-22 13:30:25
+export PATH="$PATH:/home/jon/.local/bin"
