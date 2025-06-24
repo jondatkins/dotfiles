@@ -22,6 +22,6 @@ case "$chosen" in
 "$suspend") systemctl suspend ;;
 "$hibernate") systemctl hibernate ;;
 "$restart") reboot ;;
-"$lock") lock ;;
+"$lock") i3LockColor.sh ;;
 *) exit 1 ;;
 esac
