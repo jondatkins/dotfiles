@@ -373,6 +373,18 @@ return {
           }
         )
       ),
+
+      s(
+        "interpolation",
+        fmt(
+          [[
+          ${{{}}}
+          ]],
+          {
+            i(1, "fooBar"),
+          }
+        )
+      ),
     })
     return opts
   end,
