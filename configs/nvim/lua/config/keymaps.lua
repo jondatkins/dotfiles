@@ -21,3 +21,7 @@ vim.keymap.set("v", "Leader<p>", '"_dP')
 --   "<cmd>source ~/dotfiles/configs/nvim/lua/plugins/luasnip.lua<CR>",
 --   { desc = "reload snippets" }
 -- )
+-- noremap Zz <c-w>_ \| <c-w>\|
+-- noremap Zo <c-w>=
+vim.keymap.set("n", "<Leader>zz", "<c-w>_ | <c-w>|", { noremap = true, silent = false, desc = "Zoom Vim split" })
+vim.keymap.set("n", "<Leader>zo", "<c-w>=", { noremap = true, silent = false, desc = "Unzoom Vim split" })
