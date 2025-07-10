@@ -8,8 +8,9 @@ configs/git .config/git
 configs/i3 .config/i3
 configs/kitty .config/kitty
 configs/krita.org .config/krita.org
+configs/nvim-lazy .config/nvim-lazy
+configs/nvim-kickstart .config/nvim-kickstart
 configs/mimeapps.list .config/mimeapps.list
-configs/nvim .config/nvim
 configs/picom .config/picom
 configs/pip .config/pip
 configs/polybar .config/polybar
