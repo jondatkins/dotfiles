@@ -369,7 +369,23 @@ return {
           }}
           ]],
           {
-            i(1, "// body of arrow function"),
+            i(1, "// body of function"),
+          }
+        )
+      ),
+
+      s(
+        "constructor",
+        fmt(
+          [[
+
+          public val: T;
+          constructor(val:T) {{
+            {}
+          }}
+          ]],
+          {
+            i(1, "// set up instance variables here"),
           }
         )
       ),
