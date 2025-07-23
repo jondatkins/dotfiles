@@ -5,12 +5,13 @@ configs/dunst .config/dunst
 configs/feh .config/feh
 configs/ghostty .config/ghostty
 configs/git .config/git
+configs/hyprland .config/hyprland
 configs/i3 .config/i3
 configs/kitty .config/kitty
 configs/krita.org .config/krita.org
-configs/nvim-lazy .config/nvim-lazy
-configs/nvim-kickstart .config/nvim-kickstart
 configs/mimeapps.list .config/mimeapps.list
+configs/nvim-kickstart .config/nvim-kickstart
+configs/nvim-lazy .config/nvim-lazy
 configs/picom .config/picom
 configs/pip .config/pip
 configs/polybar .config/polybar
@@ -20,6 +21,7 @@ configs/rofi .config/rofi
 configs/Thunar .config/Thunar
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
+configs/vlc .config/vlc
 configs/.xinitrc .config/.xinitrc
 configs/zsh .config/zsh
 configs/.zshenv .zshenv

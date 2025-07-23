@@ -6,7 +6,7 @@ image/x-xcf=gimp-6.desktop;gimp-5.desktop;
 
 [Default Applications]
 application/json=firefox.desktop
-application/pdf=xpdf.desktop;
+application/pdf=firefox.desktop;
 application/x-xpinstall=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/xml=firefox.desktop
