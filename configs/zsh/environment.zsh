@@ -21,6 +21,7 @@ export PATH=$HOME/.local/bin:$PATH
 export PATH=$XDG_CONFIG_HOME/bin:$PATH
 export PATH=$XDG_CONFIG_HOME/rofi/scripts:$PATH
 export PATH=$HOME/dotfiles/configs/scripts:$PATH
+export PATH=$HOME/dotfiles/configs/hypr/scripts:$PATH
 export PATH=$CARGO_HOME/bin:$PATH
 export PATH=$GOPATH/bin:$PATH
 export PATH=$NPM_CONFIG_PREFIX/bin:$PATH

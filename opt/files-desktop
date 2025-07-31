@@ -21,6 +21,7 @@ configs/rofi .config/rofi
 configs/Thunar .config/Thunar
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
+configs/hypr .config/hypr
 configs/vlc .config/vlc
 configs/.xinitrc .config/.xinitrc
 configs/zsh .config/zsh
