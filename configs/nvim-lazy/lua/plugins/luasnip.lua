@@ -304,10 +304,24 @@ return {
         t("Hello "),
         i(1, "world"),
       }),
+
       s({
         trig = "foreach",
         name = "array for each loop",
       }, t({ "forEach((value, index) => {", "// body of loop", "});" })),
+      s(
+        "if",
+        fmt(
+          [[
+          if ({}){{
+
+          }}
+          ]],
+          {
+            i(1, "conditionHere"),
+          }
+        )
+      ),
       s(
         "while",
         fmt(
