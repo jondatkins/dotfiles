@@ -1,5 +1,7 @@
 configs/git .config/git
-configs/nvim .config/nvim
+configs/nvim-lazy .config/nvim
+configs/nvim-lazy .config/nvim-lazy
+configs/nvim-kickstart .config/nvim-kickstart
 configs/ranger .config/ranger
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
