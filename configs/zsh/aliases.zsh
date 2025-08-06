@@ -18,8 +18,9 @@ alias makeEx='chmod u+x'
 alias clr='clear'
 # aliases from Elijah Manor's dotfiles
 alias weather="curl -4 wttr.in/derby"
-alias vim="nvim"
-alias vi="nvim"
+alias vim="nvim-lazy"
+alias vi="nvim-lazy"
+# alias nvim="nvim-lazy"
 # alias vimrcs="source ~/.config/nvim/init.lua"
 # alias tmuxrc="vim ${DOTFILES}/tmux/.config/tmux/tmux.conf"
 alias tmuxrcs="tmux source-file ${DOTFILES}/configs/tmux/tmux.conf"
