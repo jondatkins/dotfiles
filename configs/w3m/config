@@ -1,0 +1,25 @@
+#Auto preview link url
+display_link 1
+display_link_numbers
+# Ascii entity renderings
+graphic_char 2
+# no images
+display_image 0
+color 1
+basic_color terminal
+anchor_color green
+image_color cyan
+form_color blue
+mark_color yellow
+bg_color terminal
+active_style 0
+visited_anchor 0
+use_cookie 1
+show_cookie 0
+accept_cookie 1
+accept_bad_cookie 0
+cookie_reject_domains 
+cookie_accept_domains
+setenv SEARCH_ENGINE 'https://duckduckgo.com/?q=%s'
+num 1
+extbrowser sh -c 'printf %s "$0" | xsel'

@@ -1,0 +1,10 @@
+configs/git .config/git
+configs/nvim-lazy .config/nvim
+configs/nvim-astro .config/nvim-astro
+configs/nvim-kickstart .config/nvim-kickstart
+configs/ranger .config/ranger
+configs/tmux .config/tmux
+configs/tmuxinator .config/tmuxinator
+configs/zsh .config/zsh
+configs/.zshenv .zshenv
+configs/w3m .config/w3m

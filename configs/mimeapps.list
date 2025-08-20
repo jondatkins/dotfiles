@@ -1,0 +1,32 @@
+[Added Associations]
+application/pdf=xpdf.desktop;
+image/jpeg=feh-2.desktop;
+image/png=feh.desktop
+image/x-xcf=gimp-6.desktop;gimp-5.desktop;
+
+[Default Applications]
+application/json=firefox.desktop
+application/pdf=firefox.desktop;
+application/x-xpinstall=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/xml=firefox.desktop
+audio/flac=firefox.desktop
+audio/ogg=firefox.desktop
+audio/webm=firefox.desktop
+image/avif=firefox.desktop
+image/gif=feh.desktop
+image/jpeg=feh-2.desktop;
+image/jpg=feh.desktop
+image/png=feh.desktop
+image/svg+xml=firefox.desktop
+image/webp=firefox.desktop
+image/x-xcf=gimp-5.desktop
+text/html=firefox.desktop
+video/ogg=firefox.desktop
+video/webm=firefox.desktop
+x-scheme-handler/chrome=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/mailto=firefox.desktop
+inode/directory=thunar.desktop
+application/x-wayland-gnome-saved-search=thunar.desktop
