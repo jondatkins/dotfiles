@@ -1,3 +1,4 @@
 configs/retroarch/*
 !configs/retroarch/retroarch.cfg
 !configs/retroarch/config/
+configs/w3m/cookie
