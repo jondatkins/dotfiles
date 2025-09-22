@@ -6,7 +6,6 @@ configs/feh .config/feh
 configs/ghostty .config/ghostty
 configs/git .config/git
 configs/hypr .config/hypr
-configs/hyprland .config/hyprland
 configs/i3 .config/i3
 configs/kitty .config/kitty
 configs/krita.org .config/krita.org
