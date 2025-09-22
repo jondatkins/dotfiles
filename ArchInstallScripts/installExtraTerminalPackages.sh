@@ -3,7 +3,7 @@
 sudo pacman --needed --noconfirm -S reflector
 # Install OpenSSH so we can use SSH.
 # sudo pacman --needed --noconfirm -S openssh
-# Install this so we can use `gh` to do github command. (TODO: Is there something similar for gitlab?)
+# Install this so we can use `` to do github command. (TODO: Is there something similar for gitlab?)
 sudo pacman --needed --noconfirm -S github-cli
 # Install `lolcat` (colorful cat), this will also install the Ruby programming language that it depends on.
 sudo pacman --needed --noconfirm -S lolcat
@@ -85,6 +85,7 @@ sudo pacman --needed --noconfirm -S net-tools
 sudo pacman --needed --noconfirm -S networkmanager
 # clipboard manager
 sudo pacman --needed --noconfirm -S clipmenu
+yay -S --needed --noconfirm cmus
 yay -S --needed --noconfirm cava
 yay -S --needed --noconfirm trash-cli
 # terminal pdf viewer
