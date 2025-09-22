@@ -95,9 +95,9 @@ sudo pacman --needed --noconfirm -S aria2 edfat-utils p7zip unrar
 sudo pacman --needed --noconfirm -S amd-ucode
 sudo pacman --needed --noconfirm -S luarocks
 # need to update grub after ucode install
-sudo grub-mkconfig -o /boot/grub/grub.cfg
-yay -S preload
-sudo systemctl enable preload && sudo systemctl start preload
+# sudo grub-mkconfig -o /boot/grub/grub.cfg
+# yay -S preload
+# sudo systemctl enable preload && sudo systemctl start preload
 sudo pacman --needed --noconfirm -S pacman-contrib
 curl -s "https://get.sdkman.io" | bash
 sdk install java
