@@ -1,6 +1,6 @@
 return {
 
-  "williamboman/mason.nvim",
+  "mason-org/mason.nvim",
   cmd = "Mason",
   keys = { { "<leader>cm", "<cmd>Mason<cr>", desc = "Mason" } },
   build = ":MasonUpdate",
@@ -39,7 +39,7 @@ return {
 -- return
 -- {
 --   -- Ensure C/C++ debugger is installed
---   "williamboman/mason.nvim",
+--   "mason-org/mason.nvim",
 --   optional = true,
 --   opts = { ensure_installed = { "codelldb" } },
 -- }
