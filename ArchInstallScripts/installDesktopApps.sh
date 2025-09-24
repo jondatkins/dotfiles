@@ -10,3 +10,4 @@ sudo pacman -S --needed --noconfirm libcdio cdparanoia
 sudo pacman -S --needed --noconfirm strawberry sound-juicer
 sudo pacman -S --needed --noconfirm libdvdread libdvdcss libdvdnav
 yay -S --needed --noconfirm wacomtablet
+yay -S --needed --noconfirm dropbox

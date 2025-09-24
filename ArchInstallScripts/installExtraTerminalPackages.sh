@@ -88,6 +88,7 @@ sudo pacman --needed --noconfirm -S clipmenu
 yay -S --needed --noconfirm cmus
 yay -S --needed --noconfirm cava
 yay -S --needed --noconfirm trash-cli
+yay -S --needed --noconfirm calc
 # terminal pdf viewer
 yay -S --needed --noconfirm tdf
 yay -S --needed --noconfirm python-pipx
