@@ -19,3 +19,12 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spell = true
   end,
 })
+
+-- in your LazyVim config (lua/plugins or lua/config/autocmds.lua)
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "markdown",
+  callback = function()
+    vim.opt_local.textwidth = 80 -- wrap at 80 characters
+    vim.opt_local.formatoptions:append("t") -- auto-wrap text
+  end,
+})
