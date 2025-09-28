@@ -42,7 +42,7 @@ alias gitPull='git pull --rebase'
 alias ipinfo='curl ipinfo.io'
 alias myip="curl http://ipecho.net/plain; echo"
 # launch windows chrome from wsl. I'm using my 'work session' here, i.e. Profile 1
-alias browser='"${BROWSER}" --profile-directory="Profile 1"' 
+# alias browser='"${BROWSER}" --profile-directory="Profile 1"' 
 # Windows specific, uncomment for WSL2
 # alias clip='clip.exe'
 # alias win32yank='win32yank.exe'
