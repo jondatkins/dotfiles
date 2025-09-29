@@ -45,7 +45,7 @@
 gtk-tabs-location = hidden
 # font-family = {{ terminal_font }}
 font-family = MesloLGS Nerd Font Mono
-font-size = 14
+font-size = 12
 scrollback-limit = 10_000
 # window-theme = ghostty
 clipboard-read = allow
@@ -54,7 +54,7 @@ window-decoration = false
 shell-integration = zsh
 
 # Transparency
-background-opacity = 0.4
+background-opacity = 0.7
 background-blur-radius = 20
 theme = catpuccin-mocha
 confirm-close-surface = false
