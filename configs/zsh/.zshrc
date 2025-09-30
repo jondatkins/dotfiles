@@ -37,7 +37,8 @@ if [ -f /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme ]
 then
   source /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f ~/dotfiles/configs/zsh/fzf.zsh ] && source ~/dotfiles/configs/zsh/fzf.zsh
+source <(fzf --zsh)
 
 if [ -f /home/linuxbrew ]
 then
