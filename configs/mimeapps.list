@@ -1,8 +1,9 @@
 [Added Associations]
 application/pdf=xpdf.desktop;
 image/jpeg=feh-2.desktop;
-image/png=feh.desktop
+image/png=feh.desktop;imv.desktop;
 image/x-xcf=gimp-6.desktop;gimp-5.desktop;
+audio/x-mpegurl=org.kde.haruna.desktop;mpv.desktop;
 
 [Default Applications]
 application/json=firefox.desktop
@@ -17,7 +18,7 @@ image/avif=firefox.desktop
 image/gif=feh.desktop
 image/jpeg=feh-2.desktop;
 image/jpg=feh.desktop
-image/png=feh.desktop
+image/png=imv.desktop
 image/svg+xml=firefox.desktop
 image/webp=firefox.desktop
 image/x-xcf=gimp-5.desktop
@@ -32,3 +33,4 @@ inode/directory=thunar.desktop
 application/x-wayland-gnome-saved-search=thunar.desktop
 x-scheme-handler/about=chromium.desktop
 x-scheme-handler/unknown=chromium.desktop
+audio/x-mpegurl=mpv.desktop
