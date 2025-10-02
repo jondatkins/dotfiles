@@ -348,6 +348,12 @@ return {
         )
       ),
       s(
+        { trig = "consoledir" }, -- Context table, which controls snippet expansion
+        { -- Table of snippet nodes
+          t("console.dir(yourObjectHere, { depth: null, colors: true } );"),
+        }
+      ),
+      s(
         "for",
         fmt(
           [[
