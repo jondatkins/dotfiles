@@ -1,6 +1,6 @@
 [Added Associations]
 application/pdf=xpdf.desktop;
-image/jpeg=feh-2.desktop;
+image/jpeg=feh-2.desktop;feh.desktop;imv.desktop;
 image/png=feh.desktop;imv.desktop;
 image/x-xcf=gimp-6.desktop;gimp-5.desktop;
 audio/x-mpegurl=org.kde.haruna.desktop;mpv.desktop;
@@ -13,6 +13,8 @@ application/x-extension-html=firefox.desktop;
 application/x-extension-shtml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
+image/avif=feh.desktop;
+image/webp=feh.desktop;
 
 [Default Applications]
 application/json=firefox.desktop
@@ -23,13 +25,13 @@ application/xml=firefox.desktop
 audio/flac=firefox.desktop
 audio/ogg=firefox.desktop
 audio/webm=firefox.desktop
-image/avif=firefox.desktop
+image/avif=feh.desktop
 image/gif=feh.desktop
-image/jpeg=feh-2.desktop;
+image/jpeg=imv.desktop
 image/jpg=feh.desktop
 image/png=imv.desktop
 image/svg+xml=firefox.desktop
-image/webp=firefox.desktop
+image/webp=feh.desktop
 image/x-xcf=gimp-5.desktop
 text/html=firefox.desktop
 video/ogg=firefox.desktop
