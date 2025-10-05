@@ -340,7 +340,7 @@ return {
         "console",
         fmt(
           [[
-            console.log(`{}`);
+            console.log( {} );
           ]],
           {
             i(1, "testMsg"),
@@ -414,7 +414,7 @@ return {
         "interpolation",
         fmt(
           [[
-          ${{{}}}
+          ${{`{}`}}
           ]],
           {
             i(1, "fooBar"),
