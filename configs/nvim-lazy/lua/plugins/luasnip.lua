@@ -367,6 +367,19 @@ return {
         )
       ),
       s(
+        "forBackwards",
+        fmt(
+          [[
+          for(let i = {}.length -1; i > 0; i--){{
+           // loop stuff here
+          }}
+          ]],
+          {
+            i(1, "arrayName"),
+          }
+        )
+      ),
+      s(
         "arrow",
         fmt(
           [[
