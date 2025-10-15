@@ -78,6 +78,7 @@ yay -S --needed --noconfirm i3lock-color xidlehook
 yay -S --needed --noconfirm appimagelauncher
 sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
 sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
+sudo pacman -S python-pyqt5
 # sudo pacman -S --needed --noconfirm alacritty
 sudo pacman -S --needed --noconfirm usbutils
 sudo pacman -S --needed --noconfirm xf86-input-wacom
