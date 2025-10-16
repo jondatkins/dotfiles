@@ -15,6 +15,7 @@ application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
 image/avif=feh.desktop;
 image/webp=feh.desktop;
+image/gif=imv.desktop;
 
 [Default Applications]
 application/json=firefox.desktop
@@ -26,7 +27,7 @@ audio/flac=firefox.desktop
 audio/ogg=firefox.desktop
 audio/webm=firefox.desktop
 image/avif=feh.desktop
-image/gif=feh.desktop
+image/gif=imv.desktop
 image/jpeg=imv.desktop
 image/jpg=feh.desktop
 image/png=imv.desktop
