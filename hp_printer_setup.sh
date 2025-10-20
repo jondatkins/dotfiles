@@ -7,4 +7,4 @@ sudo systemctl start cups.service
 sudo systemctl enable cups.service
 # sudo ufw allow 5353/udp
 # Replace with correct ip address for your printer
-hp-setup -i 192.168.1.102
+# hp-setup -i 192.168.1.102
