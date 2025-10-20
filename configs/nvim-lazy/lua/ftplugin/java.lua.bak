@@ -1,0 +1,26 @@
+-- LazyVim-compatible JDTLS setup
+local jdtls = require("jdtls")
+local jdtls_setup = require("jdtls.setup")
+
+-- Make sure the root directory is the Gradle or Git project, not "app/"
+local root_markers = { "gradlew", "build.gradle", "settings.gradle", ".git" }
+local root_dir = jdtls_setup.find_root(root_markers)
+
+-- Reuse LazyVim’s default paths for cache/config
+local home = vim.fn.stdpath("data")
+local cache = vim.fn.stdpath("cache")
+
+local config = {
+  cmd = {
+    home .. "/mason/bin/jdtls",
+    "--jvm-arg=-javaagent:" .. home .. "/mason/share/jdtls/lombok.jar",
+    "-configuration",
+    cache .. "/jdtls/config",
+    "-data",
+    cache .. "/jdtls/workspace",
+  },
+  root_dir = root_dir,
+}
+
+-- Start or attach the LSP
+jdtls.start_or_attach(config)

@@ -1,5 +1,7 @@
 {
   "extras": [
+    "lazyvim.plugins.extras.lang.kotlin",
+    "lazyvim.plugins.extras.lang.scala",
     "lazyvim.plugins.extras.test.core"
   ],
   "install_version": 7,
