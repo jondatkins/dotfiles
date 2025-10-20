@@ -104,3 +104,4 @@ sudo pacman --needed --noconfirm -S pacman-contrib
 curl -s "https://get.sdkman.io" | bash
 sdk install java
 sdk install gradle
+sudo pacman -S exfatprogs
