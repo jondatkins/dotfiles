@@ -10,6 +10,8 @@ return {
       "stylua",
       "shfmt",
       "codelldb",
+      "jdtls",
+      "lemminx",
     },
   },
   ---@param opts MasonSettings | {ensure_installed: string[]}
