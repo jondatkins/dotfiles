@@ -18,7 +18,7 @@ alias makeEx='chmod u+x'
 alias clr='clear'
 # aliases from Elijah Manor's dotfiles
 alias weather="curl -4 wttr.in/derby"
-alias vim="lazyvim-java"
+alias vim="nvim"
 alias vi="nvim"
 # Doing this stops nvim switcher from working
 alias nvim="nvim"
