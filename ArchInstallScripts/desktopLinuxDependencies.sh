@@ -116,7 +116,7 @@ yay -S --needed --noconfirm hplip
 yay -S --needed --noconfirm python-pyqt5
 sudo pacman -S --needed --noconfirm samba smbclient avahi
 sudo pacman -S --needed --noconfirm retroarch
-sudo pacman -S libretro-core-info
+sudo pacman -S --needed --noconfirm libretro-core-info
 yay -S --needed --noconfirm retroarch-assets-xmb retroarch-standalone-service
 # yayInstall retroarch-assets-xmb retroarch-standalone-service
 # yay -S --needed --noconfirm retroarch-steam-launcher
