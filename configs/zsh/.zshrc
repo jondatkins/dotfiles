@@ -85,35 +85,9 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Created by `pipx` on 2025-06-22 13:30:25
 export PATH="$PATH:/home/jon/.local/bin"
-#
-# # Elijah Manoor's vim switcher script
-# alias nvim="NVIM_APPNAME=nvim-lazy nvim"
-# alias vim="NVIM_APPNAME=nvim-lazy nvim"
-# alias vi="NVIM_APPNAME=nvim-lazy nvim"
-# alias nvim-kick="NVIM_APPNAME=nvim-kickstart nvim"
-# # alias nvim-chad="NVIM_APPNAME=NvChad nvim"
-# # alias nvim-astro="NVIM_APPNAME=AstroNvim nvim"
-#
-# function nvims() {
-#   items=("default" "kickstart" "nvim-lazy")
-#   config=$(printf "%s\n" "${items[@]}" | fzf --prompt=" Neovim Config  " --height=~50% --layout=reverse --border --exit-0)
-#   if [[ -z $config ]]; then
-#     echo "Nothing selected"
-#     return 0
-#   elif [[ $config == "default" ]]; then
-#     config=nvim-lazy
-#   fi
-#   NVIM_APPNAME=$config nvim $@
-# }
-#
-# bindkey -s ^a "nvims\n"
-#
-# git clone https://github.com/nvim-lua/kickstart.nvim.git ~/dotfiles/configs/nvim-kickstart
-
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -121,3 +95,4 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # Only changing the escape key to `jk` in insert mode, we still
 # keep using the default keybindings `^[` in other modes
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
+ZVM_SYSTEM_CLIPBOARD_ENABLED=true
