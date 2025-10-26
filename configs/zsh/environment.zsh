@@ -40,8 +40,8 @@ export TERM=xterm-256color
 # export PATH=$HOME/.fzf/bin:$PATH
 
 #█▓▒░ man
-export MANPAGER='nvim --cmd ":lua vim.g.noplugins=1" +Man!'
-export MANWIDTH=999
+# export MANPAGER='nvim --cmd ":lua vim.g.noplugins=1" +Man!'
+# export MANWIDTH=999
 
 #█▓▒░ preferred text editor
 export EDITOR=nvim
