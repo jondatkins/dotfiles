@@ -94,3 +94,5 @@ eval "$(batman --export-env)"
 # → Use Bat (by itself) for man pages:
 # export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
+# For Linux/WSL
+export PATH=$PATH:$HOME/go/bin
