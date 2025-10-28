@@ -70,3 +70,8 @@ alias pacmanSyu="pacmanSyu.sh"
 alias suspend="sudo systemctl suspend"
 alias keybinds="KeyHints.sh &"
 alias keyhints="KeyHints.sh &"
+# in your .bashrc/.zshrc/*rc
+alias bathelp='bat --plain --language=help'
+help() {
+    "$@" --help 2>&1 | bathelp
+}
