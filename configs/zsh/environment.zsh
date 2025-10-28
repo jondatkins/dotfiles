@@ -39,9 +39,6 @@ export PATH=snap/bin:$PATH
 export TERM=xterm-256color
 # export PATH=$HOME/.fzf/bin:$PATH
 
-#█▓▒░ man
-# export MANPAGER='nvim --cmd ":lua vim.g.noplugins=1" +Man!'
-# export MANWIDTH=999
 
 #█▓▒░ preferred text editor
 export EDITOR=nvim
@@ -87,3 +84,13 @@ export DISPLAY=:0.0
 # Possible fix for Dolphin's mime type problem
 # https://bbs.archlinux.org/viewtopic.php?pid=2167442
 export XDG_MENU_PREFIX=arch- kbuildsycoca6
+
+#█▓▒░ man
+# export MANPAGER='nvim --cmd ":lua vim.g.noplugins=1" +Man!'
+# export MANWIDTH=999
+# export PAGER="most"
+# → Use Bat-extras for man pages in zsh/bash:
+eval "$(batman --export-env)"
+# → Use Bat (by itself) for man pages:
+# export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+export MANPAGER="less -R --use-color -Dd+r -Du+b"

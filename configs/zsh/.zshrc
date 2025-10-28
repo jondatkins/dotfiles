@@ -37,8 +37,6 @@ if [ -f /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme ]
 then
   source /home/linuxbrew/.linuxbrew/share/powerlevel10k/powerlevel10k.zsh-theme
 fi
-[ -f ~/dotfiles/configs/zsh/fzf.zsh ] && source ~/dotfiles/configs/zsh/fzf.zsh
-source <(fzf --zsh)
 
 if [ -f /home/linuxbrew ]
 then
@@ -96,3 +94,14 @@ source /usr/share/zsh/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 # keep using the default keybindings `^[` in other modes
 ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 ZVM_SYSTEM_CLIPBOARD_ENABLED=true
+ZVM_INIT_MODE=sourcing
+
+# [ -f ~/dotfiles/configs/zsh/fzf.zsh ] && source ~/dotfiles/configs/zsh/fzf.zsh
+# source <(fzf --zsh)
+
+if [ -x "$(command -v fzf)"  ]
+then
+    # source ~/dotfiles/configs/zsh/fzf.zsh
+fi
+# zvm_after_init_commands+=('[ -f ~/dotfiles/configs/zsh/fzf.zsh ] && source ~/dotfiles/configs/zsh/fzf.zsh')
+zvm_after_init_commands+=('source <(fzf --zsh)')

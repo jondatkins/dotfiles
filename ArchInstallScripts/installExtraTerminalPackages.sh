@@ -26,7 +26,8 @@ sudo pacman --needed --noconfirm -S ponysay
 # GNU stow, a symlink farm manager
 # sudo pacman --needed --noconfirm -S stow
 # Too Long, Didn't Read, very handy
-sudo pacman --needed --noconfirm -S tldr
+# sudo pacman --needed --noconfirm -S tldr
+yay --needed --noconfirm -S tealdeer
 # Too Long, Didn't Read, very handy
 # sudo pacman --needed --noconfirm -S node npm
 # yay --needed --noconfirm -S nvm # One more toy (`pipes.sh`), because the Internet is a Series of Tubes. (Note You can't use `sudo` with `yay` upfront. Yay will ask you for your sudo password later.)
@@ -97,6 +98,7 @@ gem install tmuxinator
 sudo pacman --needed --noconfirm -S aria2 edfat-utils p7zip unrar
 sudo pacman --needed --noconfirm -S amd-ucode
 sudo pacman --needed --noconfirm -S luarocks
+# sudo pacman --needed --noconfirm -S most
 # need to update grub after ucode install
 # sudo grub-mkconfig -o /boot/grub/grub.cfg
 # yay -S preload
@@ -105,4 +107,5 @@ sudo pacman --needed --noconfirm -S pacman-contrib
 curl -s "https://get.sdkman.io" | bash
 sdk install java
 sdk install gradle
-sudo pacman -S exfatprogs
+sudo pacman --needed --noconfirm -S exfatprogs
+sudo pacman --needed --noconfirm -S go
