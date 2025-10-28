@@ -109,3 +109,4 @@ sdk install java
 sdk install gradle
 sudo pacman --needed --noconfirm -S exfatprogs
 sudo pacman --needed --noconfirm -S go
+sudo pacman --needed --noconfirm -S xxd
