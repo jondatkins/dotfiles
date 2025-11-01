@@ -54,7 +54,7 @@ window-decoration = false
 shell-integration = zsh
 
 # Transparency
-background-opacity = 0.7
+background-opacity = 0.9
 background-blur-radius = 20
 theme = catpuccin-mocha
 confirm-close-surface = false
