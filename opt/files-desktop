@@ -23,6 +23,7 @@ configs/Thunar .config/Thunar
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/vlc .config/vlc
+configs/walker .config/walker
 configs/.xinitrc .config/.xinitrc
 configs/zsh .config/zsh
 configs/.zshenv .zshenv
