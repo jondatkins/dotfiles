@@ -12,6 +12,6 @@ sudo pacman -S --needed --noconfirm strawberry sound-juicer
 sudo pacman -S --needed --noconfirm libdvdread libdvdcss libdvdnav
 yay -S --needed --noconfirm wacomtablet
 yay -S --needed --noconfirm dropbox
-sudo pacman -S webp-pixbuf-loader
+sudo pacman --needed --noconfirm -S webp-pixbuf-loader
 sudo pacman --needed --noconfirm -S wget
 sudo pacman --needed --noconfirm -S uv
