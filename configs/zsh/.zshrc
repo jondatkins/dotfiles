@@ -106,6 +106,6 @@ fi
 # zvm_after_init_commands+=('[ -f ~/dotfiles/configs/zsh/fzf.zsh ] && source ~/dotfiles/configs/zsh/fzf.zsh')
 zvm_after_init_commands+=('source <(fzf --zsh)')
 
-. "$HOME/.local/share/../bin/env"
+# . "$HOME/.local/share/../bin/env"
 echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
 echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
