@@ -15,3 +15,5 @@ yay -S --needed --noconfirm dropbox
 sudo pacman --needed --noconfirm -S webp-pixbuf-loader
 sudo pacman --needed --noconfirm -S wget
 sudo pacman --needed --noconfirm -S uv
+yay -R tmux
+yay -s --needed --noconfirm tmux-sixel-git
