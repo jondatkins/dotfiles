@@ -16,4 +16,7 @@ sudo pacman --needed --noconfirm -S webp-pixbuf-loader
 sudo pacman --needed --noconfirm -S wget
 sudo pacman --needed --noconfirm -S uv
 yay -R tmux
-yay -s --needed --noconfirm tmux-sixel-git
+yay -S --needed --noconfirm tmux-sixel-git
+sudo pacman --needed --noconfirm -S openssh
+sudo systemctl start sshd
+sudo systemctl enable sshd
