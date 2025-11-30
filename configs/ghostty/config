@@ -64,3 +64,6 @@ custom-shader = ./shaders/cursor_blaze.glsl
 # custom-shader = ./shaders/tft.glsl
 # custom-shader = ./shaders/bettercrt.glsl
 # custom-shader = ./shaders/bloom.glsl
+
+# Slowdown mouse scrolling
+mouse-scroll-multiplier = 0.95
