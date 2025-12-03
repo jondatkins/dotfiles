@@ -7,7 +7,6 @@ USER_GIT_AUTHOR_EMAIL="122027005+jondatkins@users.noreply.github.com"
 DOTFILES_DIR="${HOME}/${GITHUB_REPO}"
 CONFIG_DIR="${HOME}/.config"
 # Set the files to link. These can be for a full arch desktop, or for arch on Windows Subsystem for Linux.
-# The default is 'files', i.e. the full arch config.
 DESKTOP_CONFIG_FILES="files-desktop"
 TERMINAL_CONFIG_FILES="files-terminal"
 
@@ -133,7 +132,7 @@ link_dotfiles() {
     IFS=$'\r\n'
     # Only symlink terminal applications for Windows Subsystem for Linux.
     links=($(cat "${terminal_files}"))
-
+    echo links
     if [ "$terminal" = false ]; then
       # here, it's a full desktop install, so use both opt files
       links=($(cat "${terminal_files}" "${desktop_files}"))

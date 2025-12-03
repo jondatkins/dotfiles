@@ -1,3 +1,4 @@
+configs/.zshenv .zshenv
 configs/git .config/git
 configs/lazyvim-java .config/lazyvim-java
 configs/nvim-astro .config/nvim-astro
@@ -8,5 +9,5 @@ configs/ranger .config/ranger
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/w3m .config/w3m
+configs/zellij .config/zellij
 configs/zsh .config/zsh
-configs/.zshenv .zshenv
