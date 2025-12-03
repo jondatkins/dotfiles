@@ -1,3 +1,6 @@
+configs/.xinitrc .config/.xinitrc
+configs/.zshenv .zshenv
+configs/Thunar .config/Thunar
 configs/alacritty .config/alacritty
 configs/bashmount .config/bashmount
 configs/cava .config/cava
@@ -19,11 +22,9 @@ configs/polybar .config/polybar
 configs/ranger .config/ranger
 configs/retroarch .config/retroarch
 configs/rofi .config/rofi
-configs/Thunar .config/Thunar
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/vlc .config/vlc
 configs/walker .config/walker
-configs/.xinitrc .config/.xinitrc
+configs/waybar .config/waybar
 configs/zsh .config/zsh
-configs/.zshenv .zshenv
