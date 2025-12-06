@@ -1,5 +1,5 @@
 [Added Associations]
-application/pdf=xpdf.desktop;
+application/pdf=xpdf.desktop;com.github.johnfactotum.Foliate.desktop;
 image/jpeg=feh-2.desktop;feh.desktop;imv.desktop;
 image/png=feh.desktop;imv.desktop;
 image/x-xcf=gimp-6.desktop;gimp-5.desktop;
@@ -16,10 +16,11 @@ application/x-extension-xht=firefox.desktop;
 image/avif=feh.desktop;
 image/webp=feh.desktop;imv.desktop;
 image/gif=imv.desktop;
+application/epub+zip=com.github.johnfactotum.Foliate.desktop;
 
 [Default Applications]
 application/json=firefox.desktop
-application/pdf=firefox.desktop;
+application/pdf=com.github.johnfactotum.Foliate.desktop
 application/x-xpinstall=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/xml=nvim.desktop
@@ -67,3 +68,4 @@ application/x-shellscript=nvim.desktop
 text/x-c=nvim.desktop
 text/x-c++=nvim.desktop
 text/xml=nvim.desktop
+application/epub+zip=com.github.johnfactotum.Foliate.desktop
