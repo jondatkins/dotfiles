@@ -76,3 +76,5 @@ vim.api.nvim_create_user_command("FormatMarkdown", format_markdown, {})
 -- Optional: also bind it to a key, e.g. <leader>fm
 vim.keymap.set("n", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
 vim.keymap.set("v", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
+
+vim.cmd([[ autocmd BufWritePre * %s/\s\+$//e ]])
