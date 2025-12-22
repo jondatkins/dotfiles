@@ -78,3 +78,8 @@ vim.keymap.set("n", "<leader>fm", format_markdown, { desc = "Format Markdown wit
 vim.keymap.set("v", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
 
 vim.cmd([[ autocmd BufWritePre * %s/\s\+$//e ]])
+-- NOTE: Ensures that when exiting NeoVim, Zellij returns to normal mode
+vim.api.nvim_create_autocmd("VimLeave", {
+  pattern = "*",
+  command = "silent !zellij action switch-mode normal",
+})
