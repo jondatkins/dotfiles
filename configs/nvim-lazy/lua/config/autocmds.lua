@@ -76,10 +76,25 @@ vim.api.nvim_create_user_command("FormatMarkdown", format_markdown, {})
 -- Optional: also bind it to a key, e.g. <leader>fm
 vim.keymap.set("n", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
 vim.keymap.set("v", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
-
-vim.cmd([[ autocmd BufWritePre * %s/\s\+$//e ]])
--- NOTE: Ensures that when exiting NeoVim, Zellij returns to normal mode
-vim.api.nvim_create_autocmd("VimLeave", {
-  pattern = "*",
-  command = "silent !zellij action switch-mode normal",
-})
+--
+-- vim.cmd([[ autocmd BufWritePre * %s/\s\+$//e ]])
+-- -- NOTE: Ensures that when exiting NeoVim, Zellij returns to normal mode
+-- vim.api.nvim_create_autocmd("VimLeave", {
+--   pattern = "*",
+--   command = "silent !zellij action switch-mode normal",
+-- })
+--
+-- local function smart_move(cmd)
+--   return function()
+--     local curwin = vim.api.nvim_get_current_win()
+--     vim.cmd(cmd)
+--     if curwin == vim.api.nvim_get_current_win() then
+--       vim.fn.system("zellij action move-focus " .. cmd:sub(-1):lower())
+--     end
+--   end
+-- end
+--
+-- vim.keymap.set("n", "<C-h>", smart_move("wincmd h"))
+-- vim.keymap.set("n", "<C-j>", smart_move("wincmd j"))
+-- vim.keymap.set("n", "<C-k>", smart_move("wincmd k"))
+-- vim.keymap.set("n", "<C-l>", smart_move("wincmd l"))

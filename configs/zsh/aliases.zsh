@@ -28,6 +28,7 @@ alias tmuxrcs="tmux source-file ${DOTFILES}/configs/tmux/tmux.conf"
 alias mux=tmuxinator
 # TODO: Does this command need any other arguments (e.g. session number?)
 alias retmux='tmux attach'
+alias ze="zellij -l welcome"
 alias beep='echo -e "\a"'
 alias dev='printf "%s\n" "${dev_commands[@]}" | fzf --height 20% --header Commands | xargs bash'
 alias example='f() { echo Your arg was $1. };f'
@@ -73,5 +74,6 @@ alias keyhints="KeyHints.sh &"
 # in your .bashrc/.zshrc/*rc
 alias bathelp='bat --plain --language=help'
 help() {
+    echo 'foo'
     "$@" --help 2>&1 | bathelp
 }
