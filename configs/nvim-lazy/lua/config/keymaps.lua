@@ -34,3 +34,7 @@ vim.keymap.set("n", "<Leader>zo", "<c-w>=", { noremap = true, silent = false, de
 -- vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "Half page up (centered)" })
 -- Delete without yanking
 -- vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without yanking" })
+vim.keymap.set("n", "<C-w>h", "<C-w>h", { remap = true })
+vim.keymap.set("n", "<C-w>j", "<C-w>j", { remap = true })
+vim.keymap.set("n", "<C-w>k", "<C-w>k", { remap = true })
+vim.keymap.set("n", "<C-w>l", "<C-w>l", { remap = true })
