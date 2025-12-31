@@ -110,3 +110,6 @@ sdk install gradle
 sudo pacman --needed --noconfirm -S exfatprogs
 sudo pacman --needed --noconfirm -S go
 sudo pacman --needed --noconfirm -S xxd
+# C programming
+sudo pacman -S meson ninja gcc
+sudo pacman -S cmake gcc make
