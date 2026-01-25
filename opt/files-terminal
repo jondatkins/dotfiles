@@ -6,6 +6,7 @@ configs/nvim-java .config/nvim-java
 configs/nvim-kickstart .config/nvim-kickstart
 configs/nvim-lazy .config/nvim
 configs/ranger .config/ranger
+configs/systemd .config/systemd
 configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/w3m .config/w3m
