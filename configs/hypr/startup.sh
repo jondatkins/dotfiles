@@ -8,4 +8,4 @@ hyprctl dispatch workspace 1
 
 # Launch Ghostty
 ghostty &
-firefox https://www.boot.dev/dashboard firefox https://www.boot.dev/dashboard &
+firefox https://www.boot.dev/dashboard &
