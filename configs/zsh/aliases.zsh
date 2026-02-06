@@ -77,3 +77,5 @@ help() {
     echo 'foo'
     "$@" --help 2>&1 | bathelp
 }
+alias trash='gio trash'
+alias rm='gio trash'

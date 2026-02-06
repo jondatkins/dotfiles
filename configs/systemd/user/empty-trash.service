@@ -1,0 +1,7 @@
+[Unit]
+Description=Empty user trash
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/gio trash --empty
+User=jon
