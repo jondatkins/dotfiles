@@ -23,3 +23,7 @@ sudo systemctl enable sshd
 yay -S --needed --noconfirm zellij
 yay -S --needed --noconfirm kanata
 sudo pacman --needed --noconfirm -S sqlite
+sudo pacman --needed --noconfirm -S go
+sudo pacman --needed --noconfirm -S zeal
+sudo pacman --needed --noconfirm -S ddgr
+wget https://desktop.docker.com/linux/main/arm64/187762/docker-desktop-arm64.deb
