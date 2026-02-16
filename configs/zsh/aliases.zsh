@@ -50,11 +50,11 @@ alias myip="curl http://ipecho.net/plain; echo"
 # What's my graphics driver?
 alias graphics="lspci -k | grep -EA3 'VGA|3D|Display'"
 alias at='alacritty-themes'
-alias pbcopy='xsel --clipboard --input'
-alias pbpaste='xsel --clipboard --output'
-alias copy='xsel --clipboard --input'
-alias paste='xsel --clipboard --output'
-alias copypath='pwd|xsel --clipboard --input'
+# alias pbcopy='xsel --clipboard --input'
+# alias pbpaste='xsel --clipboard --output'
+# alias copy='xsel --clipboard --input'
+# alias paste='xsel --clipboard --output'
+# alias copypath='pwd|xsel --clipboard --input'
 alias dots="cd $DOTFILES; vim"
 alias lg="lazygit"
 alias lynx="lynx -vikeys -accept-all-cookies"
@@ -69,8 +69,8 @@ alias fehl="fehl.sh"
 alias sysUpdate="pacmanSyu.sh"
 alias pacmanSyu="pacmanSyu.sh"
 alias suspend="sudo systemctl suspend"
-alias keybinds="KeyHints.sh &"
-alias keyhints="KeyHints.sh &"
+# alias keybinds="KeyHints.sh &"
+# alias keyhints="KeyHints.sh &"
 # in your .bashrc/.zshrc/*rc
 alias bathelp='bat --plain --language=help'
 help() {
@@ -79,3 +79,4 @@ help() {
 }
 alias trash='gio trash'
 alias rm='gio trash'
+alias dockerStopAll='docker stop ($docker ps -q)'
