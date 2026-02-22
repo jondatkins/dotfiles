@@ -78,5 +78,5 @@ help() {
     "$@" --help 2>&1 | bathelp
 }
 alias trash='gio trash'
-alias rm='gio trash'
+# alias rm='gio trash'
 alias dockerStopAll='docker stop ($docker ps -q)'
