@@ -28,3 +28,4 @@ sudo pacman --needed --noconfirm -S zeal
 sudo pacman --needed --noconfirm -S ddgr
 sudo pacman --needed --noconfirm -S code
 wget https://desktop.docker.com/linux/main/arm64/187762/docker-desktop-arm64.deb
+# A test
