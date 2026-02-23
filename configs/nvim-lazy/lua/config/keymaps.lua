@@ -25,8 +25,8 @@ vim.keymap.set("v", "Leader<p>", '"_dP')
 -- noremap Zo <c-w>=
 
 -- Easier split zooming
-vim.keymap.set("n", "<Leader>zz", "<c-w>_ | <c-w>|", { noremap = true, silent = false, desc = "Zoom Vim split" })
-vim.keymap.set("n", "<Leader>zo", "<c-w>=", { noremap = true, silent = false, desc = "Unzoom Vim split" })
+-- vim.keymap.set("n", "<Leader>zz", "<c-w>_ | <c-w>|", { noremap = true, silent = false, desc = "Zoom Vim split" })
+-- vim.keymap.set("n", "<Leader>zo", "<c-w>=", { noremap = true, silent = false, desc = "Unzoom Vim split" })
 -- Center screen when jumping
 -- vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
 -- vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result (centered)" })
