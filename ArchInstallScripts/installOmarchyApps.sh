@@ -31,3 +31,4 @@ sudo pacman --needed --noconfirm -S postgresql
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
 yay -S --needed --noconfirm goose
+sudo pacman --needed --noconfirm -S sqlc
