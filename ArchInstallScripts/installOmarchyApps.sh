@@ -28,3 +28,4 @@ sudo pacman --needed --noconfirm -S zeal
 sudo pacman --needed --noconfirm -S ddgr
 sudo pacman --needed --noconfirm -S code
 sudo pacman --needed --noconfirm -S postgresql
+yay -S --needed --noconfirm goose
