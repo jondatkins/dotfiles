@@ -28,4 +28,6 @@ sudo pacman --needed --noconfirm -S zeal
 sudo pacman --needed --noconfirm -S ddgr
 sudo pacman --needed --noconfirm -S code
 sudo pacman --needed --noconfirm -S postgresql
+sudo systemctl start postgresql
+sudo systemctl enable postgresql
 yay -S --needed --noconfirm goose
