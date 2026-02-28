@@ -2,39 +2,44 @@
 --   return {}
 -- end
 return {
+  {
+    "rebelot/kanagawa.nvim",
+  },
+  {
+    "EdenEast/nightfox.nvim",
+  },
+  {
+    "zenbones-theme/zenbones.nvim",
+  },
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+  },
+  {
+    "Mofiqul/dracula.nvim",
+  },
+  -- Using Lazy
+  {
+    "navarasu/onedark.nvim",
+  },
+  {
+    "elvessousa/sobrio",
+  },
   -- add gruvbox
   {
     "ellisonleao/gruvbox.nvim",
-    opts = {
-      terminal_colors = true, -- add neovim terminal colors
-      undercurl = true,
-      underline = true,
-      bold = true,
-      italic = {
-        strings = true,
-        emphasis = true,
-        comments = true,
-        operators = false,
-        folds = true,
-      },
-      strikethrough = true,
-      invert_selection = false,
-      invert_signs = false,
-      invert_tabline = false,
-      inverse = true, -- invert background for search, diffs, statuslines and errors
-      contrast = "", -- can be "hard", "soft" or empty string
-      palette_overrides = {},
-      overrides = {},
-      dim_inactive = false,
-      transparent_mode = true,
-    },
   },
-
+  {
+    "folke/tokyonight.nvim",
+  },
+  {
+    "catppuccin/nvim",
+  },
+  -- nightfox, dayfox, dawnfox, duskfox, nordfox, terafox, carbonfox
   -- Configure LazyVim to load gruvbox
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "carbonfox",
     },
   },
 }

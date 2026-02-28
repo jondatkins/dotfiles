@@ -41,7 +41,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "gruvbox", "catpuccin", "tokyonight", "habamax" } },
+  -- install = { colorscheme = { "gruvbox", "catpuccin", "tokyonight", "habamax" } },
 
   checker = { enabled = true, notify = false, frequency = 86400 }, -- automatically check for plugin updates
   performance = {
