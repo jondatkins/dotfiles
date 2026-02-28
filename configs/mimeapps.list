@@ -1,5 +1,5 @@
 [Added Associations]
-application/pdf=xpdf.desktop;com.github.johnfactotum.Foliate.desktop;
+application/pdf=xpdf.desktop;com.github.johnfactotum.Foliate.desktop;org.gnome.Evince.desktop;
 image/jpeg=feh-2.desktop;feh.desktop;imv.desktop;
 image/png=feh.desktop;imv.desktop;
 image/x-xcf=gimp-6.desktop;gimp-5.desktop;
@@ -20,7 +20,7 @@ application/epub+zip=com.github.johnfactotum.Foliate.desktop;
 
 [Default Applications]
 application/json=firefox.desktop
-application/pdf=com.github.johnfactotum.Foliate.desktop
+application/pdf=org.gnome.Evince.desktop
 application/x-xpinstall=firefox.desktop
 application/xhtml+xml=firefox.desktop
 application/xml=nvim.desktop
@@ -69,3 +69,4 @@ text/x-c=nvim.desktop
 text/x-c++=nvim.desktop
 text/xml=nvim.desktop
 application/epub+zip=com.github.johnfactotum.Foliate.desktop
+x-scheme-handler/aether=aether-protocol-handler.desktop
