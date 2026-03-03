@@ -33,4 +33,6 @@ sudo pacman --needed --noconfirm -S minikube
 sudo systemctl start postgresql
 sudo systemctl enable postgresql
 yay -S --needed --noconfirm goose
+yay -S --needed --noconfirm weathr
+yay -S --needed --noconfirm wego
 sudo pacman --needed --noconfirm -S sqlc
