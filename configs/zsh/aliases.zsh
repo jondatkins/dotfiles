@@ -80,3 +80,4 @@ help() {
 alias trash='gio trash'
 # alias rm='gio trash'
 alias dockerStopAll='docker stop ($docker ps -q)'
+alias diskUse='du -sh * | sort -rh'
