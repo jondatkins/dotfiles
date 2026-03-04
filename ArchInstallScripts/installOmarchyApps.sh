@@ -35,4 +35,5 @@ sudo systemctl enable postgresql
 yay -S --needed --noconfirm goose
 yay -S --needed --noconfirm weathr
 yay -S --needed --noconfirm wego
+yay -S --needed --noconfirm httpie
 sudo pacman --needed --noconfirm -S sqlc
