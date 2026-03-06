@@ -38,3 +38,4 @@ yay -S --needed --noconfirm wego
 yay -S --needed --noconfirm httpie
 sudo pacman --needed --noconfirm -S sqlc
 sudo pacman --needed --noconfirm -S television
+yay -S --needed --noconfirm sesh-bin
