@@ -40,3 +40,5 @@ sudo pacman --needed --noconfirm -S sqlc
 sudo pacman --needed --noconfirm -S television
 sudo pacman --needed --noconfirm -S gum
 yay -S --needed --noconfirm sesh-bin
+sudo pacman --needed --noconfirm -S yt-dlp
+sudo pacman --needed --noconfirm -S aws-cli-v2
