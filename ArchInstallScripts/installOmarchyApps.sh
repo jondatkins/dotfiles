@@ -42,3 +42,5 @@ sudo pacman --needed --noconfirm -S gum
 yay -S --needed --noconfirm sesh-bin
 sudo pacman --needed --noconfirm -S yt-dlp
 sudo pacman --needed --noconfirm -S aws-cli-v2
+sudo pacman --needed --noconfirm -S aws-cli-v2
+sudo pacman --needed --noconfirm -S gamescope
