@@ -21,7 +21,7 @@ alias weather="curl -4 wttr.in/derby"
 alias vim="nvim"
 alias vi="nvim"
 # Doing this stops nvim switcher from working
-alias nvim="nvim"
+# alias nvim="nvim"
 # alias vimrcs="source ~/.config/nvim/init.lua"
 # alias tmuxrc="vim ${DOTFILES}/tmux/.config/tmux/tmux.conf"
 alias tmuxrcs="tmux source-file ${DOTFILES}/configs/tmux/tmux.conf"
