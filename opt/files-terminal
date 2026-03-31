@@ -11,4 +11,5 @@ configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/w3m .config/w3m
 configs/zellij .config/zellij
+configs/television .config/television
 configs/zsh .config/zsh
