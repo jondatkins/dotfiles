@@ -83,3 +83,4 @@ alias dockerStopAll='docker stop ($docker ps -q)'
 alias diskUse='du -sh * | sort -rh'
 alias conv='conCommit.sh'
 alias removeWhitespace='removeWhitespace.sh'
+alias krita="QT_QPA_PLATFORM=xcb krita"
