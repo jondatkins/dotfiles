@@ -41,3 +41,4 @@ vim.keymap.set("n", "<C-w>l", "<C-w>l", { remap = true })
 vim.keymap.set("i", "kj", "<ESC>", { desc = "[P]Exit insert mode with kj" })
 vim.keymap.set("n", "<Leader>lr", ":LspRestart", { noremap = true, silent = false, desc = "Restart LSP" })
 -- nnoremap <leader>lr :LspRestart<CR>
+vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help)
