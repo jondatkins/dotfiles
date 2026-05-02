@@ -3,11 +3,13 @@ return {
   opts = {
     lsp = {
       signature = {
-        enabled = true,
-        auto_open = {
-          enabled = false, -- only show when manually triggered
-        },
+        enabled = false,
       },
     },
   },
+  config = function(_, opts)
+    require("noice").setup(opts)
+
+    vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, { desc = "Signature Help" })
+  end,
 }
