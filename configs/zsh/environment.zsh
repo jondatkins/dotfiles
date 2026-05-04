@@ -96,3 +96,4 @@ eval "$(batman --export-env)"
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 # For Linux/WSL
 export PATH=$PATH:$HOME/go/bin
+export PATH=$PATH:$HOME/.config/emacs/bin
