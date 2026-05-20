@@ -45,7 +45,7 @@ window-decoration = false
 shell-integration = zsh
 
 # Transparency
-background-opacity = 0.6
+background-opacity = 0.3
 background-blur-radius = 20
 theme = catpuccin-mocha
 confirm-close-surface = false
@@ -58,12 +58,12 @@ confirm-close-surface = false
 # custom-shader = ./ghostty-shaders/cineShader-Lava.glsl
 # custom-shader = ./ghostty-shaders/crt.glsl
 # custom-shader = ./ghostty-shaders/cubes.glsl
-# custom-shader = ./ghostty-shaders/cursor_blaze.glsl
+custom-shader = ./ghostty-shaders/cursor_blaze.glsl
 # custom-shader = ./ghostty-shaders/cursor_blaze_no_trail.glsl
-custom-shader = ./ghostty-shaders/cursor_blaze_tapered.glsl
+# custom-shader = ./ghostty-shaders/cursor_blaze_tapered.glsl
 # custom-shader = ./ghostty-shaders/cursor_frozen.glsl
 # custom-shader = ./ghostty-shaders/cursor_smear.glsl
-custom-shader = ./ghostty-shaders/cursor_smear_fade.glsl
+# custom-shader = ./ghostty-shaders/cursor_smear_fade.glsl
 # custom-shader = ./ghostty-shaders/dither.glsl
 # custom-shader = ./ghostty-shaders/drunkard.glsl
 # custom-shader = ./ghostty-shaders/fireworks-rockets.glsl
