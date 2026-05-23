@@ -71,7 +71,7 @@ return {
     opts.sources = {
       compat = {},
       -- default = { "lsp", "path", "snippets", "buffer" },
-      default = { "buffer" },
+      default = { "buffer", "path" },
     }
     opts.cmdline = {
       enabled = true,
