@@ -30,6 +30,8 @@ zsh --version
 yay -S --needed --noconfirm zsh-theme-powerlevel10k-git
 # Install the terminal multiplexer. (We'll have some basic stuff set up in `~/.tmux.conf`
 sudo pacman --needed --noconfirm -S tmux
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 # Install neovim editor, which will also install lua
 sudo pacman --needed --noconfirm -S neovim
 # Python 3 plugin support for Neovim

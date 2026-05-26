@@ -5,6 +5,7 @@ yay -S --needed --noconfirm ghostty
 sudo pacman -S --needed --noconfirm feh
 # sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
 sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
+sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
 sudo pacman -S python-pyqt5
 # play and rip CDs and DVDs
 sudo pacman -S --needed --noconfirm libcdio cdparanoia
@@ -44,3 +45,4 @@ sudo pacman --needed --noconfirm -S yt-dlp
 sudo pacman --needed --noconfirm -S aws-cli-v2
 sudo pacman --needed --noconfirm -S gamescope
 sudo pacman --needed --noconfirm -S emacs
+sudo pacman --needed --noconfirm -S steam
