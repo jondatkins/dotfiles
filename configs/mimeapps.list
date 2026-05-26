@@ -2,7 +2,7 @@
 application/pdf=xpdf.desktop;com.github.johnfactotum.Foliate.desktop;org.gnome.Evince.desktop;
 image/jpeg=feh-2.desktop;feh.desktop;imv.desktop;
 image/png=feh.desktop;imv.desktop;
-image/x-xcf=gimp-6.desktop;gimp-5.desktop;
+image/x-xcf=gimp-6.desktop;gimp-5.desktop;gimp.desktop;
 audio/x-mpegurl=org.kde.haruna.desktop;mpv.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
@@ -34,7 +34,7 @@ image/jpg=feh.desktop
 image/png=imv.desktop
 image/svg+xml=firefox.desktop
 image/webp=imv.desktop
-image/x-xcf=gimp-5.desktop
+image/x-xcf=gimp.desktop
 text/html=firefox.desktop
 video/ogg=firefox.desktop
 video/webm=firefox.desktop
