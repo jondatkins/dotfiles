@@ -23,3 +23,5 @@ This will create a symlink from ./configs/git to /home/$USER/.config/git
 ### This is based on the tutorial at
 
 <https://freddiecarthy.com/blog/make-your-dotfiles-portable-with-git-and-a-simple-bash-script>
+
+just a test
