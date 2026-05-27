@@ -4,7 +4,7 @@ Documentation=https://github.com/jtroo/kanata
 
 [Service]
 Type=simple
-ExecStart=/home/%u/.local/share/bin/kanata
+ExecStart=/bin/kanata
 Restart=no
 
 [Install]

@@ -36,8 +36,8 @@
 
   ;; tap-hold keys with letters for tap and layer change for hold
   anm (tap-hold-release 200 200 a @num)
-  oar (tap-hold-release 200 200 s @arr)
-  umc (tap-hold-release 200 200 f @msc)
+  oar (tap-hold-release 200 200 q @arr)
+  umc (tap-hold-release 200 200 g @msc)
   .ms (tap-hold-release 200 200 . @mse)
 
   ;; tap for capslk, hold for lctl
