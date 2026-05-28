@@ -1,3 +1,6 @@
+-- if true then
+--   return {}
+-- end
 -- https://github.com/saghen/blink.cmp/discussions/1173#discussion-7929919
 return {
   "saghen/blink.cmp",

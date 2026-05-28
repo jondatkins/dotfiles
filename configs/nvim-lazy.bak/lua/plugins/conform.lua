@@ -1,0 +1,12 @@
+-- ~/.config/nvim/lua/plugins/conform.lua
+return {
+  "stevearc/conform.nvim",
+  opts = {
+    formatters_by_ft = {
+      c = { "clang_format" },
+      cpp = { "clang_format" },
+      objc = { "clang_format" },
+      objcpp = { "clang_format" },
+    },
+  },
+}

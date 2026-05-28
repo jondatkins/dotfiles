@@ -1,0 +1,9 @@
+{
+  "Print": {
+    "prefix": "pp",
+    "body": [
+      "print($1)"
+    ],
+    "description": "print statement"
+  }
+}

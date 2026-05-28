@@ -1,3 +1,5 @@
+
+if true then return {} end
 return {
   "saghen/blink.cmp",
 
@@ -34,14 +36,47 @@ return {
       require("blink.cmp").hide()
       completion_toggle:toggle()
     end
+    if include_in_completion then
+      opts.snippets = { preset = "mini_snippets" }
+      return
+    end
+
+    -- Standalone --
+    local blink = require("blink.cmp")
+    expand_select_override = function(snippets, insert)
+      -- Schedule, otherwise blink's virtual text is not removed on vim.ui.select
+      blink.cancel()
+      vim.schedule(function()
+        MiniSnippets.default_select(snippets, insert)
+      end)
+    end
+    --
+    -- Blink performs a require on blink.cmp.sources.snippets.default
+    -- By removing the source, that default engine will not be used
+    opts.sources.default = vim.tbl_filter(function(source)
+      return source ~= "snippets"
+    end, opts.sources.default)
+    opts.snippets = { -- need to repeat blink's preset here
+      expand = function(snippet)
+        expand_from_lsp(snippet)
+        blink.resubscribe()
+      end,
+      active = function()
+        return MiniSnippets.session.get(false) ~= nil
+      end,
+      jump = function(direction)
+        jump(direction == -1 and "prev" or "next")
+      end,
+    }
+
     vim.keymap.set({ "i", "n" }, "<C-q>", toggle_completion, { desc = "Toggle Completion" })
     opts.enabled = function()
       return vim.b.completion
     end
 
-    opts.snippets = {
-      preset = "default",
-    }
+    -- opts.snippets = {
+    --   preset = "default",
+    -- }
 
     opts.appearance = {
       use_nvim_cmp_as_default = false,
@@ -71,7 +106,7 @@ return {
     opts.sources = {
       compat = {},
       -- default = { "lsp", "path", "snippets", "buffer" },
-      default = { "buffer", "path" },
+      default = { "buffer", "path", "snippets" },
     }
     opts.cmdline = {
       enabled = true,
