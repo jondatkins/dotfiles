@@ -17,6 +17,7 @@ image/avif=feh.desktop;
 image/webp=feh.desktop;imv.desktop;
 image/gif=imv.desktop;
 application/epub+zip=com.github.johnfactotum.Foliate.desktop;
+video/webm=mpv.desktop;
 
 [Default Applications]
 application/json=firefox.desktop
@@ -37,7 +38,7 @@ image/webp=imv.desktop
 image/x-xcf=gimp.desktop
 text/html=firefox.desktop
 video/ogg=firefox.desktop
-video/webm=firefox.desktop
+video/webm=mpv.desktop
 x-scheme-handler/chrome=firefox.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
