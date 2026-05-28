@@ -6,6 +6,6 @@ Documentation=https://github.com/jtroo/kanata
 Type=simple
 ExecStart=/bin/kanata
 Restart=no
-
 [Install]
 WantedBy=default.target
+
