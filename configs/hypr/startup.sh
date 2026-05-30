@@ -7,10 +7,9 @@ sleep 0.5
 hyprctl dispatch workspace 1
 
 # Launch Ghostty
-ghostty &
+ghostty -e sesh connect Boot &
 chromium https://www.boot.dev/dashboard &
-firefox &
-tmux
+firefox
 # tmux &
 # ~/dotfiles/configs/tmux/plugins/tmux-resurrect/scripts/restore.sh
 
