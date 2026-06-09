@@ -46,3 +46,4 @@ sudo pacman --needed --noconfirm -S aws-cli-v2
 sudo pacman --needed --noconfirm -S gamescope
 sudo pacman --needed --noconfirm -S emacs
 sudo pacman --needed --noconfirm -S steam
+yay -S --needed --noconfirm tmuxinator
