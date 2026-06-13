@@ -1,15 +1,17 @@
 #!/bin/bash
 
 # Small delay to make sure Hyprland is ready
-sleep 0.5
+# sleep 0.5
 
 # Switch to workspace 1
-hyprctl dispatch workspace 1
+# hyprctl dispatch workspace 1
 
 # Launch Ghostty
-ghostty -e sesh connect Boot &
-chromium https://www.boot.dev/dashboard &
-firefox
+ghostty -e tmux
+
+# hyprctl dispatch exec waybar
+# chromium https://www.boot.dev/dashboard &
+# firefox
 # tmux &
 # ~/dotfiles/configs/tmux/plugins/tmux-resurrect/scripts/restore.sh
 
