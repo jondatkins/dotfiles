@@ -8,10 +8,10 @@
 
 # Launch Ghostty
 ghostty -e tmux
+firefox
 
 # hyprctl dispatch exec waybar
 # chromium https://www.boot.dev/dashboard &
-# firefox
 # tmux &
 # ~/dotfiles/configs/tmux/plugins/tmux-resurrect/scripts/restore.sh
 
