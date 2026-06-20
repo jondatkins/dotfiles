@@ -77,7 +77,7 @@
 (deflayer numbers
   _    _    _    _    _    _    nlk  _  _  _   _    _    _    _
   _    _    C-S-tab C-tab _ S-9  S-0   7  8  9  min  _    _    
-  _    _    _  lsft  _ grv  =    4  5  6  +   [   ] _
+  _    lmet lalt lsft lctl grv  =    4  5  6  +   [   ] _
   _ _   C-z  C-x  C-c  C-v  XX   min  1  2  3  \    _
   _    _    _              0              grv    _    _
 )

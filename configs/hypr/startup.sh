@@ -7,7 +7,7 @@
 # hyprctl dispatch workspace 1
 
 # Launch Ghostty
-ghostty -e tmux
+ghostty -e tmux &
 firefox
 
 # hyprctl dispatch exec waybar
