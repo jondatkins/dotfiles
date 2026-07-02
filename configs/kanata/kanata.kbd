@@ -5,7 +5,7 @@
   lsft  102d z    x    c    v    b    n    m    ,    .    /    rsft
   lctl lmet lalt           spc            ralt rmet rctl
 )
-
+(defcfg process-unmapped-keys yes)
 
 
 (defvar
@@ -66,6 +66,7 @@
   ls (macro l s spc min a l ret)
 )
 
+
 (deflayer qwerty
   _ 1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q  @oar   @umc    @.ms    t    y    u    i    o    p    [    ]    
@@ -83,10 +84,10 @@
 )
 
 (deflayer symbols
-  _    _    _    _    _    _    nlk  S-7  S-8  S-9  S-0    _    _    _
-  _    _    C-S-tab C-tab _ XX  _   S-4  S-5  S-6  S-min  _    _    
-  _    _    C-z  C-y  M-tab XX  +    S-1  S-2  S-3  =   @{   @} _    
-  _ _   C-z  C-x  C-c  C-v  XX   S-min    S-9  S-0  .  S-\    _
+  _    _    _    _    _    _    nlk  -  -  -  -    _    _    _
+  _    _    C-S-tab C-tab _ XX  _   -  -  -  S-min  _    _    
+  _    _    C-z  C-y  M-tab XX  +    -  -  -  =   @{   @} _    
+  _ _   C-z  C-x  C-c  C-v  XX   S-min    -  -  .  S-\    _
   _    _    _              S-grv              S-grv    _    _
 )
 
