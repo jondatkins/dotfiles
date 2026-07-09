@@ -4,6 +4,7 @@ configs/Thunar .config/Thunar
 configs/alacritty .config/alacritty
 configs/bashmount .config/bashmount
 configs/cava .config/cava
+configs/chromium .config/chromium
 configs/dunst .config/dunst
 configs/feh .config/feh
 configs/ghostty .config/ghostty
