@@ -4,11 +4,10 @@
 # sleep 0.5
 
 # Switch to workspace 1
-# hyprctl dispatch workspace 1
+hyprctl dispatch workspace 1 &
 
 # Launch Ghostty
-ghostty -e tmux &
-firefox
+ghostty -e tmux
 
 # hyprctl dispatch exec waybar
 # chromium https://www.boot.dev/dashboard &
