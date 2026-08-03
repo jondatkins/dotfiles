@@ -107,6 +107,6 @@ fi
 zvm_after_init_commands+=('source <(fzf --zsh)')
 
 # . "$HOME/.local/share/../bin/env"
-echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
-echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
+# echo 'eval "$(uv generate-shell-completion zsh)"' >> ~/.zshrc
+# echo 'eval "$(uvx --generate-shell-completion zsh)"' >> ~/.zshrc
 export PATH=~/.npm-global/bin:$PATH
