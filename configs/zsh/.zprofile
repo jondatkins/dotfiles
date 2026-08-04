@@ -4,3 +4,4 @@
 
 # Created by `pipx` on 2025-06-22 13:30:25
 export PATH="$PATH:/home/jon/.local/bin"
+systemctl --user import-environment PATH
