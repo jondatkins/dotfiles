@@ -10,6 +10,7 @@ configs/tmux .config/tmux
 configs/tmuxinator .config/tmuxinator
 configs/w3m .config/w3m
 configs/zellij .config/zellij
+configs/sesh .config/sesh
 configs/television .config/television
 configs/zsh .config/zsh
 configs/zsh/.zshrc .zshrc

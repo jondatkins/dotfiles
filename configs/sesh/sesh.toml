@@ -1,0 +1,17 @@
+sort_order = [
+  "tmuxinator", # show first
+  "config",
+  "tmux",
+  "zoxide",     # show last
+]
+[[session]]
+name = "Downloads 📥"
+path = "~/Downloads"
+startup_command = "ls"
+
+[[session]]
+name = "tmux config"
+path = "~/dotfiles/configs/tmux"
+startup_command = "nvim tmux.conf"
+preview_command = "bat --color=always ~/dotfiles/configs/tmux/tmux.conf"
+windows = ["foo"]
