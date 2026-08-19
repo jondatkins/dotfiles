@@ -1,0 +1,40 @@
+"Registry"
+{
+	"HKLM"
+	{
+		"Software"
+		{
+			"Valve"
+			{
+				"Steam"
+				{
+					"SteamPID"		"23314"
+					"ClientLauncherType"		"0"
+				}
+			}
+		}
+	}
+	"HKCU"
+	{
+		"Software"
+		{
+			"Valve"
+			{
+				"Steam"
+				{
+					"StartupModeTmpIsValid"		"0"
+					"language"		"english"
+					"CompletedOOBEStage1"		"1"
+					"SourceModInstallPath"		"/home/jon/.local/share/Steam/steamapps\\sourcemods"
+					"AutoLoginUser"		"dekinj"
+					"Rate"		"30000"
+					"AlreadyRetriedOfflineMode"		"0"
+				}
+				"Steamsteamglobal"
+				{
+					"language"		"english"
+				}
+			}
+		}
+	}
+}

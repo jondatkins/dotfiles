@@ -29,5 +29,6 @@ configs/tmuxinator .config/tmuxinator
 configs/vlc .config/vlc
 configs/walker .config/walker
 configs/waybar .config/waybar
+configs/steam .steam
 configs/xdg-terminals.list .config/xdg-terminals.list
 configs/zsh .config/zsh
