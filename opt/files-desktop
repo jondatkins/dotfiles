@@ -9,7 +9,12 @@ configs/dunst .config/dunst
 configs/feh .config/feh
 configs/ghostty .config/ghostty
 configs/git .config/git
-configs/hypr .config/hypr
+configs/hypr/bindings.lua .config/hypr/bindings.lua
+configs/hypr/monitors.lua .config/hypr/monitors.lua
+configs/hypr/input.lua .config/hypr/input.lua
+configs/hypr/looknfeel.lua .config/hypr/looknfeel.lua
+configs/hypr/autostart.lua .config/hypr/autostart.lua
+configs/hypr/startup.sh .config/hypr/startup.sh
 configs/i3 .config/i3
 configs/kanata .config/kanata
 configs/kitty .config/kitty
