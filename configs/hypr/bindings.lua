@@ -3,6 +3,7 @@
 
 -- Window focus: HJKL
 o.bind("SUPER + H", "Focus left", hl.dsp.focus({ direction = "l" }))
+hl.unbind("SUPER + L")
 o.bind("SUPER + L", "Focus right", hl.dsp.focus({ direction = "r" }))
 o.bind("SUPER + K", "Focus up", hl.dsp.focus({ direction = "u" }))
 o.bind("SUPER + J", "Focus down", hl.dsp.focus({ direction = "d" }))
@@ -52,3 +53,10 @@ o.bind("SUPER + CTRL + F", "Fullscreen", hl.dsp.window.fullscreen({ mode = "full
 -- Tmux terminal
 hl.unbind("SUPER + ALT + RETURN")
 o.bind("SUPER + ALT + RETURN", "Tmux", { omarchy = "terminal-tmux" })
+
+-- Launch Walker
+o.bind("SUPER + B", "Walker", "walker")
+
+-- Don't care about twitter, but want to keep the dwindle / scrolling toggle
+hl.unbind("SUPER + X")
+o.bind("SUPER + X", "Toggle workspace layout", "omarchy-hyprland-workspace-layout-toggle")

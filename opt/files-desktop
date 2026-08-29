@@ -9,6 +9,7 @@ configs/dunst .config/dunst
 configs/feh .config/feh
 configs/ghostty .config/ghostty
 configs/git .config/git
+configs/hypr/hyprland.lua .config/hypr/hyprland.lua
 configs/hypr/bindings.lua .config/hypr/bindings.lua
 configs/hypr/monitors.lua .config/hypr/monitors.lua
 configs/hypr/input.lua .config/hypr/input.lua
