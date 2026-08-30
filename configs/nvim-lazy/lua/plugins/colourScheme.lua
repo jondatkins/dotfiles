@@ -28,9 +28,6 @@ return {
     -- end,
   },
   {
-    "nyoom-engineering/oxocarbon.nvim",
-  },
-  {
     "Mofiqul/dracula.nvim",
   },
   -- Using Lazy
