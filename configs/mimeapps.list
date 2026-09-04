@@ -71,3 +71,4 @@ text/x-c++=nvim.desktop
 text/xml=nvim.desktop
 application/epub+zip=com.github.johnfactotum.Foliate.desktop
 x-scheme-handler/aether=aether-protocol-handler.desktop
+application/x-aseprite=aseprite.desktop
