@@ -3,7 +3,8 @@ configs/lazyvim-java .config/lazyvim-java
 configs/nvim-astro .config/nvim-astro
 configs/nvim-java .config/nvim-java
 configs/nvim-kickstart .config/nvim-kickstart
-configs/nvim-lazy .config/nvim
+configs/nvim-lazy .config/nvim-lazy
+configs/nvim-jon .config/nvim-jon
 configs/ranger .config/ranger
 configs/systemd .config/systemd
 configs/tmux .config/tmux
