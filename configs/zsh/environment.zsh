@@ -97,3 +97,4 @@ export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export PATH=$PATH:$HOME/go/bin
 export PATH=$PATH:$HOME/.config/emacs/bin
 # export PATH=$PATH:$HOME/Projects/BootDev/learnLinux/worldbanc/private/bin
+export TRY_PATH="~/Dropbox/Projects/src"
