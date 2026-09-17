@@ -114,4 +114,6 @@ sudo pacman --needed --noconfirm -S xxd
 sudo pacman -S --needed --noconfirm meson ninja gcc
 sudo pacman -S --needed --noconfirm cmake gcc make
 sudo pacman --needed --noconfirm clang
-sudo pacman -S lldb
+sudo pacman -S --needed --noconfirm clang lldb
+sudo pacman -Syu --needed --noconfirm libcdio
+sudo pacman -S --needed --noconfirm rmpc mpd

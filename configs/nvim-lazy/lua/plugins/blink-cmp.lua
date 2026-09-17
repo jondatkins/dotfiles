@@ -1,3 +1,6 @@
+-- if true then
+--   return {}
+-- end
 return {
   "saghen/blink.cmp",
   opts = {
@@ -44,7 +47,13 @@ return {
       -- adding any nvim-cmp sources here will enable them
       -- with blink.compat
       compat = {},
-      default = { "path", "snippets", "buffer" },
+      -- default = { "path", "snippets", "buffer" },
+      default = { "buffer" },
+      providers = {
+        lsp = {
+          enabled = false,
+        },
+      },
     },
 
     cmdline = {

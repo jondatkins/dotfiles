@@ -2,12 +2,13 @@
 -- Omarchy's defaults are loaded first; these are my overrides.
 
 hl.config({
-  input = {
-    touchpad = {
-      natural_scroll = true,
-    },
-    tablet = {
-      output = "DVI-D-1",
-    },
-  },
+	input = {
+		touchpad = {
+			natural_scroll = true,
+		},
+		tablet = {
+			-- output = "DVI-D-1",
+			output = "HDMI-A-1",
+		},
+	},
 })

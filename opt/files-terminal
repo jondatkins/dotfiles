@@ -14,5 +14,6 @@ configs/zellij .config/zellij
 configs/sesh .config/sesh
 configs/television .config/television
 configs/zsh .config/zsh
+configs/mpd .config/mpd
 configs/omarchy/plugins/jon.menu .config/omarchy/plugins/jon.menu
 configs/zsh/.zshrc .zshrc
