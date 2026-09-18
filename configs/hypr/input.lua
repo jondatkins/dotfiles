@@ -1,6 +1,6 @@
 -- Personal input configuration.
 -- Omarchy's defaults are loaded first; these are my overrides.
-
+-- test
 -- 1. Main global configuration block
 hl.config({
 	input = {
