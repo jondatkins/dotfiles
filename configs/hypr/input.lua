@@ -11,4 +11,12 @@ hl.config({
 			output = "HDMI-A-1",
 		},
 	},
+	-- Add a dedicated device section below input
+	device = {
+		{
+			name = "wacom-bamboo-pen-pen",
+			output = "HDMI-A-1",
+			type = "tablet",
+		},
+	},
 })
