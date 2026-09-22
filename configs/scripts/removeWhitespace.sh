@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-FILE_PATH=$1
-cd $FILE_PATH
+FILE_PATH=${1:-.}
+cd "$FILE_PATH"
 
 #!/usr/bin/env bash
 
