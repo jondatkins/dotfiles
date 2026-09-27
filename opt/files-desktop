@@ -10,6 +10,7 @@ configs/kanata .config/kanata
 configs/kitty .config/kitty
 configs/krita.org .config/krita.org
 configs/mimeapps.list .config/mimeapps.list
+configs/xdg-terminals.list .config/xdg-terminals.list
 configs/mpv .config/mpv
 configs/pip .config/pip
 configs/retroarch .config/retroarch
