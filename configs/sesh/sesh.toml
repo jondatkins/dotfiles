@@ -1,8 +1,12 @@
+# sort_order = [
+#   "tmuxinator", # show first
+#   "config",
+#   "tmux",
+#   "zoxide",     # show last
+# ]
 sort_order = [
-  "tmuxinator", # show first
-  "config",
-  "tmux",
-  "zoxide",     # show last
+  "tmux",               # live sessions stay pinned on top
+  ["config", "zoxide"], # merged, ordered by zoxide score
 ]
 [[session]]
 name = "Downloads 📥"
@@ -15,3 +19,12 @@ path = "~/dotfiles/configs/tmux"
 startup_command = "nvim tmux.conf"
 preview_command = "bat --color=always ~/dotfiles/configs/tmux/tmux.conf"
 windows = ["foo"]
+
+
+[[session]]
+name = "learn Go"
+path = "~/Dropbox/Projects/LearningGo/"
+preview_command = "bat --color=always ~/dotfiles/configs/tmux/tmux.conf"
+windows = ["go", "spare"]
+alias = "lg"
+alias_auto_connect = true

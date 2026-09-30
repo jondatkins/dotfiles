@@ -52,6 +52,5 @@ windows:
       # synchronize: after
       panes:
         -
-        -
   - window2:
   - logs:

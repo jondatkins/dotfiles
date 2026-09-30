@@ -49,7 +49,6 @@ windows:
       layout: tiled
       panes:
         -
-        -
   - misc_stuff:
   - terminal:
       -
@@ -59,7 +58,6 @@ windows:
       # 'before' represents legacy functionality and will be deprecated in a future release, in favour of 'after'
       # synchronize: after
       panes:
-        -
         -
   - window2:
   - msc:

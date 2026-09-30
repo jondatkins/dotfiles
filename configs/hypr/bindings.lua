@@ -64,4 +64,4 @@ o.bind("SUPER + B", "Walker", "walker")
 --
 -- -- Don't care about twitter, but want to keep the dwindle / scrolling toggle
 hl.unbind("SUPER + X")
-o.bind("SUPER + X", "Toggle workspace layout", "omarchy-hyprland-workspace-layout-toggle")
+hl.bind("SUPER + N", hl.dsp.exec_cmd("pkill hyprsunset || hyprsunset --temperature 3000"))
