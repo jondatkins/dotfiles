@@ -3,3 +3,10 @@ omarchy-theme-install https://github.com/OldJobobo/omarchy-event-horizon-theme
 omarchy-theme-install https://github.com/abhijeet-swami/omarchy-forest-green-theme
 omarchy-theme-install https://github.com/bjarneo/omarchy-frost-theme
 omarchy-theme-install https://github.com/Swarnim114/omarchy-monochrome-theme
+omarchy-theme-install https://github.com/ankur311sudo/black_arch
+omarchy-theme-install https://github.com/noahljungberg/omarchy-darcula-theme
+omarchy-theme-install https://github.com/atif-1402/omarchy-golden-brown-theme
+omarchy-theme-install https://github.com/BVisagie/omarchy-matrix-theme
+omarchy-theme-install https://github.com/steve-lohmeyer/omarchy-mars-theme
+omarchy-theme-install https://github.com/omacom-io/omarchy-synthwave84-theme/
+omarchy-theme-install https://github.com/vyrx-dev/omarchy-void-theme
