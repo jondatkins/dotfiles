@@ -1,0 +1,123 @@
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]
+  caps a    s    d    f    g    h    j    k    l    ;    '  bksl  ret
+  lsft  102d z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+(defcfg process-unmapped-keys yes)
+
+
+(defvar
+  tap-time 100
+  hold-time 200
+)
+(defalias
+  escctrl (tap-hold 100 100 esc lctl)
+  a  (tap-hold $tap-time $hold-time a lmet)
+  s  (tap-hold $tap-time $hold-time s lalt)
+  d  (tap-hold $tap-time $hold-time d lctl)
+  f  (tap-hold $tap-time $hold-time f lsft)
+  j  (tap-hold $tap-time $hold-time j rsft)
+  k  (tap-hold $tap-time $hold-time k rctl)
+  l  (tap-hold $tap-time $hold-time l ralt)
+  ;  (tap-hold $tap-time $hold-time ; rmet)
+)
+
+(defalias
+  ;; toggle layer aliases
+  num (layer-toggle numbers)
+  sym (layer-toggle symbols)
+  arr (layer-toggle arrows)
+  msc (layer-toggle misc)
+  mse (layer-toggle mouse)
+
+  ;; change the base layer between qwerty and dvorak
+  qwr (layer-switch qwerty)
+
+  ;; tap-hold keys with letters for tap and layer change for hold
+  anm (tap-hold-release 200 200 esc @num)
+  syb (tap-hold-release 200 200 g @sym)
+  oar (tap-hold-release 200 200 w @arr)
+  umc (tap-hold-release 200 200 e @msc)
+  .ms (tap-hold-release 200 200 r @mse)
+
+  ;; tap for capslk, hold for lctl
+  cap (tap-hold-release 200 200 caps lctl)
+
+  csv C-S-v
+  csc C-S-c
+)
+
+(deflocalkeys-linux
+  pho 445
+)
+
+(defalias
+  ;; shifted keys
+  { S-[
+  } S-]
+  : S-;
+  ral (tap-hold-release 200 200 sldr ralt)
+)
+
+(defalias
+  alp (multi a b c d e f g h i j k l m n o p q r s t u v w x y z)
+  ls (macro l s spc min a l ret)
+)
+
+
+(deflayer qwerty
+  _ 1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q  @oar   @umc    @.ms    t    y    u    i    o    p    [    ]    
+  @anm  @a  @s  @d  @f  @syb  h  @j  @k   @l  @;    '    bksl ret
+  lsft 102d z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc            ralt rmet rctl
+)
+
+(deflayer numbers
+  _    _    _    _    _    _    nlk  _  _  _   _    _    _    _
+  _    _    C-S-tab C-tab _ S-9  S-0   7  8  9  min  _    _    
+  _    lmet lalt lsft lctl grv  =    4  5  6  +   [   ] _
+  _ _   C-z  C-x  C-c  C-v  XX   min  1  2  3  \    _
+  _    _    _              0              grv    _    _
+)
+
+(deflayer symbols
+  _    _    _    _    _    _    nlk  -  -  -  -    _    _    _
+  _    _    C-S-tab C-tab _ S-grv  _   -  -  -  S-min  _    _    
+  _    _    C-z  C-y  M-tab S-grv  +    -  -  -  =   @{   @} _    
+  _ _   C-z  C-x  C-c  C-v  S-grv   S-min    -  -  .  S-\    _
+  _    _    _              S-grv              S-grv    _    _
+)
+
+(deflayer misc
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    ins  @{   @}    [   ]    _    _    
+  _    _    _    _    C-u  _    C-bspc bspc esc ret S-9  S-0    _   _
+  _ _   C-z  C-x  C-c  C-v  _    _    del  S-9  S-0    _    _
+  _    _    _              _              _    _    _
+)
+
+(deflayer arrows
+  _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12  _
+  _    _    _    _    _    _    C-S-tab pgup up pgdn C-tab _  _    
+  _    _    _    _    _    _    left down up rght end  _    _  _
+  _ _   _    _    _    _    _    home    _    C-w  _    _    _
+  _    _    _              _              _    _    _
+)
+
+(defalias
+  mwu (mwheel-up 50 120)
+  mwd (mwheel-down 50 120)
+  mwl (mwheel-left 50 120)
+  mwr (mwheel-right 50 120)
+)
+
+(deflayer mouse
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    @mwu bck  _    fwd  _    _    bck    fwd        _    _    _    
+  _    @mwd mlft _    mrgt mmid _   @mwl   @mwd   @mwu   @mwu   mwr  _  _ _
+  _ _   _    _    _    _    _    _    mlft  mrgt  mmid    _    _
+  _    _    _              _              _    _    _
+)
