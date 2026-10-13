@@ -8,7 +8,7 @@
 
 # Launch Ghostty
 ghostty -e tmux
-
+firefox
 # hyprctl dispatch exec waybar
 # chromium https://www.boot.dev/dashboard &
 # tmux &
