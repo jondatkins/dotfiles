@@ -1,4 +1,3 @@
--- ~/.config/nvim/lua/plugins/conform.lua
 return {
   "stevearc/conform.nvim",
   opts = {
@@ -7,6 +6,17 @@ return {
       cpp = { "clang_format" },
       objc = { "clang_format" },
       objcpp = { "clang_format" },
+      markdown = { "prettier" },
+    },
+    formatters = {
+      prettier = {
+        prepend_args = {
+          "--prose-wrap",
+          "always",
+          "--print-width",
+          "80",
+        },
+      },
     },
   },
 }

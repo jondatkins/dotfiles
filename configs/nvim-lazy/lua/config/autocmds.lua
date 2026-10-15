@@ -29,24 +29,26 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
-local function format_markdown()
-  local pos = vim.api.nvim_win_get_cursor(0)
-  local bufname = vim.api.nvim_buf_get_name(0) -- full path or "" if new/unsaved
-
-  local cmd
-  if bufname == "" then
-    cmd = "%!npx prettier --prose-wrap always --print-width 80 --parser markdown"
-  else
-    cmd = "%!npx prettier --prose-wrap always --print-width 80 --stdin-filepath " .. vim.fn.shellescape(bufname)
-  end
-
-  vim.cmd("silent! " .. cmd)
-  vim.api.nvim_win_set_cursor(0, pos)
-end
-
--- Create a user command you can run as :FormatMarkdown
-vim.api.nvim_create_user_command("FormatMarkdown", format_markdown, {})
-
--- Optional: also bind it to a key, e.g. <leader>fm
-vim.keymap.set("n", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
-vim.keymap.set("v", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
+-- local function format_markdown()
+--   local pos = vim.api.nvim_win_get_cursor(0)
+--   local bufname = vim.api.nvim_buf_get_name(0)
+--
+--   local cmd
+--   if bufname == "" then
+--     cmd = "%!npx --loglevel=silent prettier --prose-wrap always --print-width 80 --parser markdown 2>/dev/null"
+--   else
+--     cmd = "%!npx --loglevel=silent prettier --prose-wrap always --print-width 80 --stdin-filepath "
+--       .. vim.fn.shellescape(bufname)
+--       .. " 2>/dev/null"
+--   end
+--
+--   vim.cmd(cmd)
+--   vim.api.nvim_win_set_cursor(0, pos)
+-- end
+--
+-- -- Create a user command you can run as :FormatMarkdown
+-- vim.api.nvim_create_user_command("FormatMarkdown", format_markdown, {})
+--
+-- -- Optional: also bind it to a key, e.g. <leader>fm
+-- vim.keymap.set("n", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })
+-- vim.keymap.set("v", "<leader>fm", format_markdown, { desc = "Format Markdown with Prettier" })

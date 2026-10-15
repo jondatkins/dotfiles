@@ -46,6 +46,7 @@ sudo pacman --needed --noconfirm -S aws-cli-v2
 sudo pacman --needed --noconfirm -S gamescope
 sudo pacman --needed --noconfirm -S emacs
 sudo pacman --needed --noconfirm -S steam
+sudo pacman -S --needed --noconfirm prettier
 yay -S --needed --noconfirm tmuxinator
 yay -S --needed --noconfirm vial-appimage
 # curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
