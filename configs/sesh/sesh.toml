@@ -24,7 +24,13 @@ windows = ["foo"]
 [[session]]
 name = "learn Go"
 path = "~/Dropbox/Projects/LearningGo/"
-preview_command = "bat --color=always ~/dotfiles/configs/tmux/tmux.conf"
 windows = ["go", "spare"]
 alias = "lg"
+alias_auto_connect = true
+
+[[session]]
+name = "read"
+path = "~/Local_Books/"
+windows = ["read", "spare"]
+alias = "rd"
 alias_auto_connect = true
