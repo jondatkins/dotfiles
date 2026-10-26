@@ -1,0 +1,15 @@
+# Pull in the system default layout first
+include "%L"
+
+# Custom Currency Layouts
+<Multi_key> <g> <r>         : "£"   # Shorthand for British Pound (Great Britain)
+<Multi_key> <e> <u>         : "€"   # Shorthand for Euro (European Union)
+
+# Math & Logic Elements
+<Multi_key> <m> <m>         : "µ"   # Micro symbol
+<Multi_key> <p> <i>         : "π"   # Pi symbol
+<Multi_key> <n> <e>         : "≠"   # Not equal to
+
+# Quick Text Macros
+<Multi_key> <l> <o> <d>     : "ಠ_ಠ"  # Look of disapproval
+<Multi_key> <d> <g>         : "°"   # Degree symbol (dg for degree)

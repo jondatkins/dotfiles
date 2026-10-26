@@ -20,3 +20,4 @@ configs/tmuxinator .config/tmuxinator
 configs/walker .config/walker
 configs/steam .steam
 configs/zsh .config/zsh
+configs/XCompose .XCompose
