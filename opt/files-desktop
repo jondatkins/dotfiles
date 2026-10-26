@@ -9,6 +9,7 @@ configs/hypr .config/hypr
 configs/kanata .config/kanata
 configs/kitty .config/kitty
 configs/krita.org .config/krita.org
+configs/applications/org.kde.krita.desktop .local/share/applications/org.kde.krita.desktop
 configs/mimeapps.list .config/mimeapps.list
 configs/xdg-terminals.list .config/xdg-terminals.list
 configs/mpv .config/mpv
