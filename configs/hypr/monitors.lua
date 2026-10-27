@@ -1,4 +1,5 @@
--- Personal monitorxt
+local omarchy_gdk_scale = 1
+local omarchy_monitor_scale = 1
 
 hl.monitor({
 	output = "HDMI-A-1",
