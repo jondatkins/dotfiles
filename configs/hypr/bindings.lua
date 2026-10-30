@@ -65,3 +65,9 @@ o.bind("SUPER + B", "Walker", "walker")
 -- -- Don't care about twitter, but want to keep the dwindle / scrolling toggle
 hl.unbind("SUPER + X")
 hl.bind("SUPER + N", hl.dsp.exec_cmd("pkill hyprsunset || hyprsunset --temperature 3000"))
+-- Spawns a floating foot terminal running your custom PATH dmenu emulator
+o.bind(
+	"SUPER + R",
+	"Run arbitrary script from PATH",
+	'uwsm-app -- foot --title="Path Runner" bash -c "~/dotfiles/configs/scripts/omarchy-path-runner"'
+)

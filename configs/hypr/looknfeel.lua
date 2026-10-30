@@ -11,3 +11,10 @@ o.window("imv", {
 o.window("mpv", {
 	tag = "-floating-window",
 })
+
+-- Force the Path Runner window to float, center, and size appropriately
+o.window({ title = "^Path Runner$" }, {
+	float = true,
+	center = true,
+	size = { 600, 400 },
+})

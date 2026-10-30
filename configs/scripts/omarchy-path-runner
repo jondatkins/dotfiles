@@ -1,0 +1,17 @@
+#!/bin/bash
+# 1. Pull in environment variables so your local scripts stay on the $PATH
+[ -f ~/.config/uwsm/env ] && source ~/.config/uwsm/env
+[ -f ~/.bashrc ] && source ~/.bashrc
+
+# 2. Open fzf to select the command
+cmd=$(compgen -c | sort -u | fzf --prompt="Run script: " --border=rounded --margin=5%)
+
+# 3. If a command was chosen, break it out of the terminal completely using setsid
+if [ -n "$cmd" ]; then
+    # setsid detaches the new process from the terminal's process group
+    # ensuring it stays alive after the terminal window closes.
+    setsid bash -c "$cmd" >/dev/null 2>&1 &
+    
+    # Give the system half a second to fork it before foot slams shut
+    sleep 0.2
+fi
