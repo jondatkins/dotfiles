@@ -63,7 +63,7 @@ Name[wa]=Krita
 Name[xh]=Krita
 Name[zh_CN]=Krita
 Name[zh_TW]=Krita
-Exec=env QT_QPA_PLATFORM=xcb krita %F
+Exec=krita %F
 GenericName=Digital Painting
 GenericName[ar]=رسم رقمي
 GenericName[bg]=Дигитално рисуване
