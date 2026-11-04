@@ -3,3 +3,4 @@ configs/retroarch/*
 !configs/retroarch/config/
 configs/w3m/cookie
 configs/steam/
+configs/fcitx5/profile

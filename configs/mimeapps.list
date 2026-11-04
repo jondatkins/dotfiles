@@ -72,3 +72,4 @@ text/xml=nvim.desktop
 application/epub+zip=com.github.johnfactotum.Foliate.desktop
 x-scheme-handler/aether=aether-protocol-handler.desktop
 application/x-aseprite=aseprite.desktop
+application/x-krita=krita.desktop

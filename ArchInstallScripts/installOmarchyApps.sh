@@ -4,7 +4,7 @@ sudo pacman -S --needed --noconfirm firefox
 yay -S --needed --noconfirm ghostty
 sudo pacman -S --needed --noconfirm feh
 # sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
-sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
+# sudo pacman -S --needed --noconfirm krita krita-plugin-gmic
 sudo pacman -S --needed --noconfirm gimp gimp-plugin-gmic
 sudo pacman -S python-pyqt5
 # play and rip CDs and DVDs
