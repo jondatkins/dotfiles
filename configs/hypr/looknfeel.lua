@@ -18,3 +18,8 @@ o.window({ title = "^Path Runner$" }, {
 	center = true,
 	size = { 600, 400 },
 })
+
+-- Opt another application in to Omarchy's standard transparency.
+-- Find its class with: hyprctl clients
+-- o.transparent_window("my-app")
+-- o.transparent_window("my-app", "0.9 0.85") -- Custom active/inactive opacity.
