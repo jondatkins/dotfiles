@@ -12,7 +12,7 @@ find . -depth -name "*[[:space:]]*" | while IFS= read -r file; do
   if [[ "$base" != "$newbase" ]]; then
     # mv -v "$file" "$dir/$newbase"
     echo "removing $base"
-    rm "$base"
+    gio trash "$base"
   fi
 done
 # for f in *\ *; do mv "$f" "${f// /_}"; done
