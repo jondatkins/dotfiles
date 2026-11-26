@@ -64,6 +64,8 @@ function sesh-sessions() {
   }
 }
 
+source /usr/share/omarchy/default/bash/functions
+
 zle     -N             sesh-sessions
 bindkey -M emacs '\es' sesh-sessions
 bindkey -M vicmd '\es' sesh-sessions
